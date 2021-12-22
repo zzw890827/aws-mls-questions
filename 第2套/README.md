@@ -274,63 +274,11 @@
 
     </details>
 
-21. A company is setting up an Amazon SageMaker environment. The corporate data security policy does not allow communication over the internet. How can the company enable the Amazon SageMaker service without enabling direct internet access to Amazon SageMaker notebook instances?
-    - [ ] A. 在公司VPC内创建一个NAT网关。 Create a NAT gateway within the corporate VPC.
-    - [ ] B. 将Amazon SageMaker的流量通过企业内部的网络进行路由。 Route Amazon SageMaker traffic through an on-premises network.
-    - [ ] C. 在企业内部创建Amazon SageMaker VPC接口端点。 Create Amazon SageMaker VPC interface endpoints within the corporate.
-    - [ ] D. 与托管Amazon SageMaker的Amazon VPC建立VPC对等关系。 Create VPC peering with Amazon VPC hosting Amazon SageMaker.
-
-    <details>
-       <summary>Answer</summary>
-
-       答案A。
-
-    </details>
-
-22. 机器学习专家正在训练一个模型来识别图像中的车辆品牌和型号。专家希望使用转移学习和一个在一般物体的图像上训练的现有模型。专家整理了一个包含不同车辆品牌和型号的大型自定义图片数据集。专家应该如何初始化模型，以便用自定义数据重新训练它？ Machine Learning Specialist is training a model to identify the make and model of vehicles in images. The Specialist wants to use transfer learning and an existing model trained on images of general objects. The Specialist collated a large custom dataset of pictures containing different vehicle makes and models. What should the Specialist do to initialize the model to re-train it with the custom data?
-    - [ ] A. 在所有层中用随机权重初始化模型，包括最后的全连接层。 Initialize the model with random weights in all layers including the last fully connected layer
-    - [ ] B. 用所有层的预训练权重初始化模型，并替换最后一个全连接层。 Initialize the model with pre-trained weights in all layers and replace the last fully connected layer.
-    - [ ] C. 在所有层中用随机权重初始化模型，并替换最后一个全连接层。 Initialize the model with random weights in all layers and replace the last fully connected layer.
-    - [ ] D. 用所有层的预训练权重初始化模型，包括最后一个全连接层。 Initialize the model with pre-trained weights in all layers including the last fully connected layer.
-  
-    <details>
-       <summary>Answer</summary>
-
-       答案B。
-
-    </details>
-
-23. 一家办公室安全机构使用安装在主要办公室内关键位置的100个摄像头进行了一次成功的试点。摄像机的图像被上传到Amazon S3，并使用Amazon Rekognition进行标记，结果被储存在Amazon ES中。该机构现在希望将试点扩大到一个完整的生产系统，在全球的办公地点使用数以千计的视频摄像头。其目标是实时识别非雇员的活动。该机构应该考虑哪种解决方案？ An office security agency conducted a successful pilot using 100 cameras installed at key locations within the main office. Images from the cameras were uploaded to Amazon S3 and tagged using Amazon Rekognition, and the results were stored in Amazon ES. The agency is now looking to expand the pilot into a full production system using thousands of video cameras in its office locations globally. The goal is to identify activities performed by non -employees in real time. Which solution should the agency consider?
-    - [ ] A. 在每个地方办公室和每个摄像头使用一个代理服务器，将RTSP馈送流向一个独特的亚马逊Kinesis视频流视频流。在每个流中，使用Amazon Rekognition Video，并创建一个流处理器，从已知员工的集合中检测人脸，并在检测到非员工时发出警报。 Use a proxy server at each local office and for each camera and stream the RTSP feed to a unique Amazon Kinesis Video Streams video stream. On each stream, use Amazon Rekognition Video and create a stream processor to detect faces from a collection of known employees, and alert when non-employees are detected.
-    - [ ] B. 在每个本地办公室和每个摄像头使用一个代理服务器，并将RTSP馈送流向一个独特的亚马逊Kinesis视频流视频流。在每个流中，使用Amazon Rekognition Image从已知员工的集合中检测人脸，并在检测到非员工时发出警报。 Use a proxy server at each local office and for each camera and stream the RTSP feed to a unique Amazon Kinesis Video Streams video stream. On each stream, use Amazon Rekognition Image to detect faces from a collection of known employees and alert when non-employees are detected.
-    - [ ] C. 安装AWS DeepLens摄像头，并使用DeepLens Kinesis Video模块将每个摄像头的视频流传到Amazon Kinesis Video Streams。在每个流中，使用Amazon Rekognition Video并创建一个流处理器，从每个流的集合中检测人脸，并在检测到非雇员时发出警报。 Install AWS DeepLens cameras and use the DeepLens Kinesis Video module to stream video to Amazon Kinesis Video Streams for each camera. On each stream, use Amazon Rekognition Video and create a stream processor to detect faces from a collection on each stream, and alert when non-employees are detected.
-    - [ ] D. 安装AWS DeepLens摄像机，并使用DeepLens Kinesis Video模块将每个摄像机的视频流转到Amazon Kinesis Video Streams。在每个流中，运行AWS Lambda函数来捕获图像片段，然后调用Amazon Rekognition Image来从已知员工的集合中检测人脸，并在检测到非员工时发出警报。 Install AWS DeepLens cameras and use the DeepLens Kinesis Video module to stream video to Amazon Kinesis Video Streams for each camera. On each stream, run an AWS Lambda function to capture image fragments and then call Amazon Rekognition Image to detect faces from a collection of known employees, and alert when non-employees are detected.
-
-    <details>
-       <summary>Answer</summary>
-
-       简单题，答案C
-
-    </details>
-
-24. 一家宠物保险公司的营销经理计划在社交媒体上发起一个有针对性的营销活动，以获取新客户。目前，该公司在Amazon Aurora有以下数据： -所有过去和现有客户的档案。-所有过去和现有的被保险宠物的档案。-保单级别信息 -收到的保费 已支付的索赔。应该采取什么步骤来实现机器学习模型，以识别社交媒体上的潜在新客户？ A Marketing Manager at a pet insurance company plans to launch a targeted marketing campaign on social media to acquire new customers. Currently, the company has the following data in Amazon Aurora: -Profiles for all past and existing customers. -Profiles for all past and existing insured pets. -Policy level information -Premiums received Claims paid. What steps should be taken to implement a machine learning model to identify potential new customers on social media?
-    - [ ] A. 对客户资料数据进行回归，了解消费者群体的关键特征。在社交媒体上寻找类似的资料。 Use regression on customer profile data to understand key characteristics of consumer segments. Find similar profiles on social media.
-    - [ ] B. 在客户资料数据上使用聚类，以了解消费者群体的关键特征。在社交媒体上寻找类似的资料。 Use clustering on customer profile data to understand key characteristics of consumer segments. Find similar profiles on social media.
-    - [ ] C. 在客户资料数据上使用推荐引擎来了解消费者群体的主要特征。在社交媒体上寻找类似的资料。 Use a recommendation engine on customer profile data to understand key characteristics of consumer segments. Find similar profiles on social media.
-    - [ ] D. 在客户资料数据上使用决策树分类器引擎来了解消费者群体的主要特征。在社交媒体上寻找类似的资料。 Use a decision tree classifier engine on customer profile data to understand key characteristics of consumer segments. Find similar profiles on social media.
-
-    <details>
-       <summary>Answer</summary>
-
-       答案B。
-
-    </details>
-
-25. 一家制造公司有一大组带标签的历史销售数据。该制造商想预测每个季度应该生产多少个特定的零件。应该用哪种机器学习方法来解决这个问题？ A manufacturing company has a large set of labeled historical sales data. The manufacturer would like to predict how many units of a particular part should be produced each quarter. Which machine learning approach should be used to solve this problem?
-    - [ ] A. Logistic回归 Logistic regression
-    - [ ] B. 随机切割森林(RCF) Random Cut Forest (RCF)
-    - [ ] C. 主成分分析（PCA） Principal component analysis (PCA)
-    - [ ] D. 线性回归 Linear regression
+21. 数据科学家正在一个有多个类别的数据集上训练一个多层感知器（MLP）。与数据集中的其他类相比，感兴趣的目标类是独特的，但它没有达到可接受的召回指标。数据科学家已经尝试改变MPS隐藏层的数量和大小，但结果没有明显改善。必须尽快实施改善召回率的解决方案。应该使用哪些技术来满足这些要求？ Data Scientist is training a multilayer perceptron (MLP) on a dataset with multiple classes. The target class of interest is unique compared to the other classes within the dataset, but it does not achieve an acceptable recall metric. The Data Scientist has already tried varying the number and size of the MPS hidden layers, which has not significantly improved the results. A solution to improve recall must be implemented as quickly as possible. Which techniques should be used to meet these requirements?
+    - [ ] A. 使用Amazon Mechanical Turk收集更多数据，然后重新训练。 Gather more data using Amazon Mechanical Turk and then retrain.
+    - [ ] B. 训练一个异常检测模型而不是MLP。 Train an anomaly detection model instead of an MLP.
+    - [ ] C. 训练一个XGBboost模型而不是MLP。 Train an XGBboost model instead of an MLP.
+    - [ ] D. 在MLP的损失函数中加入类的权重，然后再重新训练。 Add class weights to the MLP's loss function and the retrain.
 
     <details>
        <summary>Answer</summary>
@@ -339,11 +287,40 @@
 
     </details>
 
-26. 一家金融服务公司正在Amazon S3上构建一个强大的无服务器数据湖。该数据湖应该是灵活的，并满足以下要求。-支持通过Amazon Athena和Amazon Redshift Spectrum查询Amazon S3上的旧数据和新数据。-支持事件驱动的ETL管道。-提供快速和简单的方法来理解元数据。哪种方法符合这些要求？ A financial services company is building a robust serverless data lake on Amazon S3. The data lake should be flexible and meet the following requirements: -Support querying old and new data on Amazon S3 through Amazon Athena and Amazon Redshift Spectrum. -Support event-driven ETL pipelines. -Provide a quick and easy way to understand metadata. Which approach meets these requirements?
-    - [ ] A. 使用AWS Glue爬虫来抓取S3数据，使用AWS Lambda函数来触发AWS Glue ETL作业，以及使用AWS Glue数据目录来搜索和发现元数据。 Use an AWS Glue crawler to crawl S3 data, an AWS Lambda function to trigger an AWS Glue ETL job, and an AWS Glue Data catalog to search and discover metadata.
-    - [ ] B. 使用AWS Glue爬虫来抓取S3数据，使用AWS Lambda函数来触发AWS Batch作业，并使用外部Apache Hive元存储来搜索和发现元数据。 Use an AWS Glue crawler to crawl S3 data, an AWS Lambda function to trigger an AWS Batch job, and an external Apache Hive metastore to search and discover metadata.
-    - [ ] C. 使用AWS Glue爬虫来抓取S3数据，使用Amazon Cloud Watch警报来触发AWS Batch作业，并使用AWS Glue数据目录来搜索和发现元数据。 Use an AWS Glue crawler to crawl S3 data, an Amazon Cloud Watch alarm to trigger an AWS Batch job, and an AWS Glue Data Catalog to search and discover metadata.
-    - [ ] D. 使用AWS Glue爬虫来抓取S3数据，使用Amazon Cloud Watch报警来触发AWS Glue ETL作业，使用外部Apache Hive元存储来搜索和发现元数据。 Use an AWS Glue crawler to crawl S3 data, an Amazon Cloud watch alarm to trigger an AWS Glue ETL job, and an external Apache Hive metastore to search and discover metadata.
+22. 一个网络安全供应商需要从世界各地运行的数以百万计的端点中获取遥测数据。这些数据每30秒以包含50个字段的记录形式传输。每条记录的大小为1KB。这些数据是使用亚马逊Kinesis数据流摄入的。在Amazon Athena查询时，需要每小时对可用记录进行汇总。针对Athena运行的查询将针对包括7-12列数据的不同集合。哪种解决方案在转换和存储摄入的数据时涉及的定制化程度最低？ A network security vendor needs to ingest telemetry data from millions of endpoints running all over the world. This data is transmitted every 30 seconds in the form of records containing 50 fields. Each record is up to 1KB in size. The data is being ingested using Amazon Kinesis Data streams. Hourly summaries of the available records are needed for querying in Amazon Athena. The queries running against Athena will target different sets that include 7-12 columns of data. Which solution involves the LEAST amount of customization for transforming and storing the ingested data?
+    - [ ] A. 配置Kinesis数据流，通过流将数据发送到AWS Lambda。配置Lambda每小时汇总数据，并将其发送到Amazon Kinesis Data Firehose交付流，配置为将数据以Apache Parquet格式存储在Amazon S3。 Configure Kinesis Data Streams to send the data through a stream to AWS Lambda. configure Lambda to aggregate the data hourly and send it to an Amazon Kinesis Data Firehose delivery stream configured to store the data in Amazon S3 in Apache Parquet format.
+    - [ ] B. 配置Kinesis数据流，通过流来发送数据，每小时将数据汇总到Amazon Kinesis Data Firehose交付流。配置交付流，将数据发送到Amazon EMR，并将数据以Apache Parquet格式存储在Amazon S3中。 Configure Kinesis Data Streams to send the data through a stream to aggregate the data hourly to an Amazon Kinesis Data Firehose delivery stream. Configure the delivery stream to send the data to Amazon EMR and store the data in Amazon S3 in Apache Parquet format.
+    - [ ] C. 配置Kinesis数据流，通过流来发送数据，每小时将数据汇总到Amazon Kinesis数据分析。配置Kinesis Data Analytics，将数据处理到Amazon Kinesis Data Firehose交付流，配置为将数据以Apache Parquet格式存储在Amazon S3。 Configure Kinesis Data Streams to send the data through a stream to aggregate the data hourly to Amazon Kinesis Data Analytics. Configure Kinesis Data Analytics to process the data to an Amazon Kinesis Data Firehose delivery stream configured to store the data in Amazon S3 in Apache Parquet format.
+    - [ ] D. 配置Kinesis数据流，通过一个流来发送数据，每小时将数据汇总到Amazon Kinesis Data Firehose交付流中。配置AWS Lambda来处理数据，并将数据以Apache Parquet格式存储在Amazon S3中。 Configure Kinesis Data Streams to send the data through a stream to aggregate the data hourly to an Amazon Kinesis Data Firehose delivery stream. Configure AWS Lambda to process the data and store the data in Amazon S3 in Apache Parquet format.
+  
+    <details>
+       <summary>Answer</summary>
+
+       答案C: [ref](https://docs.aws.amazon.com/zh_cn/kinesisanalytics/latest/sqlref/analytics-sql-reference.html)
+
+    </details>
+
+23. 一个数据科学家使用Amazon SageMaker笔记本实例来进行数据探索和分析。这需要在笔记本实例上安装Amazon SageMaker上没有的某些Python包。机器学习专家如何确保所需的包在笔记本实例上自动可用，供数据科学家使用？ A Data Scientist uses an Amazon SageMaker notebook instance to conduct data exploration and analysis. This requires certain Python packages that are not natively available on Amazon SageMaker to be installed on the notebook instance. How can a Machine Learning Specialist ensure that required packages are automatically available on the notebook instance for the Data Scientist to use?
+    - [ ] A. 在底层的Amazon EC实例上安装AWS系统管理器代理，并使用系统管理器自动化来执行包安装命令。 Install AWS System Manager Agent on the underlying Amazon EC instance and use Systems Manager Automation to execute the package installation commands.
+    - [ ] B. 创建一个Jupyter笔记本文件（.ipynb），其中包含要执行的包安装命令的单元，并将该文件放在每个Amazon SageMaker笔记本实例的`/etc/init`目录下。 Create a Jupyter notebook file (.ipynb) with cells containing the package installation commands to execute and place the file under the `/etc/init` directory of each Amazon SageMaker notebook instance.
+    - [ ] C. 在Jupyter笔记本控制台中使用conda包管理器，将必要的conda包应用于笔记本的默认内核。 Use the conda package manager from within the Jupyter notebook console to apply the necessary conda packages to the default kernel of the notebook.
+    - [ ] D. 使用包安装命令创建Amazon SageMaker生命周期配置，并将生命周期配置分配给笔记本实例。 Create an Amazon SageMaker lifecycle configuration with package installation commands and assign the lifecycle configuration to the notebook instance.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D: [ref](https://docs.aws.amazon.com/zh_cn/sagemaker/latest/dg/notebook-lifecycle-config.html)
+
+    </details>
+
+24. 一位机器学习专家正试图建立一个线性回归模型。仅从显示的残差图来看，该模型最可能出现的问题是什么？ A Machine Learning Specialist is attempting to build a linear regression model. Given the displayed residual plot only, what is the MOST likely problem with the model?
+
+    ![89](img/89.png)
+
+    - [ ] A. 线性回归是不合适的。残差不具有恒定方差 Linear regression is inappropriate. The residuals do not have constant variance
+    - [ ] B. 线性回归是不恰当的。基础数据有离群值 Linear regression is inappropriate. The underlying data has outliers
+    - [ ] C. 线性回归是合适的。残差的平均值为零 Linear regression is appropriate. The residuals have a zero mean
+    - [ ] D. 线性回归是合适的。残差有恒定的方差 Linear regression is appropriate. The residuals have constant variance
 
     <details>
        <summary>Answer</summary>
@@ -352,11 +329,11 @@
 
     </details>
 
-27. A company’s Machine Learning Specialist needs to improve the training speed of a time-series forecasting model using TensorFlow. The training is currently implemented on a single-GPU machine and takes approximately 23 hours to complete. The training needs to be run daily. The model accuracy is acceptable, but the company anticipates a continuous increase in the size of the training data and a need to update the model on an hourly, rather than a daily, basis. The company also wants to minimize coding effort and infrastructure changes. What should the Machine Learning Specialist do to the training solution to allow it to scale for future demand?
-    - [ ] A. Do not change the TensorFlow code. Change the machine to one with a more powerful GPU to speed up the training.
-    - [ ] B. Change the TensorFlow code to implement a Horovod distributed framework supported by Amazon SageMaker. Parallelize the training to as many machines as needed to achieve the business goals.
-    - [ ] C. Switch to using a built-in AWS SageMaker DEEPAR model. Parallelize the training to as many machines as needed to achieve the business goals.
-    - [ ] D. Move the training to Amazon EMR and distribute the workload to as many machines as needed to achieve the business goals.
+25. 一家报纸出版商有一个客户数据表，该表由几个数字和分类特征组成，如年龄和教育历史，以及订阅状态。该公司希望建立一个有针对性的营销模型，以根据表格数据预测订阅状态，哪个Amazon SageMaker内置算法应该被用来建立有针对性的营销模型？ A newspaper publisher has a table of customer data that consists of several numerical and categorical features, such as age and education history, as well as subscription status. The company wants to build a targeted marketing model for predicting the subscription status based on the table data Which Amazon SageMaker built-in algorithm should be used to model the targeted marketing?
+    - [ ] A. Random Cut Forest (RCF)
+    - [ ] B. XGBboost
+    - [ ] C Neural Topic Model (NTM)
+    - [ ] D. DeepAR forecasting
 
     <details>
        <summary>Answer</summary>
@@ -365,12 +342,93 @@
 
     </details>
 
-28. 机器学习专家一般应使用以下哪种指标来对机器学习分类模型进行相互比较/评价？ Which of the following metrics should a Machine Learning Specialist generally use to compare/evaluate machine learning classification models against each other?
-    - [ ] A. 召回率 Recall
-    - [ ] B. 错误分类率 Misclassification rate
-    - [ ] C. 平均绝对百分比误差（MAPE） Mean absolute percentage error (MAPE)
-    - [ ] D. ROC曲线下的面积（AUC） Area Under the ROC Curve (AUC)
+26. 一位机器学习专家正在研究一个线性回归模型，并注意到该模型正在过度拟合。该专家应用L1正则化参数，并再次运行模型。不幸的是，这导致所有特征的权重为零。机器学习专家应该怎么做来改善模型的结果？ A Machine Learning Specialist is working on a linear regression model and notices the model is overfitting. The specialist applies an L1 regularization parameter and runs the model again. Unfortunately, this results in all features having zero weights. What should the Machine Learning Specialist do to improve the model results?
+    - [ ] A. 增加L1正则化参数。 Increase the L1 regularization parameter.
+    - [ ] B. 减少L1正则化参数。 Decrease the L1 regularization parameter.
+    - [ ] C. 增加L2正则化参数。 Increase the L2 regularization parameter.
+    - [ ] D. 减少L2正则化参数。 Decrease the L2 regularization parameter.
 
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+27. 一位机器学习专家为一家水果加工公司工作，需要建立一个系统，将苹果分为三种类型。该专家收集了一个数据集，其中包含每种苹果的150张图片，并在一个神经网络上应用了转移学习，该网络是在ImageNet上用这个数据集预训练的。该公司要求至少有85%的准确率才能利用该模型。经过详尽的网格搜索，最佳超参数产生如下。训练集上的准确率为68%。在验证集上的准确率为67%。机器学习专家可以做些什么来提高系统的准确性？ A machine learning specialist works for a fruit processing company and needs to build a system that categorizes apples into three types. The specialist has collected a dataset that contains 150 images for each type of apple and applied transfer learning on a neural network that was pretrained on ImageNet with this dataset. The company requires at least 85% accuracy to make use of the model. After an exhaustive grid search, the optimal hyperparameters produced the following: 68% accuracy on the training set. 67% accuracy on the validation set. What can the machine learning specialist do to improve the system' s accuracy?
+    - [ ] A. 把模型上传到Amazon SageMaker笔记本实例，并使用Amazon SageMaker HPO功能来优化模型的超参数。 Upload the model to an Amazon SageMaker notebook instance and use the Amazon SageMaker HPO feature to optimize the model’s hyperparameters.
+    - [ ] B. 向训练集添加更多的数据，并使用转移学习重新训练模型以减少偏差。 Add more data to the training set and retrain the model using transfer learning to reduce the bias.
+    - [ ] C. 使用具有更多层的神经网络模型，在ImageNet上进行预训练，并应用转移学习来增加方差。 Use a neural network model with more layers that are pretrained on ImageNet and apply transfer learning to increase the variance.
+    - [ ] D. 使用当前的神经网络架构训练一个新的模型。 Train a new model using the current neural network architecture.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+28. 一位数据科学家已经探索并净化了一个数据集，为监督学习任务的建模阶段做准备。统计学上的分散性在不同的特征之间会有很大的差异，有时会有几个数量级的差异。在进入建模阶段之前，数据科学家希望确保对生产数据的预测性能尽可能准确。数据科学家应该采取哪一序列的步骤来满足这些要求？ A Data Scientist has explored and sanitized a dataset in preparation for the modeling phase of a supervised learning task. The statistical dispersion can vary widely between features, sometimes by several orders of magnitude. Before moving on to the modeling phase, the Data Scientist wants to ensure that the prediction performance on the production data is as accurate as possible. Which sequence of steps should the Data Scientist take to meet these requirements?
+    - [ ] A. 对数据集应用随机抽样。然后将数据集分成训练集、验证集和测试集。 Apply random sampling to the dataset. Then split the dataset into training, validation, and test sets
+    - [ ] B. 将数据集分成训练、验证和测试集。然后重新调整训练集的比例，并对验证集和测试集采用同样的比例。 Split the dataset into training, validation, and test sets. Then rescale the training set and apply the same scaling to the validation and test sets
+    - [ ] C. 重新调整数据集的比例。然后将数据集分成训练集、验证集和测试集。 Rescale the dataset. Then split the dataset into training, validation, and test sets
+    - [ ] D. 将数据集分成训练集、验证集和测试集。然后独立地重新调整训练集、验证集和测试集的比例。 Split the dataset into training, validation, and test sets. Then rescale the training set, the validation set, and the test set independently.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+29. 一位数据科学家正在建立一个线性回归模型，并将使用产生的P值来评估每个系数的统计意义。在检查数据集时，数据科学家发现大多数特征都是正态分布。图中显示了数据集中的一个特征的图。为了满足线性回归模型的统计假设，数据科学家应该应用什么转换？ A Data Scientist is building a linear regression model and will use resulting p-values o evaluate the statistical significance of each coefficient. Upon inspection of the dataset the Data Scientist discovers that most of the features are normally distributed. The plot of one feature in the dataset is shown in the graphic. What transformation should the Data Scientist apply to satisfy the statistical assumptions of the linear regression model?
+
+    ![94](img/94.png)
+
+    - [ ] A. 指数转换 Exponential transformation
+    - [ ] B. 对数转换 Logarithmic transformation
+    - [ ] C. 多项式转换 Polynomial transformation
+    - [ ] D. 正弦波变换 Sinusoidal transformation
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+30. 某制造商经营着大量的工厂，供应链关系复杂，一台机器的意外停机会导致几个工厂的生产停止。一台机器的传感器读数可以包括多达200个数据点，包括温度、电压、振动、RPMS和压力读数。为了收集这些传感器数据，制造商在整个工厂部署了Wi-Fi和ANS。即使许多工厂地点没有可靠的或高速的互联网连接，制造商仍希望保持近乎实时的推理能力。 该模型的哪种部署架构能解决这些业务需求？ A manufacturer is operating a large number of factories with a complex supply chain relationship where unexpected downtime of a machine can cause production to stop at several factories A data scientist wants to analyze sensor data from the factories to identify equipment in need of preemptive maintenance and then dispatch a service team to prevent unplanned downtime. The sensor readings from a single machine can include up to 200 data points including temperatures, voltages, vibrations, RPMS, and pressure readings. To collect this sensor data, the manufacturer deployed Wi-Fi and ANS across the factories. Even though many factory locations do not have reliable or high-speed internet connectivity, the manufacturer would like to maintain near-real-time inference capabilities Which deployment architecture for the model will address these business requirements?
+    - [ ] A. 在Amazon SageMaker中部署该模型 通过该模型运行传感器数据，预测哪些机器需要维护。 Deploy the model in Amazon SageMaker Run sensor data through this model to predict which machines need maintenance.
+    - [ ] B. 在每个工厂的AWS IoT Greengrass上部署该模型 通过该模型运行传感器数据来推断哪些机器需要维护。 Deploy the model on AWS IoT Greengrass in each factory Run sensor data through this model to infer which machines need maintenance.
+    - [ ] C. 将该模型部署到Amazon SageMaker的批量转换作业中。在每日批处理报告中生成推断，以确定需要维护的机器。 Deploy the model to an Amazon SageMaker batch transformation job. Generate inferences in a daily batch report to identify machines that need maintenance.
+    - [ ] D. 在Amazon SageMaker中部署该模型，并使用OT规则将数据写入Amazon DynamoDB表。用AWS Lambda函数从该表消耗一个DYNAMODB流来调用端点。 Deploy the model in Amazon SageMaker and use an IoT rule to write data to an Amazon DynamoDB table. Consume a DynamoDB stream from the table with an AWS Lambda function to invoke the endpoint.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+31. 一位机器学习专家正在为一家在线零售商工作，该零售商希望对每个客户的访问进行分析，通过机器学习管道进行处理。数据需要以每秒100个交易的速度被亚马逊Kinesis数据流摄取，SON数据blob的大小为100KB。专家应该使用Kinesis数据流中的最小分片数来成功摄取这些数据？ A Machine Learning Specialist is working for an online retailer that wants to run analytics on every customer visit, processed through a machine learning pipeline. The data needs to be ingested by Amazon Kinesis Data Streams at up to 100 transactions per second, and the SON data blob is 100 KB in size. What in the MINIMUM number of shards in Kinesis Data Streams the Specialist should use to successfully ingest this data?
+    - [ ] A. 1 shard
+    - [ ] B. 10 shards
+    - [ ] C. 100 shards
+    - [ ] D. 1,000 shards
+  
+    <details>
+       <summary>Answer</summary>
+
+       答案B: [ref](https://docs.aws.amazon.com/zh_cn/streams/latest/dev/service-sizes-and-limits.html)
+
+    </details>
+
+32. 一家公司使用商店货架上陈列的物品顶部的相机图像来确定哪些物品被移走，哪些物品仍然存在。经过几个小时的数据标记，该公司总共有1，000张手工标记的图像，涵盖了10个不同的物品。训练结果很差。哪种机器学习方法能满足该公司的长期需求？ A company uses camera images of the tops of items displayed on store shelves to determine which items were removed and which ones remain. After several hours of data labeling, the company has a total of 1, 000 hand-labeled images covering 10 distinct items. The training results were poor. Which machine learning approach fulfills the company’s long-term needs?
+    - [ ] A. 将图像转换成灰度并重新训练模型。 Convert the images to grayscale and retrain the model.
+    - [ ] B. 将不同项目的数量从10个减少到2个，建立模型，并进行迭代。 Reduce the number of distinct items from 10 to 2, build the model, and iterate.
+    - [ ] C. 给每个项目贴上不同颜色的标签，再次拍摄图像，并建立模型。 Attach different colored labels to each item, take the images again, and build the model.
+    - [ ] D. 使用图像变体如反转和翻译来增加每个项目的训练数据，建立模型，并进行迭代。 Augment training data for each item using image variants like inversions and translations, build the model, and iterate.
+  
     <details>
        <summary>Answer</summary>
 
@@ -378,63 +436,13 @@
 
     </details>
 
-29. 一位机器学习专家正在与一家大型网络安全公司合作，为世界各地的公司实时管理安全事件。这家网络安全公司希望设计一个解决方案，使其能够在数据输入时，使用机器学习对恶意事件进行评分，作为数据的异常情况。该公司还希望能够将结果保存在其数据湖中，供以后处理和分析。完成这些任务的最有效方法是什么？ A Machine Learning Specialist is working with a large cybersecurity company that manages security events in real time for companies around the world. The cybersecurity company wants to design a solution that will allow It to use machine learning to score malicious events as anomalies on the data as it is being ingested. The company also wants to be able to save the results in its data lake for later processing and analysis. What is the MOST efficient way to accomplish these tasks?
-    - [ ] A. 使用Amazon Kinesis Data Firehose摄取数据，并使用Amazon Kinesis Data Analytics Random Cut Forest（RCF）进行异常检测。然后使用Kinesis Data Firehose将结果流向Amazon S3。 Ingest the data using Amazon Kinesis Data Firehose, and use Amazon Kinesis Data Analytics Random Cut Forest (RCF) for anomaly detection. Then use Kinesis Data Firehose to stream the results to Amazon S3.
-    - [ ] B. 使用Amazon EMR将数据输入Apache Spark Streaming，并使用Spark MLlib与k-means来进行异常检测。然后使用Amazon EMR将结果存储在Apache Hadoop分布式文件系统（HDFS）中，复制系数为3，作为数据湖。 Ingest the data into Apache Spark Streaming using Amazon EMR and use Spark MLlib with k-means to perform anomaly detection. Then store the results in an Apache Hadoop Distributed File System (HDFS) using Amazon EMR with a replication factor of three as the data lake.
-    - [ ] C. 摄取数据并将其存储在Amazon S3中。使用AWS Batch和AWS深度学习AMI，在Amazon S3的数据上使用TensorFlow训练一个k-means模型。 Ingest the data and store it in Amazon S3. Use AWS Batch along with the AWS Deep Learning AMIs to train a k-means model using TensorFlow on the data in Amazon S3.
-    - [ ] D. 摄取数据并将其存储在Amazon S3中。让AWS的Glue作业按需触发，转换新数据。然后在Amazon SageMaker中使用内置的随机切割森林（RCF）模型来检测数据中的异常情况。 Ingest the data and store it in Amazon S3. Have an AWS Glue job that is triggered on demand transform the new data. Then use the built-in Random Cut Forest (RCF) model within Amazon SageMaker to detect anomalies in the data.
+33. 一家公司希望将用户行为分类为欺诈行为或正常行为。根据内部研究，一位机器精简专家将根据两个特征建立一个二进制分类器，账户年龄用x表示，交易月份用y表示，类别分布在提供的图中说明。正面类用红色表示，负面类用黑色表示。哪个模型的准确率最高？ A company wants to classify user behavior as either fraudulent or normal. Based on internal research, a machine leaning specialist will build a binary classifier based on two features age of account, denoted by x, and transaction month denoted by y. The class distributions are illustrated in the provided figure. The positive class is portrayed in red, while the negative class is portrayed in black. Which model would have the HIGHEST accuracy?
 
-    <details>
-       <summary>Answer</summary>
-
-       答案A。
-
-    </details>
-
-30. 一位数据科学家希望获得对GZIP文件数据流的实时洞察力。哪种解决方案允许使用SQL来查询延迟最小的数据流？ A Data Scientist wants to gain real-time insights into a data stream of GZIP files. Which solution would allow the use of SQL to query the stream with the LEAST latency?
-    - [ ] A. 亚马逊Kinesis数据分析与AWS Lambda函数来转换数据。 Amazon Kinesis Data Analytics with an AWS Lambda function to transform the data.
-    - [ ] B. AWS Glue和一个自定义ETL脚本来转换数据。 AWS Glue with a custom ETL script to transform the data.
-    - [ ] C. 亚马逊Kinesis客户端库来转换数据并保存到亚马逊ES集群中。 An Amazon Kinesis Client Library to transform the data and save into an Amazon ES cluster.
-    - [ ] D. Amazon Kinesis Data Firehose来转换数据，并将其放入Amazon S3桶中。 Amazon Kinesis Data Firehose to transform the data and put it into an Amazon S3 bucket.
-
-    <details>
-       <summary>Answer</summary>
-
-       答案A。
-
-    </details>
-
-31. 一家零售公司打算使用机器学习来对新产品进行分类。向数据科学团队提供了一个当前产品的标记数据集。该数据集包括1,200种产品。标记的数据集对每个产品有15个特征，如标题尺寸、重量和价格。每个产品都被标记为属于六个类别中的一个，如书籍、游戏、电子产品和电影。使用所提供的数据集进行训练，哪种模型应该被用来对新产品进行分类？ A retail company intends to use machine learning to categorize new products. A labeled dataset of current products was provided to the Data Science team. The dataset includes 1,200 products. The labeled dataset has 15 features for each product such as title dimensions, weight, and price. Each product is labeled as belonging to one of six categories such as books, games, electronics, and movies. Which model should be used for categorizing new products using the provided dataset for training?
-    - [ ] A. 一个XGBboost模型，目标参数被设置为多：softmax。 An XGBboost model where the objective parameter is set to multi: softmax.
-    - [ ] B. 一个深度卷积神经网络（CNN），最后一层有一个softmax激活函数A deep convolutional neural network (CNN) with a softmax activation function for the last layer
-    - [ ] C. 一个回归森林，树的数量被设置为等于产品类别的数量。 A regression forest where the number of trees is set equal to the number of product categories.
-    - [ ] D. 一个基于循环神经网络（RNN）的DeepAR预测模型。 A DeepAR forecasting model based on a recurrent neural network (RNN).
-  
-    <details>
-       <summary>Answer</summary>
-
-       答案A。
-
-    </details>
-
-32. 一位数据科学家正在开发一个执行情感分析的应用程序。验证准确率很低，数据科学家认为原因可能是数据集中有丰富的词汇和低的平均词频。应该使用哪种工具来提高验证的准确性？ A Data Scientist is working on an application that performs sentiment analysis. The validation accuracy is poor, and the Data Scientist thinks that the cause may be a rich vocabulary and a low average frequency of words in the dataset. Which tool should be used to Improve the validation accuracy?
-    - [ ] A. Amazon Comprehend 语法分析和实体检测。 Amazon Comprehend syntax analysis and entity detection.
-    - [ ] B. Amazon SageMaker Blazing Text CBOW模式。 Amazon SageMaker Blazing Text CBOW mode.
-    - [ ] C. 自然语言工具箱（NLTK）的词干和停止词的去除。 Natural Language Toolkit (NLTK) stemming and stop word removal.
-    - [ ] D. Scikit-learn术语频率-反向文档频率（TF-IDF）向量器。 Scikit-learn term frequency-inverse document frequency (TF-IDF) vectorizer.
-  
-    <details>
-       <summary>Answer</summary>
-
-       答案D。
-
-    </details>
-
-33. 一位数据科学家需要将一个现有的企业内部ETL流程迁移到云端。目前的流程以固定的时间间隔运行，并使用PySpark将多个大型数据源合并和格式化为一个单一的综合输出，供下游处理。数据科学家对云解决方案有以下要求： -合并多个数据源。-重用现有的PySpark逻辑。-在现有的时间表上运行该解决方案。-最大限度地减少需要管理的服务器的数量。该数据科学家应该使用哪种架构来建立这个解决方案？ A Data Scientist needs to migrate an existing on-premises ETL process to the cloud. The current process runs at regular time intervals and uses PySpark to combine and format multiple large data sources into a single consolidated output for downstream processing. The Data Scientist has been given the following requirements to the cloud solution: -Combine multiple data sources. -Reuse existing PySpark logic. -Run the solution on the existing schedule. -Minimize the number of servers that will need to be managed. Which architecture should the Data Scientist use to build this solution?
-    - [ ] A. 把原始数据写到Amazon S3。安排一个AWS Lambda函数，根据现有的时间表向一个持久的亚马逊EMR集群提交Spark步骤。使用现有的PySpark逻辑，在EMR集群上运行ETL工作。将结果输出到Amazon S3中的 "处理过的 "位置，供下游使用。 Write the raw data to Amazon S3. Schedule an AWS Lambda function to submit a Spark step to a persistent Amazon EMR cluster based on the existing schedule. Use the existing PySpark logic to run the ETL job on the EMR cluster. Output the results to a `processed` location in Amazon S3 that is accessible for downstream use.
-    - [ ] B. 把原始数据写到Amazon S3。创建一个AWS Glue EL作业，对输入数据进行ETL处理。在PySpark中编写ETL工作，以利用现有的逻辑。创建一个新的AWS Glue触发器，根据现有的时间表触发ETL工作。配置ETL工作的输出目标，将其写入Amazon S3中的 "处理 "位置，供下游使用。 Write the raw data to Amazon S3. Create an AWS Glue EL job to perform the ETL processing against the input data. Write the ETL job in PySpark to leverage the existing logic. Create a new AWS Glue trigger to trigger the ETL job based on the existing schedule. Configure the output target of the ETL job to write to a `processed` location in Amazon S3 that is accessible for downstream use.
-    - [ ] C. 把原始数据写到Amazon S3。安排一个AWS Lambda函数在现有的时间表上运行，并处理来自Amazon S3的输入数据。用Python编写Lambda逻辑，并实现现有的PySpark逻辑，以执行ETL过程 让Lambda函数将结果输出到Amazon S3中的`处理`位置，供下游使用。 Write the raw data to Amazon S3. Schedule an AWS Lambda function to run on the existing schedule and process the input data from Amazon S3. Write the Lambda logic in Python and implement the existing PySpark logic to perform the ETL process Have the Lambda function output the results to a `processed` location in Amazon S3 that is accessible for downstream use.
-    - [ ] D. 使用Amazon Kinesis Data Analytics来流化输入数据，并对流进行实时SQL查询，以在流中进行所需的转换。将输出结果交付给Amazon S3中的`处理`位置，供下游使用。 Use Amazon Kinesis Data Analytics to stream the input data and perform real-time SQL queries against the stream to carry out the required transformations within the stream. Deliver the output results to a `processed` location in Amazon S3 that is accessible for downstream use.
+    ![98](img/98.png)
+    - [ ] A. 线性支持向量机（SVM） Linear support vector machine (SVM)
+    - [ ] B. 决策树 Decision Tree
+    - [ ] C. 带有径向基函数核的支持向量机 Support vector machine (SVM) with a radial basis function kernel
+    - [ ] D. 具有Tanh激活函数的单感知器 Single perceptron with a Tanh activation function
   
     <details>
        <summary>Answer</summary>
@@ -443,43 +451,24 @@
 
     </details>
 
-34. 一个机器学习团队在Amazon S3中拥有几个大型CSV数据集。历史上，用Amazon SageMaker Linear Learner算法建立的模型在类似大小的数据集上训练需要花费数小时。该团队的领导需要加快训练过程。机器学习专家可以做些什么来解决这个问题？ A Machine Learning team has several large CSV datasets in Amazon S3. Historically, models built with the Amazon SageMaker Linear Learner algorithm have taken hours to train on similar-sized datasets. The team’s leaders need to accelerate the training process. What can a Machine Learning Specialist do to address this concern?
-    - [ ] A. 使用Amazon SageMaker Pipe模式。 Use Amazon SageMaker Pipe mode.
-    - [ ] B. 使用亚马逊机器学习来训练模型。 Use Amazon Machine Learning to train the models.
-    - [ ] C. 使用Amazon Kinesis将数据流到Amazon SageMaker。 Use Amazon Kinesis to stream the data to Amazon SageMaker.
-    - [ ] D. 使用AWS Glue将CSV数据集转换为JSON格式。 Use AWS Glue to transform the CSV dataset to the JSON format.
+34. 一位机器学习专家正在对一个有1,000条记录和50个特征的数据集应用线性最小二乘回归模型。在训练之前，ML专家注意到有两个特征是完全线性依赖的。为什么这可能是线性最小二乘回归模型的一个问题？ A Machine Learning Specialist is applying a linear least squares regression model to a dataset with 1, 000 record and 50 features. Prior to train he ML Specialist notices at two features are perfectly linearly dependent. Why could this be an issue for the linear least square regression model?
+    - [ ] A. 它可能导致反向传播算法在训练中失败。 It could cause the backpropagation algorithm to fail during training.
+    - [ ] B. 它可能在优化过程中产生一个奇异矩阵，从而无法定义一个唯一的解决方案。 It could create a singular matrix during optimization, which fails to define a unique solution.
+    - [ ] C. 它可能在优化过程中修改损失函数，导致它在训练中失败。 It could modify the loss function during optimization, causing it to fail during training.
+    - [ ] D. 它可能在数据中引入非线性的依赖关系，这可能使模型的线性假设失效。 It could introduce non-linear dependencies within the data, which could invalidate the linear assumptions of the model.
 
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案B。
 
     </details>
 
-35. 从由以下两个句子组成的文本语料库中，建立了一个使用单字和大字的术语频率-逆文档频率（tf-idf）矩阵。1 `Please call the number below` 2 `Please do not call us` tf-idf矩阵的尺寸是多少？ A term frequency-inverse document frequency (tf-idf) matrix using both unigrams and bigrams is built from a text corpus consisting of the following two sentences: 1 Please call the number below. 2 Please do not call us. What are the dimensions of the tf-idf matrix?
-    - [ ] A. (2, 16)
-    - [ ] B. (2, 8)
-    - [ ] C. (2, 10)
-    - [ ] D. (8, 10)
-
-    <details>
-       <summary>Answer</summary>
-
-       答案A。
-
-    </details>
-
-36. 一家大型移动网络运营公司正在建立一个机器学习模型，以预测那些有可能退订服务的客户。该公司计划为这些客户提供奖励，因为客户流失的成本远远大于奖励的成本。在对100个客户的测试数据集进行评估后，该模型产生了以下混淆矩阵。根据模型的评估结果，为什么说这是一个可行的生产模型？ A large mobile network operating company is building a machine learning model to predict customers who are likely to unsubscribe from the service. The company plans to offer an incentive for these customers as the cost of churn is far greater than the cost of the incentive. The model produces the following confusion matrix after evaluating on a test dataset of 100 customers. Based on the model evaluation results, why is this a viable model for production?
-
-    |n=100|PREDICTED: Yes|PREDICTED: No|
-    |----|-------------|--------------|
-    |Actual: Yes|10|4|
-    |Actual: No|10|76|
-
-    - [ ] A. 该模型的精确度为86%，公司因假阴性而产生的成本小于假阳性。 The model is 86 accurate and the cost incurred by the company as a result of false negatives is less than the false positives.
-    - [ ] B. 该模型的精确度为86%o，小于该模型的精确度。 The precision of the model is 86%o, which is less than the accuracy of the model.
-    - [ ] C. 该模型的准确度为86%，公司因假阳性而产生的成本小于假阴性。 The model is 86% accurate and the cost incurred by the company as a result of false positives is less than the false negatives.
-    - [ ] D. 该模型的精确度为86%，大于模型的精确度。 The precision of the model is 86%, which is greater than the accuracy of the model.
+35. 一家信用卡公司想建立一个信用评分模型，以帮助预测一个新的信用卡申请人是否会拖欠信用卡付款。该公司收集了大量的数据，其中有数千条原始属性。早期的分类模型实验表明，许多属性是高度相关的，大量的特征使训练速度明显减慢，而且存在一些过拟合问题。这个项目的数据科学家希望在不损失原始数据集的大量信息的情况下加快模型的训练时间。该数据科学家应该使用哪种特征工程技术来达到目标？ A credit card company wants to build a credit scoring model to help predict whether a new credit card applicant will default on a credit card payment. The company has collected data from a large number of sources with thousands of raw attributes. Early experiments to rain a classification model revealed that many attributes are highly correlated, the large number of features slows down the training speed significantly, and that there are some overfitting issues. The Data Scientist on this project would like to speed up the model training time without losing a lot of information from the original dataset. Which feature engineering technique should the Data Scientist use to meet the objectives?
+    - [ ] A. 在所有的特征上运行自相关，删除高度相关的特征。 Run self-correlation on all features and remove highly correlated features.
+    - [ ] B. 将所有的数值归一化为0和1之间。 Normalize all numerical values to be between 0 and 1.
+    - [ ] C. 使用自动编码器或主成分分析（PCA），用新的特征替换原来的特征。 Use an autoencoder or principal component analysis (PCA) to replace original features with new features.
+    - [ ] D. 使用k-means对原始数据进行聚类，并使用每个聚类的样本数据来建立一个新的数据集。 Cluster raw data using k-means and use sample data from each cluster to build a new dataset.
 
     <details>
        <summary>Answer</summary>
@@ -488,50 +477,11 @@
 
     </details>
 
-37. 一位机器学习专家正在为一家公司设计一个改善销售的系统。目标是利用该公司拥有的大量关于用户行为和产品偏好的信息，根据用户与其他用户的相似性来预测用户会喜欢哪些产品。专家应该怎样做才能达到这个目标？ A Machine Learning Specialist is designing a system for improving sales for a company. The objective is to use the large amount of information the company has on users' behavior and product preferences to predict which products users would like based on the users' similarity to other users. What should the Specialist do to meet this objective?
-    - [ ] A. 在Amazon EMR上用Apache Spark ML构建一个基于内容的过滤推荐引擎。 Build a content-based filtering recommendation engine with Apache Spark ML on Amazon EMR
-    - [ ] B. 在Amazon EMR上用Apache Spark ML建立一个协作过滤推荐引擎。 Build a collaborative filtering recommendation engine with Apache Spark ML on Amazon EMR
-    - [ ] C. 在Amazon EMR上用Apache Spark AIL建立一个基于模型的过滤推荐引擎。 Build a model-based filtering recommendation engine with Apache Spark AIL on Amazon EMR
-    - [ ] D. 在Amazon EMR上用Apache Spark ML建立一个组合式过滤推荐引擎。 Build a combinative filtering recommendation engine with Apache Spark ML on Amazon EMR
-
-    <details>
-       <summary>Answer</summary>
-
-       答案B。
-
-    </details>
-
-38. 一家移动网络运营商正在建立一个分析平台，使用Amazon Athena和Amazon S3来分析和优化公司的运营。源系统实时发送CSV格式的数据。数据工程团队希望在将数据存储到Amazon S3之前将其转换为Apache Parquet格式，哪种解决方案的实施工作量最小？ A Mobile Network Operator is building an analytics platform to analyze and optimize a company‘’s operations using Amazon Athena and Amazon S3. The source systems send data in CSV format in real time. The Data Engineering team wants to transform the data to the Apache Parquet format before storing it on Amazon S3 Which solution takes the LEAST effort to implement?
-    - [ ] A. 使用Apache Kafka Streams在Amazon EC2实例上摄取CSV数据，并使用Kafka Connect S3将数据序列化为Parquet。 Ingest CSV data using Apache Kafka Streams on Amazon EC2 instances and use Kafka Connect S3 to serialize data as Parquet.
-    - [ ] B. 从Amazon Kinesis数据流摄取CSV数据，并使用Amazon Glue将数据转换为Parquet。 Ingest CSV data from Amazon Kinesis Data Streams and use Amazon Glue to convert data into Parquet.
-    - [ ] C. 在Amazon MR集群中使用Apache Spark结构化流摄取CSV数据，并使用Apache Spark将数据转换为Parquet。 Ingest CSV data using Apache Spark Structured Streaming in an Amazon MR cluster and use Apache Spark to convert data into Parquet.
-    - [ ] D. 从Amazon Kinesis数据流摄取CSV数据，并使用Amazon Kinesis Data Firehose将数据转换为Parquet。 Ingest CSV data from Amazon Kinesis Data Streams and use Amazon Kinesis Data Firehose to convert data into Parquet.
-
-    <details>
-       <summary>Answer</summary>
-
-       答案B。
-
-    </details>
-
-39. 一个城市希望监测其空气质量，以解决空气污染的后果。一位机器学习专家需要预测该城市未来2天的空气质量，单位为百万分之一的污染物。由于这是一个原型，只有过去一年的每日数据可用，哪个模型最有可能在Amazon SageMaker中提供最佳结果？ A city wants to monitor its air quality to address the consequences of air pollution. A Machine Learning Specialist needs to forecast the air quality in parts per million of contaminates for the next 2 days in the city. As this is a prototype, only daily data from the last year is available Which model is MOST likely to provide the best results in Amazon SageMaker?
-    - [ ] A. 在由全年数据组成的单一时间序列上使用Amazon SageMaker的K-Nearest-Neighbors（KNN）算法，并使用预测器类型的回归器。 Use the Amazon SageMaker K-Nearest-Neighbors (KNN) algorithm on the single time series consisting of the full year of data with a predictor type of regressor.
-    - [ ] B. 在由全年数据组成的单一时间序列上使用Amazon SageMaker随机切割森林（RCF）。 Use Amazon SageMaker Random Cut Forest (RCF) on the single time series consisting of the full year of data.
-    - [ ] C. 在由全年数据组成的单一时间序列上使用Amazon SageMaker Linear Learner算法，其预测器类型为regressor。Use the Amazon SageMaker Linear Learner algorithm on the single fire series consisting of the full year of data with a predictor type of regressor.
-    - [ ] D. 在由全年数据组成的单一时间序列上使用Amazon SageMaker Linear Learner算法，预测器类型为分类器。 Use the Amazon SageMaker Linear Learner algorithm on the single time series consisting of the full year of data with a predictor type of classifier.
-
-    <details>
-       <summary>Answer</summary>
-
-       答案C。
-
-    </details>
-
-40. 一个城市希望监测其空气质量，以解决空气污染的后果。一位机器学习专家需要预测该城市未来2天的空气质量，单位为百万分之一的污染物。由于这是一个原型，只有过去一年的每日数据可用，哪个模型最有可能在Amazon SageMaker中提供最佳结果？ A city wants to monitor its air quality to address the consequences of air pollution. A Machine Learning Specialist needs to forecast the air quality in parts per million of contaminates for the next 2 days in the city. As this is a prototype, only daily data from the last year is available Which model is MOST likely to provide the best results in Amazon SageMaker?
-    - [ ] A. 在由全年数据组成的单一时间序列上使用Amazon SageMaker的K-Nearest-Neighbors（KNN）算法，并使用预测器类型的回归器。 Use the Amazon SageMaker K-Nearest-Neighbors (KNN) algorithm on the single time series consisting of the full year of data with a predictor type of regressor.
-    - [ ] B. 在由全年数据组成的单一时间序列上使用Amazon SageMaker随机切割森林（RCF）。 Use Amazon SageMaker Random Cut Forest (RCF) on the single time series consisting of the full year of data.
-    - [ ] C. 在由全年数据组成的单一时间序列上使用Amazon SageMaker Linear Learner算法，其预测器类型为regressor。 Use the Amazon SageMaker Linear Learner algorithm on the single fire series consisting of the full year of data with a predictor type of regressor.
-    - [ ] D. 在由全年数据组成的单一时间序列上使用Amazon SageMaker Linear Learner算法，预测器类型为分类器。 Use the Amazon SageMaker Linear Learner algorithm on the single time series consisting of the full year of data with a predictor type of classifier.
+36. 一位机器学习专家将OT土壤传感器数据存储在Amazon DynamoDB表中，将天气事件数据作为JSON文件存储在Amazon S3中。DynamoDB中的数据集大小为10GB，Amazon S3中的数据集大小为5GB。专家想在这些数据上训练一个模型，以帮助预测土壤湿度，作为使用Amazon SageMaker的天气事件的一个函数。哪种解决方案可以完成必要的转换，以训练Amazon SageMaker模型，并且管理费用最少？ A Machine Learning Specialist stores OT soil sensor data in an Amazon DynamoDB table and stores weather event data as JSON files in Amazon S3. The dataset in DynamoDB is 10 GB in size and the dataset in Amazon S3 is 5 GB in size. The Specialist wants to train a model on this data to help predict soil moisture levels as a function of weather events using Amazon SageMaker. Which solution will accomplish the necessary transformation to train the Amazon SageMaker model with the LEAST amount of administrative overhead?
+    - [ ] A. 启动一个Amazon EMR集群。为 DYNAMODB 表和 S3 数据创建一个 Apache Hive 外部表。连接Hive表，并将结果写到Amazon S3。 Launch an Amazon EMR cluster. Create an Apache Hive external table for the DYNAMODB table and S3 data. Join the Hive tables and write the results out to Amazon S3.
+    - [ ] B. 使用AWS Glue爬虫来抓取数据。编写一个AWS Glue ETL作业，合并两个表并将输出写入Amazon Redshift集群。 Crawl the data using AWS Glue crawlers. Write an AWS Glue ETL job that merges the two tables and writes the output to an Amazon Redshift cluster.
+    - [ ] C. 在传感器表上启用Amazon DynamoDB Streams。编写一个AWS Lambda函数，消耗流并将结果附加到Amazon S3中的现有天气文件。 Enable Amazon DynamoDB Streams on the sensor table. Write an AWS Lambda function that consumes the stream and appends the results to the existing weather files in Amazon S3.
+    - [ ] D. 使用AWS Glue爬虫来抓取数据。编写一个AWS Glue ETL作业，将两个表合并，并将CSV格式的输出写到Amazon S3。 Crawl the data using AWS Glue crawlers. Write an AWS Glue ETL job that merges the two tables and writes the output in CSV format to Amazon S3.
 
     <details>
        <summary>Answer</summary>
@@ -540,11 +490,80 @@
 
     </details>
 
-41. 一位机器学习专家在企业VPC的一个私有子网中使用Amazon SageMaker笔记本实例。ML专家的重要数据存储在Amazon SageMaker笔记本实例的Amazon EBS卷上，需要对该EBS卷进行快照。然而，ML专家在VPC中找不到Amazon SageMaker笔记本实例的EBS卷或Amazon EC2实例。为什么ML专家在VPC中看不到该实例？ A Machine Learning Specialist is using an Amazon SageMaker notebook instance in a private subnet of a corporate VPC. The ML Specialist has important data stored on the Amazon SageMaker notebook instance’s Amazon EBS volume and needs to take a snapshot of that EBS volume. However, the ML Specialist cannot find the Amazon SageMaker notebook instance’s EBS volume or Amazon EC2 instance within the VPC. Why Is the ML Specialist not seeing the instance visible in the VPC?
-    - [ ] A. Amazon SageMaker 笔记本实例是基于客户账户内的 EC2 实例，但它们在 VPC 之外运行。 Amazon SageMaker notebook instances are based on the EC2 instances within the customer account, but they run outside of VPCs.
-    - [ ] B. Amazon SageMaker 笔记本实例是基于客户账户内的 Amazon ECS 服务。 Amazon SageMaker notebook instances are based on the Amazon ECS service within customer accounts.
-    - [ ] C. Amazon SageMaker笔记本实例是基于AWS服务账户内运行的EC2实例。 Amazon SageMaker notebook instances are based on EC2 instances running within AWS service accounts.
-    - [ ] D. Amazon SageMaker笔记本实例是基于在AWS服务账户内运行的AWS ECS实例。 Amazon SageMaker notebook instances are based on AWS ECS instances running within AWS service accounts.
+37. 一家飞机发动机制造公司正在测量时间序列中的200个性能指标。工程师们希望在测试过程中以近乎实时的方式检测出关键的制造缺陷。所有的数据都需要被存储起来，以便进行离线分析。哪种方法对进行近实时的缺陷检测最有效？ An aircraft engine manufacturing company is measuring 200 performance metrics in a time-series. Engineers want to detect critical manufacturing defects in near-real time during testing. All of the data needs to be stored for offline analysis. What approach would be the MOST effect to perform near-real time defect detection?
+    - [ ] A. 使用AWS IoT Analytics进行摄取、存储和进一步分析。使用AWS IT分析中的Jupyter笔记本来进行异常情况的分析。 Use AWS IoT Analytics for ingestion, storage, and further analysis. Use Jupyter notebooks from within AWS IT Analytics to carry our analysis for anomalies.
+    - [ ] B. 使用Amazon S3进行摄取存储和进一步分析。使用亚马逊EMR集群来进行Apache Spark ML k-means聚类，以确定异常情况。 Use Amazon S3 for ingestion storage, and further analysis. Use an Amazon EMR cluster to carry out Apache Spark ML k-means clustering to determine anomalies.
+    - [ ] C. 使用亚马逊S3进行摄取、存储和进一步分析。使用Amazon SageMaker随机切割森林（RCF）算法来确定异常情况。 Use Amazon S3 for ingestion, storage, and further analysis. Use the Amazon SageMaker Random Cut Forest (RCF) algorithm to determine anomalies.
+    - [ ] D. 使用Amazon Kinesis Data Firehose进行摄取，使用Amazon Kinesis Data Analytics Random Cut Forest（RCF）进行异常检测。使用Kinesis Data Firehose将数据存储在Amazon S3中，以便进一步分析。 Use Amazon Kinesis Data Firehose for ingestion and Amazon Kinesis Data Analytics Random Cut Forest (RCF) to perform anomaly detection. Use Kinesis Data Firehose to store data in Amazon S3 for further analysis.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D。
+
+    </details>
+
+38. 一家科技创业公司正在使用复杂的深度神经网络和GPU计算，根据每个客户的习惯和互动，向其现有客户推荐公司的产品。该解决方案目前从亚马逊S3桶中提取每个数据集，然后将数据加载到从公司Git库中提取的TensorFlow模型中，在本地运行。然后，这项工作运行几个小时，同时不断地将其进度输出到同一个S3桶。工作可以暂停、重启，并在发生故障的情况下随时继续，并且从中央队列中运行。高级管理人员对解决方案资源管理的复杂性和定期重复该过程所涉及的成本感到担忧。他们要求将工作量自动化，以便从周一开始每周运行一次，并在周五营业结束前完成。应该使用哪种架构来以最低的成本扩展解决方案？ A technology startup is using complex deep neural networks and GPU compute to recommend the company’s products to its existing customers based upon each customers habits and interactions. The solution currently pulls each dataset from an Amazon S3 bucket before loading the data into a TensorFlow model pulled from the company’s Git repository that runs locally. This job then runs for several hours while continually outputting its progress to the same S3 bucket. The job can be paused, restarted, and continued at any time in the event of a failure, and is run from a central queue. Senior managers are concerned about the complexity of the solutions resource management and the costs involved in repeating the process regularly. They ask for workload to be automated so it runs once a week starting Monday and completing by the close of business Friday. Which architecture should be used to scale the solution at the lowest cost?
+    - [ ] A. 使用AWS深度学习容器实现该解决方案，并在GPU兼容的Sport Instance上使用AWS Batch将容器作为作业运行。 Implement the solution using AWS Deep Learning Containers and run the container as a job using AWS Batch on a GPU-compatible Sport Instance.
+    - [ ] B. 使用低成本的GPU兼容的亚马逊EC2实例来实现该解决方案，并使用AWS实例调度器来安排任务。 Implement the solution using a low-cost GPU-compatible Amazon EC2 instance and use the AWS Instance Scheduler to schedule the task.
+    - [ ] C. 使用AWS深度学习容器实现解决方案，使用在Spot Instance上运行的AWS Fargate运行工作负载，然后使用内置的任务调度器安排任务。 Implement the solution using AWS Deep Learning Containers, run the workload using AWS Fargate running on Spot Instance, and then schedule the task using the built-in task scheduler.
+    - [ ] D. 使用在Spot Instance上运行的Amazon ECS实现解决方案，并使用ECS服务调度器安排任务。 Implement the solution using Amazon ECS running on Spot Instances and schedule the task using the ECS service scheduler.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C: [ref](https://aws.amazon.com/cn/blogs/aws/aws-fargate-spot-now-generally-available/)
+
+    </details>
+
+39. 一家金融公司正试图检测信用卡欺诈。该公司观察到，平均有2%的信用卡交易是欺诈性的。一位数据科学家在一年的信用卡交易数据上训练了一个分类器。该模型需要将欺诈性交易（阳性）从正常交易（阴性）中识别出来。该公司的目标是尽可能多地准确捕获阳性交易。数据科学家应该使用哪些指标来优化该模式？(选择两个) A financial company is trying to detect credit card fraud. The company observed that, on average, 2% of credit card transactions were fraudulent. A Data Scientist trained a classifier on a year’s worth of credit card transactions data. The model needs to identify the fraudulent transactions (positives) from the regular ones (negatives). The company’s goal is to accurately capture as many positives as possible. Which metrics should the Data Scientist use to optimize the mode? (Select TWO)
+    - [ ] A. 特异性 Specificity
+    - [ ] B. 假阳性率 False positive rate
+    - [ ] C. 准确率 Accuracy
+    - [ ] D. 精度-记忆曲线下的面积 Area Under the precision-recall curve
+    - [ ] E. 真阳性率 True positive rate
+
+    <details>
+       <summary>Answer</summary>
+
+       答案DE。
+
+    </details>
+
+40. 你的任务是将一个传统的应用程序从你的数据中心内运行的虚拟机转移到亚马逊VPC上。不幸的是，这个应用程序需要访问一些场所服务，而且配置这个应用程序的人都不在你的公司工作。更糟糕的是，没有相关的文档。怎样才能让在VPC内运行的应用程序在不被重新配置的情况下达到回访其内部依赖关系的目的？选择3个答案 You are tasked with moving a legacy application from a virtual machine running inside your data center to an Amazon VPC. Unfortunately, this app requires access to a number of premises services and no one who configured the app still works for your company. Even worse, there is no documentation for it. What will allow the application running inside the VPC to reach back and access its internal dependencies without being reconfigured? Choose 3 answers
+    - [ ] A. 当前虚拟机的一个虚拟机导入。 A VM Import of the current virtual machine.
+    - [ ] B. 一个互联网网关，允许VPN连接。 An Internet Gateway to allow a VPN connection.
+    - [ ] C. 亚马逊Route53中的条目，允许Instance解决其依赖的IP地址。 Entries in Amazon Route53 that allow the Instance to resolve its dependencies IP addresses.
+    - [ ] D. 一个与企业内部不冲突的IP地址空间。 An IP address space that does not conflict with the one on-premises.
+    - [ ] E. VPC实例上的一个Elastic IP地址。 An Elastic IP address on the VPC instance.
+    - [ ] F. 在VPC和容纳内部服务的网络之间有一个AWS直接连接链接。 An AWS Direct Connect link between the VPC and the network housing the internal services.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案ADF。
+
+    </details>
+
+41. 一家制造商在其整个工厂部署了一个由50,000个传感器组成的阵列，以预测部件的故障。数据科学家在Gluon中建立了一个长短期记忆（STM）模型，并正在使用Amazon SageMaker API对其进行训练。数据科学家们正在使用一个有一千万个例子的时间序列来训练这个模型。训练目前需要100个小时，数据科学家正试图通过使用多个GPUS来加快训练速度。然而，当他们修改代码以使用8个GPU时，它的运行速度比在一个GPU上略低。目前的超参数设置是。1）炒作参数值 批量大小182，2）剪辑梯度10，3）自回归窗口160，4）学习率0.01，5）间隔时间80。为了加快8个GPUS的训练速度，同时保持测试的准确性，建议将以下哪些变化放在一起？(选择两个) A manufacturer has deployed an array of 50,000 sensors throughout its plant to predict failures in components. Data Scientists have built a long short-term memory (STM) model in Gluon and are training it using the Amazon SageMaker API. The Data Scientists are training the model using a time series with ten million examples. Training is currently taking 100 ours and Data Scientists are attempting to speed it up by using multiple GPUS. However, when they modified the code to use eight GPUs, it is running slightly lower than on one GPU. The current hyperparameter settings are: 1) Hype Parameter Value Batch size 182, 2) Clip gradient 10, 3) Autoregressive window 160, 4) Learning rate 0.01, 5) Epochs 80. Which of the following changes together are recommended to speed up training on 8 GPUS while maintaining test accuracy? (Select TWO)
+    - [ ] A. 将批量大小增加8倍。 Increase the batch size by a factor of 8.
+    - [ ] B. 将剪辑梯度增加8。 Increase the clip gradient by 8.
+    - [ ] C. 将自回归窗口增加8倍。 Increase the autoregressive window by a factor of 8.
+    - [ ] D. 将学习率提高8倍。 Increase the learning rate by a factor of 8.
+    - [ ] E. 将epochs的数量减少20。 Decrease the number of epochs by 20.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案AD。
+
+    </details>
+
+42. 一位数据科学家需要创建一个用于欺诈检测的模型。该数据集由2年的记录交易组成，每个交易都有一组小的特征。数据集中的所有交易都是人工标注的。由于欺诈并不经常发生，该数据集是高度不平衡的。不到2%的数据集被标记为欺诈性的。哪种解决方案为欺诈活动的分类提供了最佳预测能力？ A Data Scientist needs to create a model for fraud detection. The dataset is composed of 2 years’ worth of logged transactions, each with a small set of features. All of the transactions in the dataset were manually labeled. Since fraud does not occur frequently, the dataset is highly imbalanced. Less than 2% of the dataset was labeled as fraudulent. Which solution provides the optimal predictive power for classifying fraudulent activity?
+    - [ ] A. 使用聚类技术对数据集进行过度取样，将准确性作为目标指标，并应用随机切割森林（RCP）。 Oversample the dataset using a clustering technique, use accuracy as the objective metric, and apply Random Cut Forest (RCP).
+    - [ ] B. 使用聚类技术对数据集中的多数类进行未取样，使用精确度作为目标指标，并应用随机切割森林（RCF）。 Undersample the majority class in the dataset using a clustering technique, use precision as the objective metric, and apply Random Cut Forest (RCF).
+    - [ ] C. 重新取样数据集，使用F1分数作为目标指标，并应用XGBboost。 Resample the dataset, use the F1 score as the objective metric, and apply XGBboost.
+    - [ ] D. 对数据集进行重新取样，使用精度作为目标指标，并应用XGBboost。 Resample the dataset, use accuracy as the objective metric, and apply XGBboost.
 
     <details>
        <summary>Answer</summary>
@@ -553,11 +572,11 @@
 
     </details>
 
-42. 一位机器学习专家正在建立一个模型，将使用Amazon SageMaker执行时间序列预测。专家已经完成了模型的训练，现在计划在端点上进行负载测试，以便他们能够为模型变体配置自动扩展。哪种方法可以让专家在负载测试期间审查延迟、内存利用率和CPU利用率？ A Machine Learning Specialist is building a model that will perform time series forecasting using Amazon SageMaker. The Specialist has finished training the model and is now planning to perform load testing on the endpoint so they can configure Auto Scaling for the model variant. Which approach will allow the Specialist to review the latency, memory utilization, and CPU utilization during the load test?
-    - [ ] A. 通过利用Amazon Athena和Amazon QuickSight来查看已经写入Amazon S3的SageMaker日志，以便在产生日志的时候进行可视化。 Review SageMaker logs that have been written to Amazon S3 by leveraging Amazon Athena and Amazon QuickSight to visualize logs as they are being produced.
-    - [ ] B. 生成一个Amazon CloudWatch仪表盘，为Amazon SageMaker输出的延迟、内存利用率和CPU利用率指标创建一个单一的视图。 Generate an Amazon CloudWatch dashboard to create a single view for the latency, memory utilization, and CPU utilization metrics that are outputted by Amazon SageMaker.
-    - [ ] C. 建立自定义的Amazon CloudWatch日志，然后利用Amazon ES和Kibana来查询和可视化由Amazon SageMaker生成的日志数据。 Build custom Amazon CloudWatch Logs and then leverage Amazon ES and Kibana to query and visualize the log data as it is generated by Amazon SageMaker.
-    - [ ] D. 将Amazon SageMaker生成的Amazon Cloud Watch Logs发送到Amazon ES，并使用Kibana查询和可视化日志数据。 Send Amazon CloudWatch Logs that were generated by Amazon SageMaker to Amazon ES and use Kibana to query and visualize the log data.
+43. 一位机器学习专家正在使用监督学习算法训练一个模型。专家对数据集进行了分割，使用80%的数据进行训练，保留20%的数据进行测试。在评估该模型时，专家发现该模型对训练数据集的准确率为97%，对测试数据集的准确率为75%。造成这种差异的原因是什么，专家应该采取什么措施？ A Machine Learning Specialist is training a model using a supervised learning algorithm. The Specialist split the dataset to use 80% of the data for training and reserved 20% of the data for testing. While evaluating the model the Specialist discovers that the mode is 97% accurate for the training dataset and 75% accurate for the test dataset. What is the reason for the discrepancy and what action should the Specialist take?
+    - [ ] A. 大量训练数据的高准确率意味着该模型已经完成。将该模型部署到生产中。 The high accuracy for the larger amount of training data means that the model is finished. Deploy the model to production.
+    - [ ] B. 该模型目前对训练数据过度拟合，在它以前没有见过的数据上没有表现出应有的水平。改变超参数以简化和泛化模型，然后重新训练。 The mode is currently overfitting the training data and not performing as well as it should on data it has not seen before. Change the hyperparameters to simplify and generalize the model, then retrain.
+    - [ ] C. 需要测试集中的额外数据来平衡模式的得分 在训练集和测试集中更均匀地重新分配数据。 Additional data in the test set is needed to balance the scoring of the model Redistribute the data more evenly across training and test sets.
+    - [ ] D. 该模式目前是欠拟合的，没有足够的复杂性来捕捉数据集的全部范围。改变超参数，使模式更加具体和复杂，然后重新训练。 The mode is currently underfitting and does not have enough complexity to capture the full scope of the dataset. Change the hyperparameters to make the model more specific and complex, then retrain.
 
     <details>
        <summary>Answer</summary>
@@ -566,24 +585,11 @@
 
     </details>
 
-43. 一家制造公司有结构化和非结构化的数据存储在Amazon S3桶中。一位机器学习专家希望使用SQL对这些数据进行查询，哪种解决方案需要最少的努力才能查询这些数据？ A manufacturing company has structured and unstructured data stored in an Amazon S3 bucket. A Machine Learning Specialist wants to use SQL to run queries on this data Which solution requires the LEAST effort to be able to query this data?
-    - [ ] A. 使用AWS Data Pipeline来转换数据，并使用Amazon RDS来运行查询。 Use AWS Data Pipeline to transform the data and Amazon RDS to run queries.
-    - [ ] B. 使用AWS Glue对数据进行编目，并使用Amazon Athena来运行查询。 Use AWS Glue to catalogue the data and Amazon Athena to run queries.
-    - [ ] C. 使用AWS Batch在数据上运行ETL和Amazon Aurora运行查询。 Use AWS Batch to run ETL on the data and Amazon Aurora to run the queries.
-    - [ ] D. 使用AWS Lambda来转换数据，使用Amazon Kinesis Data Analytics来运行查询。 Use AWS Lambda to transform the data and Amazon Kinesis Data Analytics to run queries.
-
-    <details>
-       <summary>Answer</summary>
-
-       答案B。
-
-    </details>
-
-44. 一位机器学习专家正在为一个应用程序开发一个定制的视频推荐模型。用于训练这个模型的数据集非常大，有数百万个数据点，托管在一个Amazon S3桶中。专家希望避免将所有这些数据加载到Amazon SageMaker笔记本实例上，因为移动这些数据需要几个小时，而且会超过笔记本实例上附加的5GB Amazon EBS卷。哪种方法允许专家使用所有的数据来训练模型？ A Machine Learning Specialist is developing a custom video recommendation model for an application. The dataset used to train this model is very large with millions of data points and is hosted in an Amazon S3 bucket. The Specialist wants to avoid loading all of this data onto an Amazon SageMaker notebook instance because it would take hours to move and will exceed the attached 5 GB Amazon EBS volume on the notebook instance. Which approach allows the Specialist to use all the data to train the model?
-    - [ ] A. 将一个较小的数据子集加载到SageMaker笔记本中，并在本地进行训练。确认训练代码正在执行，并且模式参数看起来很合理。使用S3桶中的完整数据集，使用管道输入模式启动SageMaker训练作业。 Load a smaller subset of the data into the SageMaker notebook and train locally. Confirm that the training code is executing, and the mode parameters seem reasonable. Initiate a SageMaker training job using the full dataset from the S3 bucket using Pipe input mode.
-    - [ ] B. 用AWS深度学习AMI启动一个亚马逊EC2实例，并将S3桶连接到该实例。在少量的数据上进行训练，以验证训练代码和超参数。回到亚马逊Speaker，使用完整的数据集进行训练。 Launch an Amazon EC2 instance with an AWS Deep Learning AMI and attach the S3 bucket to the instance. Train on a small amount of the data to verify the training code and hyperparameters. Go back to Amazon Speaker and train using the full dataset.
-    - [ ] C. 使用AWS Glue来训练一个模型，使用一小部分数据来确认数据与Amazon SageMaker兼容。使用S3桶中的完整数据集，使用管道输入模式启动SageMaker训练作业。 Use AWS Glue to train a model using a small subset of the data to confirm that the data will be compatible with Amazon SageMaker. Initiate a SageMaker training job using the full dataset from the S3 bucket using Pipe input mode.
-    - [ ] D. 将一个较小的数据子集加载到SageMaker笔记本中，并在本地进行训练。确认训练代码正在执行，并且模型参数看起来很合理。启动一个带有AWS深度学习AMI的亚马逊EC2实例，并附加S3桶来训练完整的数据集。 Load a smaller subset of the data into the SageMaker notebook and train locally. Confirm that the training code is executing, and the model parameters seem reasonable. Launch an Amazon EC2 instance with an AWS Deep Learning AMI and attach the S3 bucket to train the full dataset.
+44. 一位机器学习专家正在开发一个回归模型来预测一场即将到来的音乐会的门票销售。历史门票销售数据由1,000多条记录组成，包含20个数字变量。在探索性数据分析阶段，专家发现有33条记录的数值在框图上四分位数的最右边有一个可耕地的数值。专家与一位业务用户确认，这些数值是不寻常的，但也是合理的。还有70条记录中另一个数字变量是空白的。专家应该做什么来纠正这些问题？ A Machine Learning Specialist is developing a regression model to predict ticket sales for an upcoming concert. The historical ticket sales data consists of more than 1, 000 records containing 20 numerical variables During the exploratory data analysis phase, the Specialist discovered 33 records have values for a numerical arable in the far right of the box plots upper quartile. The Specialist confirmed with a business user that those values are unusual, but plausible. There are also 70 records where another numerical variable is blank. What should the Specialist do to correct these problems?
+    - [ ] A. 删除不寻常的记录，用平均值代替空白值。 Drop the unusual records and replace the blank values with the mean value.
+    - [ ] B. 将不寻常的数据规范化，为空白值创建一个单独的布尔变量。 Normalize unusual data and create a separate Boolean variable for blank values.
+    - [ ] C. 删除不寻常的记录，将空白值填为0。 Drop the unusual records and fill in the blank values with 0.
+    - [ ] D. 使用异常数据，并为空白值创建一个单独的布尔变量。 Use unusual data and create a separate Boolean variable for blank values.
 
     <details>
        <summary>Answer</summary>
@@ -592,16 +598,17 @@
 
     </details>
 
-45. 一家公司正在建立一个系统来管理它存储在Amazon S3中的所有数据集。该公司希望能自动运行数据的转换工作，并维护有关数据集的元数据目录。该解决方案应该需要最少的设置和维护。哪种解决方案可以让该公司实现其目标？ A company is setting up a system to manage all of the datasets it stores in Amazon S3. The company would like to automate running transformation jobs on the data and maintaining a catalog of the metadata concerning the datasets. The solution should require the least amount of setup and maintenance. Which solution will allow the company to achieve Its goals?
-    - [ ] A.  创建一个安装了Apache Hive的Amazon EMR集群。然后，创建一个Hive元存储和一个脚本，按计划运行转换工作。 Create an Amazon EMR cluster with Apache Hive installed. Then, create a Hive metastore and a script to run transformation jobs on a schedule.
-    - [ ] B. 创建一个AWS Glue爬虫来填充AWS Glue数据目录。然后，编写一个AWS Glue ETL作业，并为数据转换作业设置一个时间表。 Create an AWS Glue crawler to populate the AWS Glue Data Catalog. Then, author an AWS Glue ETL job, and set up a schedule for data transformation jobs.
-    - [ ] C. 创建一个安装有Apache Spark的Amazon EMR集群。然后，命一个Apache Hive元存储和一个脚本，在时间表上运行转换工作。 Create an Amazon EMR cluster with Apache Spark installed. Then, fate an Apache Hive metastore and a script to run transformation jobs on a schedule.
-    - [ ] D. 创建一个AWS数据管道，对数据进行转换。然后，创建一个Apache Hive元存储和一个脚本，在时间表上运行转换工作。 Create an AWS Data Pipeline that transforms the data. Then, create an Apache Hive metastore and a script to run transformation jobs on a schedule.
+45. 一位机器学习专家正在开发一种模式，将制造过程中的缺陷部件归类为八种缺陷类型之一。训练数据包括每个缺陷类型的100,000张图像。在图像分类模型的初始训练中，专家注意到验证准确率为89. 5%，而训练准确率为90%。众所周知，这种类型的图像分类的人类水平性能约为97%。专家应该考虑如何提高该模型的性能？(选择两个。） A Machine Learning Specialist is developing a mode that classifies defective parts from a manufacturing process into one of eight defect types. The training data consists of 100,000 images per defect type. During the initial training of the image classification model, the Specialist notices that the validation accuracy is 89. 5% while the training accuracy is 90%. It is known that human-level performance for this type of image classification is around 97%. What should the Specialist consider improving the performance of the model? (Select TWO.)
+    - [ ] A. 延长训练时间 A longer training time
+    - [ ] B. 扩充数据 Data augmentation
+    - [ ] C. 获得更多的训练数据 Getting more training data
+    - [ ] D. 一个不同的优化器 A different optimizer
+    - [ ] E. 二级正则化 L2 regularization
 
     <details>
        <summary>Answer</summary>
 
-       答案B：AWS Glue是正确的答案，因为这个选项需要最少的设置和维护，因为它是无服务器的，而且它不需要管理基础设施。A、C和D都是可以解决问题的方案，但需要更多的配置步骤，并且需要更高的运行和维护开销。
+       答案BC。
 
     </details>
 
