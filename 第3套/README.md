@@ -910,3 +910,136 @@
        答案B。
 
     </details>
+
+66. 一家在线游戏公司使用DynamoDB来存储用户活动日志，并在该公司的DynamoDB表上遇到了节流写入的问题。该公司并没有消耗接近规定的容量。该表包含大量的项目，按用户分区，并按日期排序。该表有200GB，目前的配置是10K WCU和20K RCU。要确定节流的原因，需要哪两个额外的信息？(选择两个) An online gaming company uses DynamoDB to store user activity logs and is experiencing throttled writes on the company s DynamoDB table. The company is NOT consuming close to the provisioned capacity. The table contains a large number of items and is partitioned on user and sorted by date. The table s 200GB and is currently provisioned at 10K WCU and 20K RCU. Which two additional pieces of information are required to determine the cause of the throttling? (Choose two)
+    - [ ] A. 该表上定义的任何GSI的结构。 The structure of any GSIs that have been defined on the table.
+    - [ ] B. 当写入被节制时，显示消耗和配置的写入容量的云观察数据。 Cloud Watch data showing consumed and provisioned write capacity when writes are being throttled.
+    - [ ] C. 显示每个属性的平均项目大小和峰值更新率的应用程序级指标。 Application-level metrics showing the average item size and peak update rates for each attribute.
+    - [ ] D. 表上已经定义的任何ISIS的结构。 The structure of any ISIS that have been defined on the table.
+    - [ ] E. 该表的最大历史WCU和RCU。 The maximum historical WCU and RCU for the table.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案AD。
+
+    </details>
+
+67. 一家公司已经建立了机器学习（ML）模型并将其部署到生产中，其终端使用Amazon SageMaker托管服务。ML团队已经为其SageMaker实例配置了自动缩放功能，以支持工作负载的变化。在测试过程中，该团队注意到，在新的实例准备好之前，就已经启动了额外的实例。这种行为需要尽快改变。ML团队如何解决这个问题？ A company has set up and deployed its machine learning (ML) model into production with an endpoint using Amazon SageMaker hosting service. The ML team has configured automatic scaling for its SageMaker instances to support workload changes. During testing, the team notices that additional instances are being launched before the new instances are ready. This behavior needs to change as soon as possible. How can the ML team solve this issue?
+    - [ ] A. 减少scale-in活动的冷却期 增加实例的配置最大容量。 Decrease the cooldown period for the scale-in activity Increase the configured maximum capacity of instances.
+    - [ ] B. 用SageMaker的多模型端点替换当前的端点。 Replace the current endpoint with a multi-model endpoint using SageMaker.
+    - [ ] C. 设置Amazon API Gateway和AWS Lambda来触发SageMaker推理端点。 Set up Amazon API Gateway and AWS Lambda to trigger the SageMaker inference endpoint.
+    - [ ] D. 增加scale-out活动的冷却期。 Increase the cooldown period for the scale-out activity.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D。
+
+    </details>
+
+68. 一个城市在过去三年里一直在收集其公共自行车共享项目的数据。5PB数据集目前驻留在Amazon S3上。该数据包含以下数据点。自行车出发点。自行车目的地点。各点之间的里程数。车站可用的自行车车位数量（根据车站位置而变化）。在某一特定时间内，可用和使用的车位数量。该计划已获得额外资金，以增加可用的自行车站数量。所有的数据都会定期存档到亚马逊冰川 新的自行车站的位置必须为最多的乘客提供自行车的使用。应该如何执行这项任务？ A city has been collecting data on its public bicycle share program for the past three years. The 5PB dataset currently resides on Amazon S3. The data contains the following datapoints: Bicycle origination points. Bicycle destination points. Mileage between the points. Number of bicycle slots available at the station (which is variable based on the station location). Number of slots available and taken at a given time. The program has received additional funds to increase the number of bicycle stations available. All data is regularly archived to Amazon Glacier The new bicycle stations must be located to provide the most riders access to bicycles. How should this task be performed?
+    - [ ] A. 将数据从Amazon S3转移到Amazon EBS支持的卷中，并使用一个基于EC-2的Hadoop集群，用现货实例运行一个Spark作业，执行随机梯度下降优化。 Move the data from Amazon S3 into Amazon EBS-backed volumes and use an EC-2 based Hadoop cluster with spot instances to run a Spark job that performs a stochastic gradient descent optimization.
+    - [ ] B. 使用Amazon Redshift COPY命令将数据从Amazon S3移动到Redshift，并执行一个SQL查询，输出最受欢迎的自行车站。 Use the Amazon Redshift COPY command to move the data from Amazon S3 into Redshift and perform a SQL query that outputs the most popular bicycle stations.
+    - [ ] C. 将数据保存在Amazon S3上，并使用一个有现货实例的瞬时EMR集群来运行Spark流作业，将数据移入Amazon Kinesis。 Persist the data on Amazon S3 and use a transient EMR cluster with spot instances to run a Spark streaming job that will move the data into Amazon Kinesis.
+    - [ ] D. 将数据保留在Amazon S3上，并使用基于Amazon EMR的Hadoop集群与现货实例来运行一个Spark作业，在EMRFS上执行随机梯度下降优化。 Keep the data on Amazon S3 and use an Amazon EMR-based Hadoop cluster with spot instances to run a Spark job that performs a stochastic gradient descent optimization over EMRFS.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+69. 一家新闻公司正在为其编辑开发一个文章搜索工具。这个搜索工具应该在历史新闻文件的语料库中寻找与特定词汇最相关、最有代表性的文章。编辑们测试了该工具的第一个版本，并报告说，该工具似乎在寻找一般的词语匹配。编辑们不得不花额外的时间来过滤结果，以寻找那些被查询的词最重要的文章。一组数据科学家必须重新设计这个工具，使其能够分离出文件中最常用的词。该工具还必须捕获语料库中每个文档的相关度和重要性。哪种解决方案符合这些要求？ A news company is developing an article search tool for its editors. The search tool should look for the articles that are most relevant and representative for particular words that are queried among a corpus of historical news documents. The editors test the first version of the tool and report that the tool seems to look for word matches in general. The editors have to spend additional time to filter the results to look for the articles where the queried words are most important. A group of data scientists must redesign the tool so that it isolates the most frequently used words in a document. The tool also must capture the relevance and importance of words for each document in the corpus. Which solution meets these requirements?
+    - [ ] A. 通过使用Latent Dirichlet Allocation（LDA）主题建模，从每篇文章中提取主题。通过为文章中的每个词分配主题计数的总和作为分数来创建特异性表格。 配置工具以检索该主题计数分数较高的文章中的被查询词。 Extract the topics from each article by using Latent Dirichlet Allocation (LDA) topic modeling. Create atopic table by assigning the sum of the topic counts as a score for each word in the articles Configure the tool to retrieve the articles where this topic count score is higher for the queried words.
+    - [ ] B. 为文章中的每个词建立一个词频，该词频是根据文章的长度加权的。为每个词建立一个反文档频率，该频率由语料库中的所有文章加权计算。将最终的高亮分数定义为这两个频率的乘积。对工具进行配置，以检索那些高亮分数较高的文章。 Build a term frequency for each word in the articles that is weighted with the article’s length. Build an inverse document frequency for each word that is weighted with all articles in the corpus. Define a final highlight score as the product of both of these frequencies. Configure the tool to retrieve the articles where this highlight score is higher for the queried words.
+    - [ ] C. 下载一个预先训练好的词嵌入查询表。通过对语料库中每篇文章的标题词嵌入进行平均，创建一个标题-嵌入表。为每个词定义一个高亮分数，与它的嵌入和标题嵌入之间的距离成反比。配置工具来检索那些高亮分数较高的文章。 Download a pretrained word-embedding lookup table. Create a titles-embedding table by averaging the titles word embedding for each article in the corpus. Define a highlight score for each word as inversely proportional to the distance between its embedding and the title embedding. Configure the tool to retrieve the articles where this highlight score is higher for the queried words.
+    - [ ] D. 为语料库中每篇文章的每个词建立一个词频评分表。给所有的停止词分配一个零分。对于任何其他的词，按照该词在文章中的频率分配一个分数。配置该工具，以检索该频率得分较高的文章中的查询词。 Build a term frequency score table for each word in each article of the corpus. Assign a score of zero to all stop words. For any other words, assign a score as the words frequency in the article. Configure the tool to retrieve the articles where this frequency score is higher for the queried words.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案A。
+
+    </details>
+
+70. 你的任务是将一个传统的应用程序从你的数据中心内运行的虚拟机转移到亚马逊VPC上。不幸的是，这个应用程序需要访问一些企业内部的服务，而且配置这个应用程序的人都不在你们公司工作。更糟糕的是，没有相关的文档。怎样才能让在VPC内运行的应用程序在不被重新配置的情况下，回过头来访问它的内部依赖关系？(选择3个答案) You are tasked with moving a legacy application from a virtual machine running inside your datacenter to an Amazon VPC. Unfortunately, this app requires access to a number of on-premises services and no one who configured the app still works for your company. Even worse, there’s no documentation for it. What will allow the application running inside the VPC to reach back and access its internal dependencies without being reconfigured? (Choose 3 answers)
+    - [ ] A. 当前虚拟机的一个虚拟机导入。 A VM Import of the current virtual machine.
+    - [ ] B. 一个互联网网关，允许VPN连接。 An Internet Gateway to allow a VPN connection.
+    - [ ] C. 亚马逊Route 53中的条目，允许实例解决其依赖的IP地址。 Entries in Amazon Route 53 that allow the instance to resolve its dependencies’ IP addresses.
+    - [ ] D. 一个与企业内部不冲突的IP地址空间。 An IP address space that does not conflict with the one on-premises.
+    - [ ] E. VPC实例上的一个弹性IP地址。 An Elastic IP address on the VPC instance.
+    - [ ] F. 在VPC和容纳内部服务的网络之间有一个AWS直接连接链接。 An AWS Direct Connect link between the VPC and the network housing the internal services.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案ADF。
+
+    </details>
+
+71. 一位数据科学家正在使用Amazon SageMaker神经主题模式（NTM）算法来建立一个模型，从博客文章中推荐标签。原始博文数据以JSON格式存储在Amazon S3桶中。在模型评估过程中，数据科学家发现该模型推荐某些停顿词，如`a`、`an`和`the`作为某些博客文章的标签，还有一些只出现在某些博客条目中的罕见词汇。在与内容团队进行了几次反复的标签审查后，数据科学家注意到这些罕见的词是不寻常的，但却是可行的。数据科学家还必须确保生成的模型的标签建议不包括停止词。该数据科学家应该做什么来满足这些要求？ A data scientist is using the Amazon SageMaker Neural Topic Mode (NTM) algorithm to build a model that recommends tags from blog posts. The raw blog post data is stored in an Amazon S3 bucket in JSON format. During model evaluation, the data scientist discovered that the model recommends certain stop words such as `a, an` and `the` as tags to certain blog posts, along with a few rare words that are present only in certain blog entries. After a few iterations of tag review with the content team, the data scientist notices that the rare words are unusual but feasible. The data scientist also must ensure that the tag recommendations of the generated model do not include the stop words. What should the data scientist do to meet these requirements?
+    - [ ] A. 使用Amazon Comprehend实体识别API操作。从博文数据中删除检测到的单词。替换S3桶中的博客文章数据源。 Use the Amazon Comprehend entity recognition API operations. Remove the detected words from the blog post data. Replace the blog post data source in the S3 bucket.
+    - [ ] B. 以S3桶中的博客文章数据为数据源，运行SageMaker内置的主成分分析（PCA）算法。用训练工作的结果替换S3桶中的博文数据。 Run the SageMaker built-in principal component analysis (PCA) algorithm with the blog post data from the S3 bucket as the data source. Replace the blog post data in the S3 bucket with the results of the training job.
+    - [ ] C. 使用 SageMaker 内置的对象检测算法而不是训练作业的 NTM 算法来处理博文数据。 Use the SageMaker built-in Object Detection algorithm instead of the NTM algorithm for the training job to process the blog post data.
+    - [ ] D. 通过使用scikit-learn库中的Count Vectorizer函数来删除博文数据中的停止词。用矢量器的结果替换S3桶中的博文数据。 Remove the stop words from the blog post data by using the Count Vectorizer function in the scikit-learn library. Replace the blog post data in the S3 bucket with the results of the vectorizer.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+72. 一家公司正在AWS中开发一个新的机器学习模型解决方案。这些模型被开发成独立的微服务，在启动时从Amazon S3获取约1GB的模型数据，并将数据加载到内存中。用户通过一个异步API访问这些模型。用户可以发送一个请求或一批请求，并指定结果的发送地点。该公司向数百名用户提供模型。这些模型的使用模式是不规则的。有些模型可能几天或几周都没有使用。哪种解决方案符合这些要求？ A company is developing a new machine learning model solution in AWS. The models are developed as independent microservices that fetch about 1GB of model data from Amazon S3 at startup and load the data into memory. Users access the models through an asynchronous API. Users can send a request or a batch of requests and specify where the result should be sent. The company provides models to hundreds of users. The usage patterns for the models are `irregular.somes` models could be unused for days or `weeks.other` models could receive batches of thousands of requests at a time. Which solution meets these requirements?
+    - [ ] A. 来自API的请求被发送到一个应用负载平衡器（ALB）。模型被部署为AWS lambda函数，由ALB调用。 The requests from the API are sent to an Application Load Balancer (ALB). Models are deployed as AWS lambda functions invoked by the ALB.
+    - [ ] B. 来自API的请求被发送到模型的亚马逊简单队列服务（Amazon QS）队列中。模型被部署为由SQS事件触发的AWS Lambda函数。在Lambda上启用AWS自动缩放功能，以根据SQS队列的大小增加VCPUSS的数量。 The requests from the API are sent to the models Amazon Simple Queue service (Amazon QS) queue. Models are deployed as AWS Lambda functions triggered by SQS events. AWS auto scaling is enabled on Lambda to increase the number VCPUSS based on the SQS queue size.
+    - [ ] C. 来自API的请求被发送到模型的亚马逊简单队列服务（Amazon SQS）队列中。模型被部署为亚马逊弹性容器服务（Amazon ECS）服务，从队列中读取。AWS App Mesh根据SQS队列的大小来扩展ECS集群的实例。 The requests from the API are sent to the model’s Amazon simple Queue service (Amazon SQS) queue. Models are deployed as Amazon Elastic container service (Amazon ECS) service reading from the queue. AWS App Mesh scales the instances of the ECS cluster based on the SQS queue size.
+    - [ ] D. 来自API的请求被发送到模型的亚马逊简单队列服务（Amazon SQS）队列中。模型被部署为亚马逊Elastics容器服务（Amazon ECS）服务，从队列中读取。AWS自动扩展为集群启用ECS，并根据队列大小复制服务。 The requests from the API are sent to the models Amazon simple Queue service (Amazon SQS) queue. Models are deployed as Amazon Elastics container service (Amazon ECS) services reading from the queue. AWS Auto Scaling is enabled ECS for both the cluster and copies the service based on the queue size.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D。
+
+    </details>
+
+73. 一家公司正在推出一个新产品，需要建立一个机制来监测社交媒体上对该公司及其新产品的评论。该公司需要能够评估社交媒体帖子中所表达的情绪，可视化趋势，并根据各种阈值配置警报。该公司需要快速实施这一解决方案，并希望尽量减少评估信息所需的基础设施和数据科学资源。该公司已经有一个解决方案来收集帖子并将其存储在Amazon S3桶内。数据科学团队应该使用什么服务来提供这个解决方案？ A company is launching a new product and needs to build a mechanism to monitor comments about the company and its new product on social media. The company needs to be able to evaluate the sentiment expressed in social media posts and visualize trends and configure alarms based on various thresholds. The company needs to implement this solution quickly and wants to minimize the infrastructure and data science resources needed to evaluate the messages. The company already has a solution in place to collect posts and store them within an Amazon S3 bucket. What services should the data science team use to deliver this solution?
+    - [ ] A. 通过使用Blazing Text算法在Amazon SageMaker中训练一个模型，以检测社交媒体帖子语料库中的情感。暴露一个可以被AWS Lambda调用的端点。当帖子被添加到S3桶时，触发Lambda函数来调用端点，并在Amazon DynamoDB表和自定义Amazon CloudWatch指标中记录情感。使用CloudWatch警报来通知分析师的趋势。 Train a model in Amazon SageMaker by using the Blazing Text algorithm to detect sentiment in the corpus of social media posts. Expose an endpoint that can be called by AWS Lambda. Trigger a Lambda function when posts are added to the S3 bucket to invoke the endpoint and record the sentiment in an Amazon DynamoDB table and in a custom Amazon CloudWatch metric. Use CloudWatch alarms to notify analysts of trends.
+    - [ ] B. 通过使用语义分割算法在Amazon SageMaker中训练一个模型，为社交媒体帖子的语料库中的语义内容建模。暴露一个可以被AWS Lambda调用的端点。当对象被添加到S3桶时，触发一个Lambda函数，以调用端点，并将情感记录在Amazon DynamoDB表中。安排第二个Lambda函数来查询最近添加的记录，并发送亚马逊简单通知服务（Amazon SNS）通知，以通知分析师的趋势。 Train a model in Amazon SageMaker by using the semantic segmentation algorithm to model the semantic content in the corpus of social media posts. Expose an endpoint that can be called by AWS Lambda. Trigger a Lambda function when objects are added to the S3 bucket to invoke the endpoint and record the sentiment in an Amazon DynamoDB table. Schedule a second Lambda function to query recently added records and send an Amazon Simple Notification Service (Amazon SNS) notification to notify analysts of trends.
+    - [ ] C. 当社交媒体帖子被添加到S3桶时，触发AWS Lambda函数。为每个帖子调用Amazon Comprehend来捕捉消息中的情绪，并将情绪记录在Amazon DynamoDB表中。安排第二个Lambda函数来查询最近添加的记录，并发送亚马逊简单通知服务（Amazon SNS）通知，以通知分析师的趋势。 Trigger an AWS Lambda function when social media posts are added to the S3 bucket. Call Amazon Comprehend for each post to capture the sentiment in the message and record the sentiment in an Amazon DynamoDB table. Schedule a second Lambda function to query recently added records and send an Amazon Simple Notification Service (Amazon SNS) notification to notify analysts of trends.
+    - [ ] D. 当社交媒体帖子被添加到桶中时，触发AWS Lambda函数。为每个帖子调用Amazon Comprehend，以捕获消息中的情绪，并将情绪记录在S3中的自定义Amazon CloudWatch指标Wand中。使用CloudWatch警报来通知分析师的趋势。 Trigger an AWS Lambda function when social media posts are added to the bucket. Call Amazon Comprehend for each post to capture the sentiment in the message and record the sentiment in a custom Amazon CloudWatch metric wand in S3. Use CloudWatch alarms to notify analysts of trends.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>
+
+74. 一家企业公司的数据科学团队希望提供一种安全、经济的方式来提供对Amazon SageMaker的便捷访问。数据科学家的AWS知识有限，需要能够启动一个Jupyter笔记本实例。笔记本实例需要有一个预先配置好的AWS KMS密钥来加密机器学习存储卷上的静态数据，而不暴露复杂的设置要求。哪种方法可以让该公司为数据科学家建立一个自助服务机制，在其AWS账户中启动Jupyter笔记本，并将操作费用降至最低？ An enterprise company’s data science team wants to provide a safe, cost-effective way to provide easy access to Amazon SageMaker. The data scientists have limited AWS knowledge and need to be able to launch a Jupyter notebook instance. The notebook instance needs to have a preconfigured AWS KMS key to encrypt data at rest on the machine learning storage volume without exposing the complex setup requirements. Which approach will allow the company to set up a self-service mechanism for the data scientists to launch Jupyter notebooks in its AWS accounts with the EAST amount of operational overhead?
+    - [ ] A. 使用静态的Amazon S3网站创建一个无服务器的前端，让数据科学家通过填写表格来请求一个Jupyter笔记本实例。使用亚马逊API网关从S3网站接收任务，并触发一个中央AWS Lambda函数，对Amazon SageMaker进行API调用，这将为数据科学家启动一个带有预配置KMS密钥的笔记本实例。然后回调到前端网站，显示笔记本实例的URL。 Create a serverless front end using a static Amazon S3 website to allow the data scientists to request a Jupyter notebook instance by filling out a form. Use Amazon API Gateway to receiver quests from the S3 website and trigger a central AWS Lambda function to make an API call to Amazon SageMaker that will launch a notebook instance with a preconfigured KMS key for the data scientists. Then call back to the front-end website to display the URL to the notebook instance.
+    - [ ] B. 创建一个AWS CloudFormation模板，使用`AWS:Sagemakerc:Notebooklnstance`资源类型启动一个Jupyter笔记本实例，并预先配置KMS密钥。为CloudFormation模板添加一个用户友好的名称。使用 "输出 "部分显示笔记本的URL。使用共享的Amazon S3桶将CloudFormation模板分发给数据科学家。 Create an AWS CloudFormation template to launch a Jupyter notebook instance using the `AWS:Sagemakerc:Notebooklnstance` resource type with a preconfigured KMS key. Add a user-friendly name to the CloudFormation template. Display the URL to the notebook using the Outputs section. Distribute the CloudFormation template to the data scientists using a shared Amazon S3 bucket.
+    - [ ] C. 创建一个AWS CloudFormation模板，使用`AWS:Sagemaker:NotebookInstance`资源类型启动一个Jupyter笔记本实例，并预先配置KMS密钥 简化参数名称，如实例大小，通过使用CloudFormation中的Mappings部分将其映射为Small、Large和X-large。使用输出部分显示笔记本的URL，然后将模板上传到数据科学家的组合中的AWS服务目录产品中，并与数据科学家的IAM角色共享它。 Create an AWS CloudFormation template to launch a Jupyter notebook instance using the `AWS:Sagemaker:NotebookInstance` resource type with a preconfigured KMS key Simplify the parameter names, such as the instance size, by mapping them to Small, Large, and X-large using the Mappings section in CloudFormation. Display the URL to the notebook using the Outputs section, then upload the template into an AWS Service Catalog product in the data scientist’s portfolio and share it with the data scientist's IAM role.
+    - [ ] D. 创建一个AWS CLI脚本，数据科学家可以在本地运行。提供关于执行AWS CLI脚本时要提供的参数的分步说明，以启动具有预配置KMS密钥的Jupyter笔记本 使用共享的Amazons S3桶将CLI脚本分发给数据科学家。 Create an AWS CLI script that the data scientists can run locally. Provide step by-step instructions about the parameters to be provided while executing the AWS CLI script to launch a Jupyter notebook with a preconfigured KMS key Distribute the CLI script to the data scientists using a shared Amazons S3 bucket.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>
+
+75. 一家汽车公司正计划开展一项营销活动，向之前的客户推销一款新车。该公司在过去曾提供过几次类似的促销活动，并拥有这些促销活动的结果，用于建立一个模型。该公司决定尝试向少数客户发送更昂贵的、有光泽的材料包。公司需要联系至少90%的先前购买者，同时尽量减少邮寄营销材料的成本。该公司已经使用Amazon SageMaker中的线性学习者算法训练了一个模型。该模型的调用分数为80%，精度为75%。该公司应该怎么做来改进这个模型以满足其要求？ A car company is planning to run a marketing campaign to market a new vehicle to prior customers. The company has offered several similar promotions in the past and has the results of those promotions for building a model. The company has decided to experiment with sending a more expensive, glossy package of materials to a smaller number of customers. The company needs to contact at least 90% of the prior purchasers while minimizing the cost of mailing the marketing packages. The company has trained a model using the linear learner algorithm in Amazon SageMaker. The model has been calling score of 80% and a precision of 75%. What should the company do to improve the model to meet its requirements?
+    - [ ] A. 通过设置`target_recall`超参数为90%, `binary_classifier_model_selection_criteria`超参数为 `recallat_target_precision`，重新训练模型。 Retrain the model by setting the `target_recall` hyperparameter to 90% and the `binary_classifier_model_selection_criteria` hyperparameter to `recall_at_target_precision`.
+    - [ ] B. 重新训练模型，将目标精度`target_precision`的超参数设置为90%，将`binary_classifier_model_selection_criteria`的超参数设置为精度`at_target_recall`。 Retrain the model by setting the target_precision hyperparameter to 90% and the `binary_classifier_model_selection_criteria` hyperparameter to precision `at_target_recall`.
+    - [ ] C. 重新梳理输入数据，增加用于输入的历史数据份额。重新训练模型，将epochs的数量设置为20。 Reshuffle the input data to increase the share of historical data used for input. Retrain the model with the number of epochs set to 20.
+    - [ ] D. 重新训练模型，将`normalize_label`超参数设置为true。 Retrain the model with the `normalize_label` hyperparameter set to true.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案A。
+
+    </details>
