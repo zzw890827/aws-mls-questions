@@ -873,3 +873,140 @@
        答案C。
 
     </details>
+
+66. 一家公司希望使用自动机器学习（ML）的随机切割森林（RCF）算法来可视化复杂的实词场景，例如检测季节性和趋势，排除外在因素，以及估算缺失值。从事这个项目的团队是非技术性的，他们正在寻找一个开箱即用的解决方案，需要最少的管理开销。哪种解决方案可以满足这些要求？ A company wants to use an automatic machine learning (ML) Random Cut Forest (RCF) algorithm to visualize complex real-word scenarios, such as detecting seasonality and trends, excluding outers, and imputing missing values. The team working on this project is non-technical and is looking for an out-of-the-box solution that will require the LEAST amount of management overhead. Which solution will meet these requirements?
+    - [ ] A. 使用AWS Glue ML转换来创建一个预测，然后使用Amazon QuickSight来可视化数据。 Use an AWS Glue ML transform to create a forecast and then use Amazon QuickSight to visualize the data.
+    - [ ] B. 使用亚马逊QuickSight来可视化数据，然后使用ML驱动的预测来预测关键业务指标。 Use Amazon QuickSight to visualize the data and then use ML-powered forecasting to forecast the key business metrics.
+    - [ ] C. 使用来自AWS市场的预构建ML AMI来创建预测，然后使用Amazon QuickSight来可视化数据。 Use a pre-build ML AMI from the AWS Marketplace to create forecasts and then use Amazon QuickSight to visualize the data.
+    - [ ] D. 使用计算字段来创建一个新的预测，然后使用Amazon QuickSight来可视化数据。 Use calculated fields to create a new forecast and then use Amazon QuickSight to visualize the data.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+67. 一家在线快递公司希望在下订单的时候为每次送货选择最快的快递员。该公司希望为其应用程序的现有用户和新用户实现这一功能。数据科学家为此用XGBoost训练了不同的模型，这些模型被存储在Amazon S3中。该公司运营的每个城市都有一个模型。运营工程师将这些模型托管在亚马逊EC2中，用于响应网络客户端的请求，每个模型有一个实例，但这些实例的CPU和内存利用率只有5%。运营工程师希望避免管理不必要的资源。哪种解决方案可以使该公司以最少的运营开销实现其目标？ An online delivery company wants to choose the fastest courier for each delivery at the moment an order is placed. The company wants to implement this feature for existing users and new users of its application. Data scientists have trained separate models with XGBoost for this purpose, and the models are stored in Amazon S3. There is one model for each city where the company operates. Operation engineers are hosting these models in Amazon EC2 for responding to the web client requests, with one instance for each model, but the instances have only a 5% utilization in CPU and memory. The operation engineers want to avoid managing unnecessary resources. Which solution will enable the company to achieve its goal with the LEAST operational overhead?
+    - [ ] A. 创建一个Amazon SageMaker笔记本实例，使用boto3库从Amazon S3提取所有模型。删除现有的实例，并使用笔记本来执行SageMaker批量转换，为所有城市的所有可能的用户进行离线推断。将结果存储在Amazon S3的不同文件中。将网络客户端指向这些文件。 Create an Amazon SageMaker notebook instance for pulling all the models from Amazon S3 using the boto3 library. Remove the existing instances and use the notebook to perform a SageMaker batch transform for performing, inferences offline for all the possible users in all the cities. Store the results in different files in Amazon S3. Point the web client to the files.
+    - [ ] B. 准备一个基于开源多模型服务器的Amazon SageMaker Docker容器。删除现有的实例，在SageMaker中创建一个多模型端点，指向包含所有模型的S3桶。在运行时从 Web 客户端调用该端点，根据每个请求的城市指定目标模型参数。 Prepare an Amazon SageMaker Docker container based on the open-source multi-model server. Remove the existing instances and create a multi-model endpoint in SageMaker instead, pointing to the S3 bucket containing all the models. Invoke the endpoint from the web client at runtime, specifying the Target Model parameter according to the city of each request.
+    - [ ] C. 只保留一个EC2实例来托管所有模型。在该实例中安装一个模型服务器，并通过从亚马逊S3中提取模型来加载每个模型。使用亚马逊API网关将该实例与Web客户端集成，以实时响应请求，根据每个请求的城市指定目标资源。 Keep only a single EC2 instance for hosting all the models. Install a model server in the instance and load each model by pulling it from Amazon S3. Integrate the instance with the web client using Amazon API Gateway for responding to the requests in real time, specifying the target resource according to the city of each request.
+    - [ ] D. 根据Amazon SageMaker中预先构建的图像准备一个Docker容器。用单独的SageMaker端点替换现有的实例，公司运营的每个城市都有一个端点，从Web客户端调用端点，根据每个请求的城市指定URL和端点名称参数。 Prepare a Docker container based on the prebuilt images in Amazon SageMaker. Replace the existing instances with separate SageMaker endpoints, one for each city where the company operates invoke the endpoints from the web client, specifying the URL and Endpoint Name parameter according to the city of each request.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+68. 一家零售公司希望将其客户订单与产品目录中的产品描述数据结合起来。每个数据集中的记录的结构和格式是不同的。一个数据分析员试图使用电子表格来合并数据集，但这一努力导致了重复的记录和没有被正确合并的记录。该公司需要一个解决方案，它可以用来合并两个数据集中的类似记录并删除任何重复的记录。哪种解决方案可以满足这些要求？ A retail company wants to combine its customer orders with the product description data from its product catalog. The structure and format of the records in each dataset is different. A data analyst tried to use a spreadsheet to combine the datasets, but the effort resulted in duplicate records and records that were not properly combined. The company needs a solution that it can use to combine similar records from the two datasets and remove any duplicates. Which solution will meet these requirements?
+    - [ ] A. 使用一个AWS Lambda函数来处理数据。使用两个数组来比较两个数据集中的字段的相等字符串，并删除任何重复的内容。 Use an AWS Lambda function to process the data. Use two arrays to compare equal strings in the fields from the two datasets and remove any duplicate.
+    - [ ] B. 创建AWS Glue爬虫，用于读取和填充AWS Glue数据目录。调用AWS Glue Search Tables API操作，对这两个数据集进行模糊匹配搜索，并对数据进行相应的清理。 Create AWS Glue crawlers for reading and populating the AWS Glue Data Catalog. Call the AWS Glue Search Tables API operation to perform a fuzzy-matching search on the two datasets and cleanse the data accordingly.
+    - [ ] C. 创建AWS Glue爬虫，用于读取和填充AWS Glue数据目录。使用查找匹配转换来清理数据。 Create AWS Glue crawlers for reading and populating the AWS Glue Data catalog. Use the Find matches transform to cleanse the data.
+    - [ ] D. 创建一个AWS Lake Formation自定义转换。从Lake Formation控制台运行匹配产品的转换，以自动清理数据。 Create an AWS Lake Formation custom transform. Run a transformation for matching products from the Lake Formation console to cleanse the data automatically.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>
+
+69. 一家电信公司正在为其客户开发一个移动应用程序。该公司正在使用Amazon SageMaker托管端点进行机器学习模型推断。开发人员希望为订阅了应用程序预览功能的有限数量的用户引入一个新版本的模型。在新版模型作为预览版被测试后，开发者将评估其准确性。如果新版本的模型有更好的准确性，开发者需要能够在固定的时间内逐步为所有用户发布新版本。公司怎样才能以最少的操作开销来实施测试模型？ A telecommunications company is developing a mobile app for its customers. The company is using an Amazon SageMaker hosted endpoint for machine learning model inferences. Developers want to introduce a new version of the model for a limited number of users who subscribed to a preview feature of the app. After the new version of the model is tested as a preview, developers will evaluate its accuracy. If a new version of the model has better accuracy developers need to be able to gradually release the new version for all users over a fixed period of me. How can the company implement the testing model with the LEAST amount of operational overhead?
+    - [ ] A. 通过使用`CreateEndpointConfig`操作，用新版本的模型更新`ProductionVariant`数据类型，初始的八个参数设置为0。 为订阅预览功能的用户指定`InvokeEndpoint`调用的`TargetVariant`参数。当新版本的模型准备发布时，逐渐增加`InitialVariantWeight`，直到所有用户都有更新的版本。 Update the `ProductionVariant` data type with the new version of the model by using the `CreateEndpointConfig` operation with the initial eight parameter set to 0. Specify the `TargetVariant` parameter for `InvokeEndpoint` calls for users who subscribed to the preview feature. When the new version of the model is ready for release, gradually increase `InitialVariantWeight` until all users have the updated version.
+    - [ ] B. 配置两个SageMaker托管端点，为不同版本的模式服务。创建一个应用程序负载平衡器（ALB），根据`TargetVariant`查询字符串参数将流量发送到端点。重新配置应用程序，为订阅预览功能的用户发送`TargetVariant`查询字符串参数。当新版本的模型准备发布时，将ALBs路由算法改为加权算法，直到所有用户都有更新的版本。 Configure two SageMaker hosted endpoints that serve the different versions of the mode. Create an Application Load Balancer (ALB) to route traffic to endpoint based on the `TargetVariant` query string parameter. Reconfigure the app to send the `TargetVariant` query string parameter for users who subbed o the preview feature. When the new version of the model is ready for release change the ALBs routing algorithm to weighted until all users have the updated version.
+    - [ ] C. 通过使用`UpdateEndpointWeighsAndCapacies`操作，用新版本的模型更新期望权重和容量数据类型，期望的8个参数设置为0，为订阅预览功能的用户指定 "InvokeEndpoint "调用的 "TargetVariant "参数。当模型的新版本准备发布时，逐渐增加Desired weight，直到所有用户都有更新的版本。 Update the Desired Weights and Capacity data type with the new version of the model by using the `UpdateEndpointWeighsAndCapacies` operation with the Desired eight parameter set to 0, Specify the `TargetVariant` parameter for `InvokeEndpoint` calls for users who subscribed to the preview feature. When the new version of the model is ready for release, gradually increase Desired weight until all users have the updated version.
+    - [ ] D. 配置两个SageMaker托管端点，为模型的不同版本提供服务。创建一个亚马逊Route53记录，该记录配置了一个简单的路由策略，并指向模型的当前版本 配置移动应用程序，为订阅了预览功能的用户使用端点URL，为其他用户使用Route53记录。当模型的新版本准备发布时，向 Route 53 添加一个新的模式。版本端点，并将策略切换为加权，直到所有用户拥有更新的版本。 Configure two SageMaker hosted endpoints that serve the different versions of the model. Create an Amazon Route53 record that is configured with a simple routing policy and that points to the current version of the model Configure the mobile app to use the end point URL for users who subscribed to the preview feature and to use the Route 53 record for other users. When the new version of the model is ready for release, add a new mode. version endpoint to Route 53, and switch the policy to weighted until all users have the updated version.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+70. 一家公司向其客户提供在线购物服务。该公司希望通过在客户从不同于其正常位置的地方访问网站时要求提供额外的信息来加强网站的安全性。该公司希望更新流程，调用机器学习（ML）模型来确定何时应要求提供额外信息。该公司拥有来自其现有电子商务网络服务器的数TB数据，其中包含向网络服务器提出的每个请求的源IP地址。对于认证的请求，这些记录还包含请求用户的登录名。ML专家应该采取哪种方法来实现网络应用程序中的新安全功能？ A company offers an online shopping service to its customers. The company wants to enhance the sites security by requesting additional information when customers access the site from locations that are different from their normal location. The company wants to update the process to call a machine learning (ML) model to determine when additional information should be requested. The company has several terabytes of data from its existing ecommerce web servers containing the source IP addresses for each request made to the web server. For authenticated requests, the records also contain the login name of the requesting user. Which approach should an ML specialist take to implement the new security feature in the web application?
+    - [ ] A. 使用Amazon SageMaker Ground Truth将每个记录标记为成功或失败的访问尝试。使用Amazon SageMaker，使用因子化机器（FM）算法训练一个二进制分类模型。 Use Amazon SageMaker Ground Truth to label each record as either a successful or failed access attempt. Use Amazon SageMaker to train a binary classification model using the factorization machines (FM) algorithm.
+    - [ ] B. 使用Amazon SageMaker训练一个使用IP Insights算法的模型。每晚使用新的日志数据安排模型的更新和再训练。 Use Amazon SageMaker to train a model using the IP Insights algorithm. Schedule updates and retraining of the model using new log data nightly.
+    - [ ] C. 使用Amazon SageMaker Ground Truth将每个记录标记为成功或失败的访问尝试。使用Amazon SageMaker来训练一个使用IP Insights算法的二进制分类模型。 Use Amazon SageMaker Ground Truth to label each record as either a successful or failed access attempt. Use Amazon SageMaker to train a binary classification model using the IP Insights algorithm.
+    - [ ] D. 使用Amazon SageMaker训练一个使用Objective算法的模型。每晚使用新的日志数据安排模型的更新和再训练。 Use Amazon SageMaker to train a model using the Objective algorithm. Schedule updates and retraining of the model using new log data nightly.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>
+
+71. 一家公司正在使用Amazon SageMaker为一项在线服务部署一个新版本的分类模型。服务利用率接近24/7，而且没有定义维护窗口来部署和测试新模型。公司高管担心，如果新模型在生产中表现得不尽如人意，可能会对用户体验产生影响。在Amazon SageMaker上部署新模型的最简单的方法是什么，以减少对用户体验的潜在影响？ A company is deploying a new version of a classification model for an online service using Amazon SageMaker. Service utilization is close to 24/7, and there are no maintenance windows defined to deploy and test the new model. Company executives are concerned about the potential impact on user experience if the new model does not behave as expected in production. What is the SIMPLEST way to deploy the new model on Amazon SageMaker to reduce the potential impact on user experience?
+    - [ ] A. 在与现有模型相同的端点上，将新模型部署为生产型var ant，保证初始流量为50%，然后逐渐减少流量。 Deploy the new model as a production var ant on the same endpoint as the existing model conure an initial traffic flow of 50%, and then gradually decrease the traffic flow.
+    - [ ] B. 在一个端点上部署新模型，用弹性负载平衡器分配用户请求。 Deploy the new model on an endpoint and distribute user requests with an Elastic Load Balancer.
+    - [ ] C. 将新模型作为生产变体部署在与现有模型相同的端点上，确定初始流量为10%，然后逐渐增加流量。 Deploy the new model as a production variant on the same endpoint as the existing model, conure an initial traffic low of 10%, and then gradually increase the traffic flow.
+    - [ ] D. 在一个端点上部署新模型，用Amazon CloudFront分配用户请求。 Deploy the new model on an endpoint and distribute user requests with Amazon CloudFront.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D。
+
+    </details>
+
+72. 对于给定的混淆矩阵，该模型的召回率和精确度是多少？ For the given confusion matrix, what is the recall and precision of the model?
+
+    ||Yes|No|
+    |-|--|---|
+    |Yes|12|3|
+    |No|1|9|
+
+    - [ ] A. Recall=0.92, Precision=0.84
+    - [ ] B. Recall=0.84, Precision=0.8
+    - [ ] C. Recall=0.92, Precision=0.8
+    - [ ] D. Recall=0.8, Precision=0.92
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>
+
+73. 一位机器学习专家正在为一项计算机视觉任务在亚马逊EC2 P3实例集群上训练卷积神经网络（CNN）。然而，训练的时间比预期的长。该专家试图降低图像的分辨率以加快训练速度，但准确率下降到可接受的水平以下。哪种技术可以在不明显降低准确性的情况下加快训练速度？(选择两个 A machine learning specialist is raining a convolutional neural network (CNN) on a cluster of Amazon EC2 P3 instances for a computer vision task. However, training is taking longer than expected. The specialist tried reducing the resolution of images to speed up training, but the accuracy dropped below an acceptable level. Which technique may speed up training without significantly degrading accuracy? (Select Two)
+    - [ ] A. 使用混合精度。 Use mixed precision.
+    - [ ] B. 用全连接层取代卷积层。 Replace convolutional layers with fully connected layers.
+    - [ ] C. 从预训练的CNN开始，在训练期间冻结大多数层。 Start with a pretrained CNN and freeze most layers during training.
+    - [ ] D. 用G3实例替换P3实例。 Replace the P3 instances with G3 instances.
+    - [ ] E. 对每一类的训练数据进行降样，同时保持类的比例平衡。 Downsample training data for each class while keeping the class ratios balanced.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案AC。
+
+    </details>
+
+74. 一位数据科学家正在为一个分类建立逻辑回归模型，但一直无法达到可接受的准确度。科学家认为，特征空间不是线性可分离的。有一个强烈的业务需求，即建立一个可解释的模型，其中每个特征在分类中的贡献必须被充分理解。推论必须尽可能快地产生。数据科学家应该采取哪些措施来实现这些目标，并使之付出最少的努力？ A data scientist is building a logistic regression model for a classification but has not been able to achieve acceptable accuracy. The scientist feels that the feature space is not linearly separable. There is a strong business need to build an interpretable model where the contribution of each feature in the classification must be well understood. The inference must be generated as quickly as possible. Which measures should the data scientist take to achieve these goals with the LEAST amount of effort?
+    - [ ] A. 对现有的特征进行非线性转换。 Apply nonlinear transformations to the existing features.
+    - [ ] B. 使用递归特征消除法，每次从模型中删除一个特征。 Remove features from the model one at a time using recursive feature elimination.
+    - [ ] C. 创建一个具有一个或多个隐藏层的多层感知器（MLP）。 Create a multilayer perceptron (MLP) with one or more hidden layers.
+    - [ ] D. 创建一个线性回归模型。 Create a linear regression model.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+75. 一位数据科学家正在分析一个制造数据集，以确定在不同工厂地点组装的产品是否会通过或不通过质量检查。每个观察结果都包括一个工厂的ID，产品的各个方面，以及它是否通过或未通过质量检查。30%的观察值缺少工厂ID，这是有问题的，因为不同的工厂似乎有不同的失败率。数据科学家希望预测产品是否会通过检验，以实现检验过程的自动化。哪种方法可以管理缺少工厂ID的观察结果？ A data scientist is analyzing a manufacturing dataset to determine whether a product assembled a various factory location will pass or fail quality inspections. Each observation includes a factory ID, various aspects of the product and whether it passed or failed the quality inspection. Thirty percent of the observations are missing the factory ID, which is problematic because different factories appear to have different failure rates. The data scientist wants to predict whether the product will pass inspection to automate the inspection process. Which approach can manage observations that are missing the factory ID?
+    - [ ] A. 删除与缺失的工厂ID对应的数据集行。 Drop the dataset rows corresponding to the missing factory IDs.
+    - [ ] B. 将工厂ID作为工厂ID值的模式来计算。 Impute the factory ID as the mode of the factory ID values.
+    - [ ] C. 将工厂ID作为工厂ID值的平均值来计算。 Impute the factory ID as the mean of the factory ID values.
+    - [ ] D. 将缺失的工厂ID作为一个分类或替代属性的值来模拟。 Model the missing factory ID as a value of a categorical or substitute attribute.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>
