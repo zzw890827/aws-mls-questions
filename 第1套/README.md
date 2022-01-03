@@ -1010,3 +1010,16 @@
        答案C。
 
     </details>
+
+76. 一家经营在线图书馆的公司正在使用Amazon Lex实现一个聊天机器人，以提供基于类别的图书推荐。这个意图是由一个AWS Lambda函数实现的，该函数在给定一个特定类别的情况下，查询一个Amazon DynamoDB表，以获得一个书名列表。为了测试，只有三个类别作为自定义插槽类型实现。喜剧"、"冒险 "和 "纪录片"。一个机器学习（ML）专家注意到，有时请求不能被满足，因为Amazon Lex不能理解用户所说的类别，如`funny`、`fun`和`humor`。ML专家需要在不改变Lambda代码或DynamoDB中数据的情况下解决这个问题。该ML专家应该如何解决这个问题？ A company that runs an online library is implementing a chatbot using Amazon Lex to provide book recommendations based on category. This intent is fulfilled by an AWS Lambda function that queries an Amazon DynamoDB table for a list of book titles, given a particular category. For testing, there are only three categories implemented as the custom slot types: `comedy`, `adventure`, and `documentary`. A machine learning (ML) specialist notices that sometimes the request cannot be fulfilled because Amazon Lex cannot understand the category spoken by users with utterances such as `funny`, `fun`, and `humor`. The ML specialist needs to fix the problem without changing the Lambda code or data in DynamoDB. How should the ML specialist fix the problem?
+    - [ ] A. 在枚举值列表中添加未被识别的词，作为槽类型中的新值。 Add the unrecognized words in the enumeration values list as new values in the slot type.
+    - [ ] B. 创建一个新的自定义槽类型，将未被识别的词作为枚举值添加到这个槽类型中，并将这个槽类型用于槽。 Create a new custom slot type, add the unrecognized words to this slot type as enumeration values, and use this slot type for the slot.
+    - [ ] C. 在数据库中使用亚马逊SearchQuery内置的槽类型进行自定义搜索。 Use the Amazon SearchQuery built-in slot types for custom searches in the database.
+    - [ ] D. 在自定义槽类型中添加未被识别的词作为同义词。 Add the unrecognized words as synonyms in the custom slot type.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>

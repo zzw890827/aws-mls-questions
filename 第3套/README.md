@@ -1043,3 +1043,16 @@
        答案A。
 
     </details>
+
+76. 一家制造公司使用机器学习（ML）模型来检测质量问题。这些模型使用该公司产品在每个生产步骤结束时拍摄的图像。该公司在生产现场有数千台机器，平均每秒钟产生一张图像。该公司用一台制造机器进行了一次成功的试点。在试点中，ML专家使用了一台运行AWS IoT Greengrass的工业PC，它带有一个长期运行的AWS Lambda函数，将图像上传到Amazon S3。上传的图像调用了一个用Python编写的Lambda函数，通过使用运行自定义模型的Amazon SageMaker端点来执行推理。推理结果被转发回生产现场托管的网络服务，以防止有问题的产品被运出。该公司通过在每台生产设备上安装类似配置的工业PC，将该解决方案扩展到所有生产设备。然而，预测的延迟增加超过了可接受的限度。分析表明，互联网连接已达到其容量极限。该公司怎样才能最有效地解决这个问题？ A manufacturing company uses machine learning (ML) models to detect quality issues. The models use images that are taken of the company’s product at the end of each production step. The company has thousands of machines at the production site that generate one image per second on average. The company ran a successful pilot with a single manufacturing machine. For the pilot, ML specialists used an industrial PC that ran AWS IoT Greengrass with a long-running AWS Lambda function that uploaded the images to Amazon S3. The uploaded images invoked a Lambda function that was written in Python to perform inference by using an Amazon SageMaker endpoint that ran a custom model. The inference results were forwarded back to a web service that was hosted at the production site to prevent faulty products from being shipped. The company scaled the solution out to all manufacturing machines by installing similarly configure industrial PC on each production machine. However, laten for predictions increased beyond acceptable limits. Analysis shows that the internet connection is at its capacity limit. How can the company resolve this issue MOST cost-effectively?
+    - [ ] A. 在生产现场和最近的AWS区域之间建立一个10Gbps的AWS直接连接。使用直接连接来上传图像。增加实例的大小和SageMaker端点使用的实例数量。 Set up a 10 Gbps AWS Direct Connect connection between the production site and the nearest AWS Region. Use the Direct Connect connection to upload the images. Increase the size of the instances and the number of instances that are used by the SageMaker endpoint.
+    - [ ] B. 扩展在AWS IoT Greengrass上运行的长期运行的Lambda函数，以压缩图像并将压缩文件上传到Amazon S3。通过使用一个单独的Lambda函数来解压文件，该函数调用现有的Lambda函数来运行推理管道。 Extend the long-running Lambda function that runs on AWS IoT Greengrass to compress the images and upload the compressed files to Amazon S3. Decompress the files by using a separate Lambda function that invokes the existing Lambda function to run the inference pipeline.
+    - [ ] C. 对SageMaker使用自动扩展。在生产站点和最近的AWS区域之间建立AWS直接连接。使用直接连接的连接来上传图像。 Use auto scaling for SageMaker. Set up an AWS Direct Connect connection between the production site and the nearest AWS Region. Use the Direct Connect connection to upload the images.
+    - [ ] D. 将Lambda函数和ML模型部署到AWS IoT Greengrass核心上，该核心在安装在每台机器上的工业PC上运行。扩展在AWS IoT Greengrass上运行的长期运行的Lambda函数，用捕获的图像调用Lambda函数，并在边缘组件上运行推理，将结果直接转发给网络服务。 Deploy the Lambda function and the ML models onto the AWS IoT Greengrass core that is running on the industrial PCs that are installed on each machine. Extend the long-running Lambda function that runs on AWS IoT Greengrass to invoke the Lambda function with the captured images and run the inference on the edge component that forwards the results directly to the web service.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D。
+
+    </details>

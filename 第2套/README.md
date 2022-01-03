@@ -881,3 +881,146 @@
        答案A。
 
     </details>
+
+66. 一家公司要求一位机器学习专家提高其直接广告活动的效率。目前，没有任何机制可以对客户进行分组，因此广告活动被发送到整个客户群中。随着客户群的不断扩大，这种做法变得过于昂贵。该公司向专家提供了一个包含5年购买数据的数据库。机器学习专家应该采取什么方法来实现最精确的结果，以减少错误的广告数量？ A company has asked a machine learning specialist to increase the efficiency of its direct advertisement campaigns. Currently, there are no mechanisms in place to group customers, so campaigns are sent to the whole customer base. This is becoming too expensive as the customer base continues to grow. The company has provided the specialist with access to a database containing 5 years’ worth of purchasing data. what approach should the machine learning specialist take to achieve the MOST precise results to minimize the number of mistargeted advertisements?
+    - [ ] A. 应用k-means算法，根据客户的购买经验，创建类似的客户群。 Apply the k-means algorithm to create groups of similar customers based on their purchasing experience.
+    - [ ] B. 应用因子化机器算法，根据客户的购买经验，将其归入不同的组。 Apply the factorization machine algorithm to classify customers in different groups based on their purchasing experience.
+    - [ ] C. 创建一个Lambda函数来查询数据库中最常见的产品。使用这个输出来喂养一个XGBoost算法，将客户分类到不同的类别。 Create a Lambda function to query the database for the most common products. Use this output to feed an XGBoost algorithm to classify customers into different classes.
+    - [ ] D. 使用EMR管道整合所有过去购买经验的信息，并按基因创建用户的输出。将这些作为广告的目标群体。 Use an EMR pipeline to consolidate information for all past purchasing experience and create outputs of users by gene. Use these as destination groups for the advertisements.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+67. 一家制造公司要求其机器学习专家开发一个模型，将有缺陷的零件分为八种缺陷类型中的一种。该公司为每个缺陷类型提供了大约100,000张图像用于训练。在图像分类模型的初始训练中，专家注意到验证准确率为80%，而训练准确率为90%，众所周知，这种图像分类的人类水平表现为90%左右。专家应该考虑如何解决这个问题？ A manufacturing company asks its machine learning specialist to develop a model that classifies defective parts into one of eight defect types. The company has provided roughly 100,000 images per defect type for training. During the initial training of the image classification model, the specialist notices that the validation accuracy is 80%, while the training accuracy is 90%, it is known that human-level performance for this type of image classification is around 90%. What should the specialist consider fixing this issue?
+    - [ ] A. 延长训练时间。 A longer training time.
+    - [ ] B. 使网络更大。 Making the network larger.
+    - [ ] C. 使用不同的优化器。 Using a different optimizer.
+    - [ ] D. 使用某种形式的正则化。 Using some form of regularization.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案A。
+
+    </details>
+
+68. 一家公司正在开发一个定制的虚拟语音助手。第一个版本的虚拟语音助手只是询问用户的姓名，然后问一个简单的问题。在语音助手利用语音对用户作出回应之前，将使用情感分析对回应进行分析。亚马逊Polly将被用来将回应作为语音输出。该公司希望使用一个完全无服务器的架构，利用管理的AWS服务，目的是拥有最小的基础设施配置。该公司应该利用哪些AWS服务或功能来构建该系统？ A company is developing a custom virtual voice assistant. The first version of the virtual voice assistant simply asks the user for their name and then asks a simple question. The response will be analyzed using sentiment analysis before the voice assistant responds to the user utilizing speech. Amazon Polly will be used to output the response as speech. The company wants to use an entirely serverless architecture levering managed AWS services with the goal of having a minimal infrastructure configuration. Which AWS services or features should the company leverage to build the system?
+    - [ ] A. 亚马逊Lex管理对话界面，AWS Lambda管理无服务器计算，亚马逊Comprehend分析评论是正面还是负面。 Amazon Lex to manage the conversational interface, AWS Lambda to manage the serverless compute, and Amazon Comprehend to analyze if the comment is positive or negative.
+    - [ ] B. Amazon Transcribe将语音转换为文本，Amazon Connect管理对话界面，Amazon ECS管理无服务器计算，Amazon Comprehend分析评论是正面还是负面。 Amazon Transcribe to convert the speech into text, Amazon Connect to manage the conversational interface, Amazon ECS to manage the serverless compute, and Amazon Comprehend to analyze if the comment is positive or negative.
+    - [ ] C. 亚马逊Lex管理对话界面，AWS Lambda管理无服务器计算，以及在AWS Lambda上运行的Python自然语言工具包用于情感分析。 Amazon Lex to manage the conversational interface, AWS Lambda to manage the serverless compute, and the Python Natural Language Toolkit running on AWS Lambda for sentiment analysis.
+    - [ ] D. 亚马逊Transcribe将语音转换为文本。亚马逊Lex管理对话界面，AWS Lambda管理无服务器计算，AWS Comprehend分析评论是正面还是负面。 Amazon Transcribe to convert the speech into text. Amazon Lex to manage the conversational interface, AWS Lambda to manage the serverless compute, and AWS Comprehend to analyze if the comment is positive or negative.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D。
+
+    </details>
+
+69. 一位机器倾斜专家需要在Amazon SageMaker-hosed笔记本上安装包，这些笔记本将被用来开发机器学习解决方案。该专家有几个自定义包和依赖，需要在不同的笔记本环境中保持不变和持久。以下哪种方法能以最少的管理费用完成这一任务？ A machine leaning specialist needs to install packages on Amazon SageMaker-hosed notebooks that will be used to develop machine learning solutions. The specialist has several custom packages and dependencies that need to remain constant and persistent across notebook environments. Which of the following accomplishes this with the LEAST administrative overhead?
+    - [ ] A. 使用Jupyter终端的conda create在每个笔记本实例上创建一个虚拟环境。 Create a virtual environment using conda create from the Jupyter terminal on each notebook instance.
+    - [ ] B. 创建一个生命周期配置，在笔记本启动时触发，以安装这些包。 Create a lifecycle configuration that triggers on notebook start to install the packages.
+    - [ ] C. 使用Jupyter终端在笔记本上安装软件包。 Install the packages on the notebooks using the Jupyter terminal.
+    - [ ] D. 创建一个脚本，在启动时触发软件包的安装。 Create a script that triggers the install of the packages during startup.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+70. 一位机器学习专家一直在使用Amazon SageMaker的自动模型调优功能。在每个调优作业中，4个超参数被调优，总的训练作业为30个，并行作业训练计数设置为10。不幸的是，Amazon SageMaker在调谐过程中凹陷的最佳训练作业所达到的目标度量对该用例来说是足够的。哪种操作最可能产生一个调优作业，使Amazon SageMaker识别的最佳训练作业的目标指标得到改善？ A machine learning specialist has been using the Amazon SageMaker automatic model tuning feature. In each tuning job, 4 hyperparameters are being tuned with total training jobs to 30 and the parallel job training count set to 10. Unfortunately, the objective metric achieved by the best training job dented by Amazon SageMaker during tuning is sufficient for the use case. Which action is MOST likely to produce a tuning job with an improved objective metric for the best training job identified by Amazon SageMaker?
+    - [ ] A. 减少正在调整的超参数的数量。 Reduce the number of hyperparameters being tuned.
+    - [ ] B. 减少平行作业的训练次数。 Reduce the parallel job training count.
+    - [ ] C. 改变目标度量。 Change the objective metric.
+    - [ ] D. 改变训练作业中使用的实例类型。 Change the instance type used in the training jobs.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案A。
+
+    </details>
+
+71. 在一个高度敏感的10TB数据集上用Amazon SageMaker训练的模型，即使经过几次训练，预测结果也不佳。在进一步审查数据集时，一位机器学习专家注意到，一些字段是从同一数据源中提取的，包含重叠的信息。该专家应该如何清理数据，并为未来的训练工作安全地访问它？ A model trained with Amazon SageMaker on a highly sensitive 10 TB dataset is delivering poor prediction results, even after several training jobs. Upon further review of the dataset a machine learning specialist notices that some fields were pulled from the same data source and contain overlapping information. How should the specialist clean up the data and securely access it for future training jobs?
+    - [ ] A. 使用AWS胶水来丢弃相关字段，并将新的数据集存储在Amazon S3上。为Amazon SageMaker添加一个S3 VPC端点，用于数据访问。 Use AWS Glue to discard the related fields and store the new dataset on Amazon S3. Add an S3 VPC endpoint for Amazon SageMaker for data access.
+    - [ ] B. 使用Amazon EMR来丢弃相关字段，并将新的数据集存储在Apache Hadoop分布式文件系统（HDFS）上。在EMR VPC中为Amazon SageMaker添加一个私有子网，用于数据访问。 Use Amazon EMR to discard the elated elds and store the new dataset on an Apache Hadoop Distributed File system (HDFS). Add a private subnet in an EMR VPC for Amazon SageMaker for data access.
+    - [ ] C. 使用AWS Lambda来连接相关字段，并将新的数据集存储在Amazon SageMaker上。使用SageMaker EBS卷进行数据访问。 Use AWS Lambda to join the related fields and store the new dataset on Amazon SageMaker. Use SageMaker EBS volumes for data access.
+    - [ ] D. 使用Amazon Athena来连接相关字段，并将新的数据集存储在Amazon S3上。为Amazon SageMaker添加一个NAT网关用于数据访问。 Use Amazon Athena to join the related fields and store the new dataset on Amazon S3. Add a NAT gateway for Amazon SageMaker for data access.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D。
+
+    </details>
+
+72. 一家公司正在建立一个基于机器倾斜（ML）的预测性维护模型。数据存储在一个完全私有的亚马逊S3桶中，该桶在休息时使用AWS密钥管理服务（AWS KMS）CMKS进行加密。ML专家必须通过使用Amazon SageMaker处理作业来运行数据预处理，该作业由Amazon SageMaker笔记本中的代码触发。该作业应从Amazon S3读取数据，对其进行处理，并将其上传到同一个S3桶。预处理代码存储在Amazon Elastic Container Registry（Amazon ECR）的容器镜像中。ML专家需要授予权限以确保数据预处理工作流程的顺利进行。MI专家应该采取哪一组行动来满足这些要求？ A company is building a predictive maintenance model based on machine leaning (ML). The data is stored in a fully private Amazon S3 bucket that is encrypted at rest with AWS Key Management Service (AWS KMS) CMKS. An ML specialist must run data preprocessing by using an Amazon SageMaker Processing job that is triggered from code in an Amazon SageMaker notebook The job should read data from Amazon S3, process it, and upload it back to the same S3 bucket. The preprocessing code is stored in a container image in Amazon Elastic Container Registry (Amazon ECR). The ML specialist needs to grant permissions to ensure a smooth data preprocessing workflow. Which set of actions should the MI specialist take to meet these requirements?
+    - [ ] A. 创建一个IAM角色，该角色具有创建Amazon SageMaker处理作业的权限，对相关S3桶的S3读和写权限，以及适当的KMS和ECR权限。将该角色附加到SageMaker笔记本实例。从笔记本上创建一个Amazon SageMaker处理作业。 Create an IAM role that has permissions to create Amazon SageMaker Processing jobs, S3 read and write access to the relevant S3 bucket, and appropriate KMS and ECR permissions. Attach the role to the SageMaker notebook instance. Create an Amazon SageMaker Processing job from the notebook.
+    - [ ] B. 创建一个IAM角色，具有创建Amazon SageMaker处理作业的权限。将该角色附加到SageMaker笔记本实例。创建一个Amazon SageMaker处理作业，其IAM角色具有对相关S3桶的读和写权限，以及适当的KMS和ECR权限。 Create an IAM role that has permissions to create Amazon SageMaker Processing jobs. Attach the role to the SageMaker notebook instance. Create an Amazon SageMaker Processing job with an IAM role that has read and write permissions to the relevant S3 bucket, and appropriate KMS and ECR permissions.
+    - [ ] C. 创建一个IAM角色，具有创建Amazon SageMaker处理作业和访问Amazon ECR的权限。将该角色附加到SageMaker笔记本实例。在默认VPC中设置一个S3端点和一个KMS端点。从笔记本上创建Amazon SageMaker处理作业。 Create an IAM role that has permissions to create Amazon SageMaker Processing jobs and to access Amazon ECR. Attach the role to the SageMaker notebook instance. Set up both an S3 endpoint and a KMS endpoint in the default VPC. Create Amazon SageMaker Processing jobs from the notebook.
+    - [ ] D. 创建一个IAM角色，该角色具有创建Amazon SageMaker处理作业的权限。将该角色附加到SageMaker笔记本实例。在默认VPC中设置一个S3端点。使用具有适当的KMS和ECR权限的IAM用户的访问密钥和秘密密钥创建Amazon SageMaker处理作业。 Create an IAM role that has permissions to create Amazon SageMaker Processing jobs. Attach the role to the SageMaker notebook instance. Set up an S3 endpoint in the default VPC. Create Amazon SageMaker Processing jobs with the access key and secret key of the IAM user with appropriate KMS and ECR permissions.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案D。
+
+    </details>
+
+73. 一位数据科学家已经运行了几周的Amazon SageMaker笔记本实例。在这段时间里，新版本的Jupyter Notebook与其他软件更新一起发布。安全团队要求所有正在运行的SageMaker笔记本实例使用SageMaker提供的最新安全和软件更新，该数据科学家如何才能满足这一要求？ A data scientist has been running an Amazon SageMaker notebook instance for a few weeks. During this time, a new version of Jupyter Notebook was released along with additional software updates. The security team mandates that all running SageMaker notebook instances use the latest security and software updates provided by SageMaker How can the data scientist meet this requirement?
+    - [ ] A. 调用`CreateNotebookInstanceLifeCycle`配置API操作。 Call the `CreateNotebookInstanceLifeCycle` Config API operation.
+    - [ ] B. 创建一个新的SageMaker笔记本实例，并挂载原始实例的Amazon Elastic Block Store（Amazon EBS）卷。 Create a new SageMaker notebook instance and mount the Amazon Elastic Block Store (Amazon EBS) volume from the original instance.
+    - [ ] C. 停止，然后重新启动SageMaker笔记本实例。 Stop and then restart the SageMaker notebook instance.
+    - [ ] D. 调用`UpdateNotebookInstanceLifeCycle`配置API操作。 Call the `UpdateNotebookInstanceLifeCycle` Config API operation.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>
+
+74. 一家公司正在建立一个用于快餐店的排队计数应用程序。该公司希望使用视频摄像头对准特定收银台的顾客队伍，以测量有多少人在排队，并在队伍过长时向经理发出通知。餐厅所在地连接到外部服务的带宽有限，无法在不影响其他业务的情况下容纳多个视频流。一个机器学习专家应该实施哪种解决方案来满足这些要求？ A company is building a line-counting application for use in a quick-service restaurant. The company wants to use video cameras pointed at the line of customers at a given register to measure how many people are in line and deliver notifications to managers if the line grows too long. The restaurant locations have limited bandwidth for connections to external services and cannot accommodate multiple video streams without impacting other operations. Which solution should a machine learning specialist implement to meet these requirements?
+    - [ ] A. 安装与Amazon Kinesis Video Streams兼容的摄像头，通过餐厅现有的互联网连接将数据流传到AWS。编写一个AWS Lambda函数来获取图像，并将其发送到Amazon Rekognition来计算图像中的人脸数量。如果排队时间过长，则发送一个亚马逊简单通知服务（Amazon SNS）通知。 Install cameras compatible with Amazon Kinesis Video Streams to stream the data to AWS over the restaurant’s existing internet connection. Write an AWS Lambda function to take an image and send it to Amazon Rekognition to count the number of faces in the image. Send an Amazon Simple Notification Service (Amazon SNS) notification if the line is too long.
+    - [ ] B. 在餐厅里部署AWS DeepLens摄像头来捕捉视频。在AWS DeepLens设备上启用Amazon Rekognition，并在识别出一个人时使用它来触发本地AWS Lambda函数。如果排队时间过长，使用Lambda函数发送亚马逊简单通知服务（Amazon SNS）通知。 Deploy AWS DeepLens cameras in the restaurant to capture video. Enable Amazon Rekognition on the AWS DeepLens device and use it to trigger a local AWS Lambda function when a person is recognized. Use the Lambda function to send an Amazon Simple Notification Service (Amazon SNS) notification if the line is too long.
+    - [ ] C. 在Amazon SageMaker中建立一个自定义模型，以识别图像中的人的数量。在餐厅里安装与Amazon Kinesis Video Streams兼容的摄像头。写一个AWS Lambda函数来拍摄图像。使用SageMaker的端点来调用模型来计算人数。如果队伍太长，就发送一个亚马逊简单通知服务（Amazon SNS）通知。 Build a custom model in Amazon SageMaker to recognize the number of people in an image. Install cameras compatible with Amazon Kinesis Video Streams in the restaurant. Write an AWS Lambda function to take an image. Use the SageMaker endpoint to call the model to count people. Send an Amazon Simple Notification Service (Amazon SNS) notification if the line is too long.
+    - [ ] D. 在Amazon SageMaker中建立一个自定义模型来识别图像中的人数。在餐厅里部署AWS DeepLens相机。将模型部署到相机上。在摄像头上部署AWS Lambda函数，使用该模型来计算人数，并在队伍过长时发送亚马逊简单通知服务（Amazon SNS）通知。 Build a custom model in Amazon SageMaker to recognize the number of people in an image. Deploy AWS DeepLens cameras in the restaurant. Deploy the model to the cameras. Deploy an AWS Lambda function to the cameras to use the model to count people and send an Amazon Simple Notification Service (Amazon SNS) notification if the line is too long.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案A。
+
+    </details>
+
+75. 一家公司为其数据科学团队提供Amazon SageMaker笔记本实例，并创建Amazon PC接口端点以确保PC和笔记本实例之间的通信。所有与Amazon SageMaker API的连接都是完全安全地使用AWS网络进行的。然而，数据科学团队意识到，PC之外的个人仍然可以通过互联网连接到笔记本实例。数据科学团队应该采取哪一组行动来解决这个问题？ A company provisions Amazon SageMaker notebook instances for its data science team and creates Amazon PC interface endpoints to ensure communication between the PC and the notebook instances. All connections to the Amazon SageMaker API are contained entirely and securely using the AWS network. However, the data science team realizes that individuals outside the PC can still connect to the notebook instances across the internet. Which set of actions should the data science team take to fix the issue?
+    - [ ] A. 修改笔记本实例的安全组，只允许来自VPC的CIDR范围的流量。将此安全组应用于所有的笔记本实例VPC接口。 Modify the notebook instances security group to allow traffic only from the CIDR ranges of the VPC. Apply this security group to all of the notebook instances VPC interfaces.
+    - [ ] B. 创建一个IAM策略，只允许从PC端点进行`sagemaker:CreatePresignedNotebookInstanceUrl`和`sagemaker:DescribeNotebookInstance`操作。将此策略应用于所有用于访问笔记本实例的IAM用户、组和角色。 Create an IAM policy that allows the `sagemaker:CreatePresignedNotebookInstanceUrl` and `sagemaker:DescribeNotebookInstance` actions from only the PC endpoints. Apply this policy to all IAM users, groups, and roles used to access the notebook instances.
+    - [ ] C. 在VPC中添加一个NAT网关。将Amazon SageMaker笔记本实例所在的所有子网转换为私有子网。停止和启动所有的笔记本实例，只重新分配私有IP地址。 Add a NAT gateway to the VPC. Convert all of the subnets where the Amazon SageMaker notebook instances are hosted to private subnets. Stop and start all of the notebook instances to reassign only private IP addresses.
+    - [ ] D. 改变笔记本所在子网的网络ACL，以限制VPC以外的任何人访问。 Change the network ACL of the subnet the notebook is hosted in to restrict access to anyone outside the VPC.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案B。
+
+    </details>
+
+76. 一家公司将使用Amazon SageMaker来训练和主持一个机器学习（ML）模型，用于营销活动。大部分的数据是敏感的客户数据。这些数据必须在休息时进行加密。该公司希望AWS维护主密钥的信任根，并希望加密密钥的使用被记录下来。哪种实现方式可以满足这些要求？ A company will use Amazon SageMaker to train and host a machine learning (ML) model for a marketing campaign. The majority of data is sensitive customer data. The data must be encrypted at rest. The company wants AWS to maintain the root of trust for the master keys and wants encryption key usage to be logged. Which implementation will meet these requirements?
+    - [ ] A. 使用存储在AWS Cloud HSM中的加密密钥来加密ML数据卷，并加密Amazon S3中的模型工件和数据。 Use encryption keys that are stored in AWS Cloud HSM to encrypt the ML data volumes, and to encrypt the model artifacts and data in Amazon S3.
+    - [ ] B. 使用SageMaker内置的瞬时密钥来加密ML数据卷。为新的Amazon Elastic Block Store（Amazon EBS）卷启用默认加密功能。 Use SageMaker built-in transient keys to encrypt the ML data volumes. Enable default encryption for new Amazon Elastic Block Store (Amazon EBS) volumes.
+    - [ ] C. 使用AWS密钥管理服务（AWS KMS）中的客户管理密钥来加密ML数据卷，并在Amazon S3中加密模型工件和数据。 Use customer managed keys in AWS Key Management Service (AWS KMS) to encrypt the ML data volumes, and to encrypt the model artifacts and data In Amazon S3.
+    - [ ] D. 使用AWS安全令牌服务（AWS STS）创建临时令牌来加密ML存储卷，并在Amazon S3中加密模型工件和数据。 Use AWS Security Token Service (AWS STS) to create temporary tokens to encrypt the ML storage volumes, and to encrypt the model artifacts and data in Amazon S3.
+
+    <details>
+       <summary>Answer</summary>
+
+       答案C。
+
+    </details>
