@@ -274,7 +274,7 @@
 
     </details>
 
-21. A company is setting up an Amazon SageMaker environment. The corporate data security policy does not allow communication over the internet. How can the company enable the Amazon SageMaker service without enabling direct internet access to Amazon SageMaker notebook instances?
+21. 一家公司正在建立一个Amazon SageMaker环境。公司的数据安全政策不允许通过互联网进行通信。该公司如何启用Amazon SageMaker服务，而不启用对Amazon SageMaker笔记本实例的直接互联网访问？ A company is setting up an Amazon SageMaker environment. The corporate data security policy does not allow communication over the internet. How can the company enable the Amazon SageMaker service without enabling direct internet access to Amazon SageMaker notebook instances?
     - [ ] A. 在公司VPC内创建一个NAT网关。 Create a NAT gateway within the corporate VPC.
     - [ ] B. 将Amazon SageMaker的流量通过企业内部的网络进行路由。 Route Amazon SageMaker traffic through an on-premises network.
     - [ ] C. 在企业内部创建Amazon SageMaker VPC接口端点。 Create Amazon SageMaker VPC interface endpoints within the corporate.
@@ -283,7 +283,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案A：SageMaker需要互联往链接才能训练了，所以需要添加NAT。
 
     </details>
 
@@ -309,11 +309,11 @@
     <details>
        <summary>Answer</summary>
 
-       简单题，答案C
+       答案C。
 
     </details>
 
-24. 一家宠物保险公司的营销经理计划在社交媒体上发起一个有针对性的营销活动，以获取新客户。目前，该公司在Amazon Aurora有以下数据： -所有过去和现有客户的档案。-所有过去和现有的被保险宠物的档案。-保单级别信息 -收到的保费 已支付的索赔。应该采取什么步骤来实现机器学习模型，以识别社交媒体上的潜在新客户？ A Marketing Manager at a pet insurance company plans to launch a targeted marketing campaign on social media to acquire new customers. Currently, the company has the following data in Amazon Aurora: -Profiles for all past and existing customers. -Profiles for all past and existing insured pets. -Policy level information -Premiums received Claims paid. What steps should be taken to implement a machine learning model to identify potential new customers on social media?
+24. 一家宠物保险公司的营销经理计划在社交媒体上发起一个有针对性的营销活动，以获取新客户。目前，该公司在Amazon Aurora有以下数据： -所有过去和现有客户的档案。-所有过去和现有的被保险宠物的档案。-保单级别信息 -收到的保费 -已支付的索赔。应该采取什么步骤来实现机器学习模型，以识别社交媒体上的潜在新客户？ A Marketing Manager at a pet insurance company plans to launch a targeted marketing campaign on social media to acquire new customers. Currently, the company has the following data in Amazon Aurora: -Profiles for all past and existing customers. -Profiles for all past and existing insured pets. -Policy level information -Premiums received -Claims paid. What steps should be taken to implement a machine learning model to identify potential new customers on social media?
     - [ ] A. 对客户资料数据进行回归，了解消费者群体的关键特征。在社交媒体上寻找类似的资料。 Use regression on customer profile data to understand key characteristics of consumer segments. Find similar profiles on social media.
     - [ ] B. 在客户资料数据上使用聚类，以了解消费者群体的关键特征。在社交媒体上寻找类似的资料。 Use clustering on customer profile data to understand key characteristics of consumer segments. Find similar profiles on social media.
     - [ ] C. 在客户资料数据上使用推荐引擎来了解消费者群体的主要特征。在社交媒体上寻找类似的资料。 Use a recommendation engine on customer profile data to understand key characteristics of consumer segments. Find similar profiles on social media.
@@ -322,7 +322,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：前面例子中的所有问题都依赖于拥有包括答案的例子数据。有的时候，你不需要，或者无法得到包含答案的例子数据。对于那些答案确定为群体的问题来说，情况就是如此。比如说。"我想把现有的和潜在的客户根据他们的属性分成10组。我应该如何分组？"你可能会选择将邮件发送给现有客户比例最高的组中的客户。也就是说，基于相同的属性，与现有客户最相似的潜在客户。对于这种类型的问题，Amazon SageMaker提供了K-Means算法。聚类算法是无监督的。在无监督学习中，可能与训练数据集中的对象有关的标签没有被使用。
 
     </details>
 
@@ -335,7 +335,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案D：HOW MANY/MUCH, THOSE ARE REGRESSION TOPIC, LOGISTIC FOR 0/1,YES/NO
 
     </details>
 
@@ -352,16 +352,16 @@
 
     </details>
 
-27. A company’s Machine Learning Specialist needs to improve the training speed of a time-series forecasting model using TensorFlow. The training is currently implemented on a single-GPU machine and takes approximately 23 hours to complete. The training needs to be run daily. The model accuracy is acceptable, but the company anticipates a continuous increase in the size of the training data and a need to update the model on an hourly, rather than a daily, basis. The company also wants to minimize coding effort and infrastructure changes. What should the Machine Learning Specialist do to the training solution to allow it to scale for future demand?
-    - [ ] A. Do not change the TensorFlow code. Change the machine to one with a more powerful GPU to speed up the training.
-    - [ ] B. Change the TensorFlow code to implement a Horovod distributed framework supported by Amazon SageMaker. Parallelize the training to as many machines as needed to achieve the business goals.
-    - [ ] C. Switch to using a built-in AWS SageMaker DEEPAR model. Parallelize the training to as many machines as needed to achieve the business goals.
-    - [ ] D. Move the training to Amazon EMR and distribute the workload to as many machines as needed to achieve the business goals.
+27. 某公司的机器学习专家需要提高使用TensorFlow的时间序列预测模型的训练速度。训练目前是在单GPU机器上实现的，大约需要23小时才能完成。训练需要每天运行。模型的准确性是可以接受的，但该公司预计训练数据的规模会不断增加，需要每小时而不是每天更新模型。该公司还希望尽量减少编码工作和基础设施的变化。机器学习专家应该对训练方案做什么，以使其能够根据未来的需求进行扩展？ A company’s Machine Learning Specialist needs to improve the training speed of a time-series forecasting model using TensorFlow. The training is currently implemented on a single-GPU machine and takes approximately 23 hours to complete. The training needs to be run daily. The model accuracy is acceptable, but the company anticipates a continuous increase in the size of the training data and a need to update the model on an hourly, rather than a daily, basis. The company also wants to minimize coding effort and infrastructure changes. What should the Machine Learning Specialist do to the training solution to allow it to scale for future demand?
+    - [ ] A. 不要改变TensorFlow的代码。把机器换成一个有更强大的GPU的机器，以加快训练速度。 Do not change the TensorFlow code. Change the machine to one with a more powerful GPU to speed up the training.
+    - [ ] B. 改变TensorFlow代码以实现由Amazon SageMaker支持的Horovod分布式框架。将训练平行化到所需的机器上，以实现业务目标。 Change the TensorFlow code to implement a Horovod distributed framework supported by Amazon SageMaker. Parallelize the training to as many machines as needed to achieve the business goals.
+    - [ ] C. 改为使用内置的AWS SageMaker DeepAR模型。根据实现业务目标的需要，将训练平行化到尽可能多的机器上。 Switch to using a built-in AWS SageMaker DEEPAR model. Parallelize the training to as many machines as needed to achieve the business goals.
+    - [ ] D. 将训练转移到亚马逊EMR，并将工作负载分配到所需的机器上，以实现业务目标。 Move the training to Amazon EMR and distribute the workload to as many machines as needed to achieve the business goals.
 
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：Horovod需要修改的代码最少。
 
     </details>
 
@@ -387,7 +387,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案A：[ref](https://aws.amazon.com/tw/blogs/machine-learning/use-the-built-in-amazon-sagemaker-random-cut-forest-algorithm-for-anomaly-detection/)。
 
     </details>
 
@@ -400,12 +400,12 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案A：[ref](https://aws.amazon.com/cn/about-aws/whats-new/2017/10/amazon-kinesis-analytics-can-now-pre-process-data-prior-to-running-sql-queries/)。
 
     </details>
 
 31. 一家零售公司打算使用机器学习来对新产品进行分类。向数据科学团队提供了一个当前产品的标记数据集。该数据集包括1,200种产品。标记的数据集对每个产品有15个特征，如标题尺寸、重量和价格。每个产品都被标记为属于六个类别中的一个，如书籍、游戏、电子产品和电影。使用所提供的数据集进行训练，哪种模型应该被用来对新产品进行分类？ A retail company intends to use machine learning to categorize new products. A labeled dataset of current products was provided to the Data Science team. The dataset includes 1,200 products. The labeled dataset has 15 features for each product such as title dimensions, weight, and price. Each product is labeled as belonging to one of six categories such as books, games, electronics, and movies. Which model should be used for categorizing new products using the provided dataset for training?
-    - [ ] A. 一个XGBboost模型，目标参数被设置为多：softmax。 An XGBboost model where the objective parameter is set to multi: softmax.
+    - [ ] A. 一个XGBboost模型，目标参数被设置为`multi:softmax`。 An XGBboost model where the objective parameter is set to `multi:softmax`.
     - [ ] B. 一个深度卷积神经网络（CNN），最后一层有一个softmax激活函数A deep convolutional neural network (CNN) with a softmax activation function for the last layer
     - [ ] C. 一个回归森林，树的数量被设置为等于产品类别的数量。 A regression forest where the number of trees is set equal to the number of product categories.
     - [ ] D. 一个基于循环神经网络（RNN）的DeepAR预测模型。 A DeepAR forecasting model based on a recurrent neural network (RNN).
@@ -426,20 +426,20 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案D：[ref](https://blog.csdn.net/weixin_30477293/article/details/96674133)。
 
     </details>
 
 33. 一位数据科学家需要将一个现有的企业内部ETL流程迁移到云端。目前的流程以固定的时间间隔运行，并使用PySpark将多个大型数据源合并和格式化为一个单一的综合输出，供下游处理。数据科学家对云解决方案有以下要求： -合并多个数据源。-重用现有的PySpark逻辑。-在现有的时间表上运行该解决方案。-最大限度地减少需要管理的服务器的数量。该数据科学家应该使用哪种架构来建立这个解决方案？ A Data Scientist needs to migrate an existing on-premises ETL process to the cloud. The current process runs at regular time intervals and uses PySpark to combine and format multiple large data sources into a single consolidated output for downstream processing. The Data Scientist has been given the following requirements to the cloud solution: -Combine multiple data sources. -Reuse existing PySpark logic. -Run the solution on the existing schedule. -Minimize the number of servers that will need to be managed. Which architecture should the Data Scientist use to build this solution?
     - [ ] A. 把原始数据写到Amazon S3。安排一个AWS Lambda函数，根据现有的时间表向一个持久的亚马逊EMR集群提交Spark步骤。使用现有的PySpark逻辑，在EMR集群上运行ETL工作。将结果输出到Amazon S3中的 "处理过的 "位置，供下游使用。 Write the raw data to Amazon S3. Schedule an AWS Lambda function to submit a Spark step to a persistent Amazon EMR cluster based on the existing schedule. Use the existing PySpark logic to run the ETL job on the EMR cluster. Output the results to a `processed` location in Amazon S3 that is accessible for downstream use.
     - [ ] B. 把原始数据写到Amazon S3。创建一个AWS Glue EL作业，对输入数据进行ETL处理。在PySpark中编写ETL工作，以利用现有的逻辑。创建一个新的AWS Glue触发器，根据现有的时间表触发ETL工作。配置ETL工作的输出目标，将其写入Amazon S3中的 "处理 "位置，供下游使用。 Write the raw data to Amazon S3. Create an AWS Glue EL job to perform the ETL processing against the input data. Write the ETL job in PySpark to leverage the existing logic. Create a new AWS Glue trigger to trigger the ETL job based on the existing schedule. Configure the output target of the ETL job to write to a `processed` location in Amazon S3 that is accessible for downstream use.
-    - [ ] C. 把原始数据写到Amazon S3。安排一个AWS Lambda函数在现有的时间表上运行，并处理来自Amazon S3的输入数据。用Python编写Lambda逻辑，并实现现有的PySpark逻辑，以执行ETL过程 让Lambda函数将结果输出到Amazon S3中的`处理`位置，供下游使用。 Write the raw data to Amazon S3. Schedule an AWS Lambda function to run on the existing schedule and process the input data from Amazon S3. Write the Lambda logic in Python and implement the existing PySpark logic to perform the ETL process Have the Lambda function output the results to a `processed` location in Amazon S3 that is accessible for downstream use.
+    - [ ] C. 把原始数据写到Amazon S3。安排一个AWS Lambda函数在现有的时间表上运行，并处理来自Amazon S3的输入数据。用Python编写Lambda逻辑，并实现现有的PySpark逻辑，以执行ETL过程 让Lambda函数将结果输出到Amazon S3中的`processed`位置，供下游使用。 Write the raw data to Amazon S3. Schedule an AWS Lambda function to run on the existing schedule and process the input data from Amazon S3. Write the Lambda logic in Python and implement the existing PySpark logic to perform the ETL process Have the Lambda function output the results to a `processed` location in Amazon S3 that is accessible for downstream use.
     - [ ] D. 使用Amazon Kinesis Data Analytics来流化输入数据，并对流进行实时SQL查询，以在流中进行所需的转换。将输出结果交付给Amazon S3中的`处理`位置，供下游使用。 Use Amazon Kinesis Data Analytics to stream the input data and perform real-time SQL queries against the stream to carry out the required transformations within the stream. Deliver the output results to a `processed` location in Amazon S3 that is accessible for downstream use.
   
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：无服务的。
 
     </details>
 
@@ -484,7 +484,14 @@
     <details>
        <summary>Answer</summary>
 
-       答案C。
+       答案C
+       TP=10, TN=76, FP=10, FN=4
+       准确度=（TP+TN）/（TP+TN+FP+FN）=（10+76）/（10+76+10+4）=86
+      - 所以现在可以是A或C
+      - 现在公司可以支付奖励，但不能失去一个客户。
+      - 这意味着如果你错误地预测一个客户将离开并给他奖励，公司是可以接受的。
+      - 但是反过来说，如果你错误地预测一个客户不会离开（即使他会离开），这将给公司带来很大的损失，所以你不应该把客户退订的阳性案例预测为没有退订，这意味着你不应该错误地预测阳性退订并把它标记为阴性。
+      - 假阳性比假阴性对公司的损失要小。
 
     </details>
 
@@ -527,16 +534,16 @@
 
     </details>
 
-40. 一个城市希望监测其空气质量，以解决空气污染的后果。一位机器学习专家需要预测该城市未来2天的空气质量，单位为百万分之一的污染物。由于这是一个原型，只有过去一年的每日数据可用，哪个模型最有可能在Amazon SageMaker中提供最佳结果？ A city wants to monitor its air quality to address the consequences of air pollution. A Machine Learning Specialist needs to forecast the air quality in parts per million of contaminates for the next 2 days in the city. As this is a prototype, only daily data from the last year is available Which model is MOST likely to provide the best results in Amazon SageMaker?
-    - [ ] A. 在由全年数据组成的单一时间序列上使用Amazon SageMaker的K-Nearest-Neighbors（KNN）算法，并使用预测器类型的回归器。 Use the Amazon SageMaker K-Nearest-Neighbors (KNN) algorithm on the single time series consisting of the full year of data with a predictor type of regressor.
-    - [ ] B. 在由全年数据组成的单一时间序列上使用Amazon SageMaker随机切割森林（RCF）。 Use Amazon SageMaker Random Cut Forest (RCF) on the single time series consisting of the full year of data.
-    - [ ] C. 在由全年数据组成的单一时间序列上使用Amazon SageMaker Linear Learner算法，其预测器类型为regressor。 Use the Amazon SageMaker Linear Learner algorithm on the single fire series consisting of the full year of data with a predictor type of regressor.
-    - [ ] D. 在由全年数据组成的单一时间序列上使用Amazon SageMaker Linear Learner算法，预测器类型为分类器。 Use the Amazon SageMaker Linear Learner algorithm on the single time series consisting of the full year of data with a predictor type of classifier.
+40. 一位数据工程师需要使用包含客户信用卡信息的数据集建立一个模型。数据工程师如何确保数据的加密和信用卡信息的安全？ A Data Engineer needs to build a model using a dataset containing customer credit card information. How can the Data Engineer ensure the data remains encrypted and the credit card information is secure?
+    - [ ] A. 使用自定义的加密算法对数据进行加密，并将数据存储在VPC中的Amazon SageMaker实例上。使用SageMaker DeepAR算法来随机化信用卡号码。 Use a custom encryption algorithm to encrypt the data and store the data on an Amazon SageMaker instance in a VPC. Use the SageMaker DeepAR algorithm to randomize the credit card numbers.
+    - [ ] B. 使用IAM策略来加密Amazon S3桶上的数据，Amazon Kinesis自动丢弃信用卡号码，并插入假的信用卡号码。 Use an IAM policy to encrypt the data on the Amazon S3 bucket and Amazon Kinesis to automatically discard credit card numbers and insert fake credit card numbers.
+    - [ ] C. 使用Amazon SageMaker启动配置，一旦数据被复制到VPC中的SageMaker实例，就对其进行加密。使用SageMaker主成分分析（PCA）算法来减少信用卡号码的长度。 Use an Amazon SageMaker launch configuration to encrypt the data once it is copied to the SageMaker instance in a VPC. Use the SageMaker principal component analysis (PCA) algorithm to reduce the length of the credit card numbers.
+    - [ ] D. 使用AWS KMS对Amazon S3和Amazon SageMaker上的数据进行加密，并使用AWS Glue对客户数据中的信用卡号码进行编辑。 Use AWS KMS to encrypt the data on Amazon S3 and Amazon SageMaker and redact the credit card numbers from the customer data with AWS Glue.
 
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案D：当在S3上加密的数据和SageMaker使用相同的AWS KMS密钥时，它可以在那里使用加密的数据。
 
     </details>
 
