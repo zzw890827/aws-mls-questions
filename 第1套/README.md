@@ -556,7 +556,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案C。
+       答案C：[ref](https://docs.aws.amazon.com/zh_cn/sagemaker/latest/dg/gs-setup-working-env.html)。
 
     </details>
 
@@ -569,7 +569,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：[ref](https://docs.aws.amazon.com/zh_cn/sagemaker/latest/dg/monitoring-cloudwatch.html)。
 
     </details>
 
@@ -582,7 +582,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：使用AWS Glue对数据进行编目，Amazon Athena对S3上的数据运行查询，是这些服务非常典型的用例。
 
     </details>
 
@@ -595,7 +595,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案A：使用pipe模式，答案在AC，Glue不能用作训练。
 
     </details>
 
@@ -635,7 +635,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案AD。
+       答案AD：CloudTrail用于跟踪科学家部署模型的频率。CloudWatch用于监控GPU和CPU。
 
     </details>
 
@@ -648,7 +648,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案D：问题有"简单的转换，一些属性将被合并"和最小的开发努力。Kinesis分析可以从Firehose获取数据，转换并写入S3。
 
     </details>
 
@@ -661,7 +661,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案C, Softmax分类器可以理解为逻辑回归分类器面对多分类问题的一般化归纳。
+       答案C： softmax是将数字变成概率。
 
     </details>
 
@@ -674,7 +674,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：残差图的分布表明了高估或低估的情况，AUC和混淆矩阵用于分类问题，而不是回归。RMSE说的是误差值，而不是误差的符号。
 
     </details>
 
@@ -703,11 +703,11 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案D：这是一个非常棘手的问题。我们的想法是重新配置超参数的范围。A指的是一个特征，而不是一个超参数。A出局了。C指的是训练模型，而不是优化超参数的范围。C不适用。现在变得很棘手了。D会让你找到确定近似最佳树的深度。这很好。这就是你要做的，但它只是众多超参数中的一个。这是目前最好的选择。B很棘手。t-SNE确实能帮助你将多维数据可视化，但选项B指的是输入变量，而不是超参数。对于这个非常棘手的问题，我会选择D。它是唯一一个能完成限制超参数范围的任务的，即使它只是其中之一。
 
     </details>
 
-53. 一位机器学习专家正在创建一个新的自然语言处理应用程序，处理一个由一百万句子组成的数据集。其目的是运行Word2Vec来生成句子的嵌入，并实现不同类型的预测。下面是数据集中的一个例子。"棕色的狐狸跳过懒惰的狗"。以下哪些是专家需要执行的操作，以正确消毒和准备数据的可重复方式？(选择三个) A Machine Learning Specialist is creatin a new natural language processing application that processes a dataset comprised of one million sentences. The aim is to then run Word2Vec to generate embeddings of the sentences and enable different types of predictions. Here is an example from the dataset: “The quck BROWN FOX jumps over the lazy dog.” Which of the following are the operations the specialist needs to perform to correctly sanitize and prepare the data a repeatable manner? (Choose three)
+53. 一位机器学习专家正在创建一个新的自然语言处理应用程序，处理一个由一百万句子组成的数据集。其目的是运行Word2Vec来生成句子的嵌入，并实现不同类型的预测。下面是数据集中的一个例子。`The quck BROWN FOX jumps over the lazy dog.`。以下哪些是专家需要执行的操作，以正确消毒和准备数据的可重复方式？(选择三个) A Machine Learning Specialist is creatin a new natural language processing application that processes a dataset comprised of one million sentences. The aim is to then run Word2Vec to generate embeddings of the sentences and enable different types of predictions. Here is an example from the dataset: `The quck BROWN FOX jumps over the lazy dog.` Which of the following are the operations the specialist needs to perform to correctly sanitize and prepare the data a repeatable manner? (Choose three)
     - [ ] A. 进行语义部分标记，只保留动作动词和名词。 Perform part-of-speech tagging and keep the action verb and the nouns only.
     - [ ] B. 通过使句子小写来规范所有单词。 Normalize all words by making the sentence lowercase.
     - [ ] C. 使用英语停止词词典删除停止词。 Remove stop words using an English stop word dictionary.
@@ -722,7 +722,7 @@
 
     </details>
 
-54. A Data Scientist is evaluating different binary classification models. A false positive result is 5 times more expensive (from a business perspective) than a false negative result. The models should be evaluated based on the following criteria: 1) Must have a recall rate of at least 80%. 2) Must have a false positive rate of 10 or less. 3) Must minimize business costs. After creating each binary classification model, the Data Scientist generates the corresponding confusion matrix Which confusion matrix represents the model that satisfies the requirements?
+54. 一位数据科学家正在评估不同的二进制分类模型。一个错误的阳性结果比一个错误的阴性结果要昂贵5倍（从商业角度来看）。应该根据以下标准来评估这些模型。1）必须有至少80%的召回率。2) 必须有10%或更少的假阳性率。3）必须使商业成本最小化。在创建每个二元分类模型后，数据科学家会生成相应的混淆矩阵。哪个混淆矩阵代表满足要求的模型？ A Data Scientist is evaluating different binary classification models. A false positive result is 5 times more expensive (from a business perspective) than a false negative result. The models should be evaluated based on the following criteria: 1) Must have a recall rate of at least 80%. 2) Must have a false positive rate of 10% or less. 3) Must minimize business costs. After creating each binary classification model, the Data Scientist generates the corresponding confusion matrix. Which confusion matrix represents the model that satisfies the requirements?
     - [ ] A.TN=91, FP=9, FN=22, TP=78
     - [ ] B.TN=99, FP=1, FN=21, TP=79
     - [ ] C.TN=96, FP=4, FN=10, TP=90
