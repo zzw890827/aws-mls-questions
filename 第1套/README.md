@@ -753,13 +753,13 @@
 56. 机器学习专家正在建立一个模型，以预测基于广泛的经济行为者的未来就业率，同时探索数据，专家注意到输入特征的大小差异很大。专家不希望幅度较大的变量在模型中占主导地位。专家应该做什么来准备模型训练的数据？ Machine Learning specialist is building a model to predict future employment rates based on a wide range of economic actors while exploring the data, the Specialist notices that the magnitude of the input features vary greatly. The Specialist does not want variables with a larger magnitude to dominate the model. What should the Specialist do to prepare the data for model training?
     - [ ] A. 应用量化分档法，将数据分为分类分档，通过用分布代替幅度来保持数据中的任何关系。 Apply quantile binning to group the data into categorical bins to keep any relationships in the data by replacing the magnitude with distribution.
     - [ ] B. 应用笛卡尔乘积转换，创建独立于幅度的新组合字段。 Apply the Cartesian product transformation to create new combinations of fields that are independent of the magnitude.
-    - [ ] C. 应用归一化，确保每个字段的平均值为0，方差为1，以消除任何重要的幅度。 Apply normalization to ensure each field will have a mean of 0 and a variance of I to remove any significant magnitude.
+    - [ ] C. 应用标准化，确保每个字段的平均值为0，方差为1，以消除任何重要的幅度。 Apply normalization to ensure each field will have a mean of 0 and a variance of I to remove any significant magnitude.
     - [ ] D. 应用正交稀疏大图（OSB）变换，应用固定大小的滑动窗口来产生类似幅度的新特征。 Apply the orthogonal sparse bigram (OSB) transformation to apply a fixed-size sliding window to generate new features of a similar magnitude.
 
     <details>
        <summary>Answer</summary>
 
-       答案C: [ref](https://docs.aws.amazon.com/zh_cn/machine-learning/latest/dg/data-transformations-reference.html)
+       答案C。
 
     </details>
 
@@ -785,7 +785,10 @@
     <details>
        <summary>Answer</summary>
 
-       答案A: [ref](https://aws.amazon.com/cn/step-functions/use-cases/)
+       - A: 正确。S3事件可以触发AWS Lambda函数。
+       - B: 错了。在提供的上下文中，与SageMaker没有任何关系。
+       - C: 错了。AWS Batch 不能直接接收来自 S3 的事件。
+       - D: 错了。将不会满足要求。"当所有的数据集在Amazon S3中可用时..."
 
     </details>
 
@@ -799,7 +802,11 @@
     <details>
        <summary>Answer</summary>
 
-       答案CD。
+       - C：正确。使用PCA来减少变量的数量。每个公民的回答应该有500个问题的答案，所以它应该有500个变量。
+       - D: 正确。使用K-means聚类法
+       - A: 错误。因子化机器算法通常用于处理高维稀疏数据集的任务。
+       - B: 错误。Latent Dirichlet Allocation（LDA）算法应该用于处理NLP中的主题建模任务。
+       - E: 错误。随机切割森林应该用于检测数据中的异常情况。
 
     </details>
 
@@ -842,7 +849,7 @@
 
     </details>
 
-63. 一位机器学习工程师正在准备一个数据框架，用于使用Amazon SageMaker近似学习者算法的监督学习请求。该ML工程师注意到目标标签类是高度不平衡的，并且多个特征列包含缺失值。在整个数据框架中，缺失值的比例小于5。M工程师应该做什么来减少由于缺失值造成的偏差？ A Machine Learning Engineer is preparing a data frame for a supervised learning ask with the Amazon SageMaker near Learner algorithm. The ML Engineer notices the target label classes are highly imbalanced and multiple feature columns contain missing values. The proportion of missing values across the entire data frame is less than 5. What should the M Engineer do to minimize bias due to missing values?
+63. 一位机器学习工程师正在准备一个数据框架，用于使用Amazon SageMaker近似学习者算法的监督学习请求。该ML工程师注意到目标标签类是高度不平衡的，并且多个特征列包含缺失值。在整个数据框架中，缺失值的比例小于5%。ML工程师应该怎么做才能将缺失值造成的偏差降到最低？ A Machine Learning Engineer is preparing a data frame for a supervised learning ask with the Amazon SageMaker near Learner algorithm. The ML Engineer notices the target label classes are highly imbalanced and multiple feature columns contain missing values. The proportion of missing values across the entire data frame is less than 5%. What should the ML Engineer do to minimize bias due to missing values?
     - [ ] A. 用同一行中非缺失值的平均数或中位数来替换每个缺失值。 Replace each missing value by the mean or median across non-missing values in same row.
     - [ ] B. 删除包含缺失值的观察值，因为这些观察值只占数据的50％以下。 Delete observations that contain missing values because these represent less than 50 of the data.
     - [ ] C. 用同一列中非缺失值的平均数或中位数替换每个缺失值。 Replace each missing value by the mean or median across non-missing values in the same column.
@@ -890,7 +897,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：[ref](https://docs.aws.amazon.com/zh_cn/quicksight/latest/user/making-data-driven-decisions-with-ml-in-quicksight.html)。
 
     </details>
 
@@ -947,7 +954,7 @@
     </details>
 
 71. 一家公司正在使用Amazon SageMaker为一项在线服务部署一个新版本的分类模型。服务利用率接近24/7，而且没有定义维护窗口来部署和测试新模型。公司高管担心，如果新模型在生产中表现得不尽如人意，可能会对用户体验产生影响。在Amazon SageMaker上部署新模型的最简单的方法是什么，以减少对用户体验的潜在影响？ A company is deploying a new version of a classification model for an online service using Amazon SageMaker. Service utilization is close to 24/7, and there are no maintenance windows defined to deploy and test the new model. Company executives are concerned about the potential impact on user experience if the new model does not behave as expected in production. What is the SIMPLEST way to deploy the new model on Amazon SageMaker to reduce the potential impact on user experience?
-    - [ ] A. 在与现有模型相同的端点上，将新模型部署为生产型var ant，保证初始流量为50%，然后逐渐减少流量。 Deploy the new model as a production var ant on the same endpoint as the existing model conure an initial traffic flow of 50%, and then gradually decrease the traffic flow.
+    - [ ] A. 将新模型作为生产变体部署在与现有模型相同的端点上，假定初始流量为50%，然后逐渐减少流量。 Deploy the new model as a production variant on the same endpoint as the existing model conure an initial traffic flow of 50%, and then gradually decrease the traffic flow.
     - [ ] B. 在一个端点上部署新模型，用弹性负载平衡器分配用户请求。 Deploy the new model on an endpoint and distribute user requests with an Elastic Load Balancer.
     - [ ] C. 将新模型作为生产变体部署在与现有模型相同的端点上，确定初始流量为10%，然后逐渐增加流量。 Deploy the new model as a production variant on the same endpoint as the existing model, conure an initial traffic low of 10%, and then gradually increase the traffic flow.
     - [ ] D. 在一个端点上部署新模型，用Amazon CloudFront分配用户请求。 Deploy the new model on an endpoint and distribute user requests with Amazon CloudFront.
