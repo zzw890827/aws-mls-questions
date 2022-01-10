@@ -98,7 +98,9 @@
     <details>
       <summary>Answer</summary>
 
-      答案CD。
+      答案CD：
+      - C: 因为我们需要一个平衡的数据集。
+      - D: 阳性样本的数量很大，所以模型倾向于对所有情况预测为0（阴性），导致假阴性问题。我们应该尽量减少这种情况。
 
    </details>
 
@@ -653,7 +655,7 @@
     </details>
 
 49. 一位机器学习专家正在构建一个卷积神经网络（CNN），它将对10种类型的动物进行分类。该专家在一个神经网络中建立了一系列的层，它将接收一个动物的输入图像，通过一系列的卷积层和池化层，最后再通过一个有10个节点的密集全连接层。专家希望从神经网络中得到一个输出，这个输出是输入图像属于10个类别中每个类别的概率分布，哪个函数会产生所需的输出？ A Machine Learning Specialist is building a convolutional neural network (CNN) that will classify 10 types of animals. The Specialist has built a series of layers in a neural network that will take an input image of an animal, pass it through a series of convolutional and pooling layers, and then finally pass it through a dense and fully connected layer with 10 nodes. The Specialist would like to get an output from the neural network that is a probability distribution of how likely it is that the input image belongs to each of the 10 classes Which function will produce the desired output?
-    - [ ] A Dropout
+    - [ ] A. Dropout
     - [ ] B. Smooth L1 loss
     - [ ] C. Softmax
     - [ ] D. Rectified linear units (ReLU)
