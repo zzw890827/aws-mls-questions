@@ -41,7 +41,7 @@
    <details>
       <summary>Answer</summary>
 
-      答案C。
+      答案C：带有非线性核的SVM适用于非线性聚类。即使形状接近于矩形。带有非线性核的SVM将是接近于矩形边界形状的。
 
    </details>
 
@@ -80,7 +80,7 @@
     <details>
       <summary>Answer</summary>
 
-      答案C。
+      答案C：QuickSight搞不定100TB的数据。
 
    </details>
 
@@ -119,7 +119,7 @@
    <details>
       <summary>Answer</summary>
 
-      答案C。
+      答案C：题的重点是数据转换为Parquet格式，而这是由Kinesis Data Firehose而不是Data Stream完成的。关于数据存储，Kinesis数据流中的数据存储只有几天的时间，所以它在这里没有作用。
 
    </details>
 
@@ -140,7 +140,7 @@
 
     </details>
 
-11. 一位机器学习专家被分配到一个TensorFlow项目唱Amazon SageMaker进行训练，并需要在没有WI-FI接入的情况下继续工作很长一段时间。该专家应该使用哪种方法来继续工作？ A Machine Learning Specialist is assigned a TensorFlow project sing Amazon SageMaker for training and needs to continue working for an extended period with no WI-FI access. Which approach should the Specialist use to continue working?
+11. 一位机器学习专家被分配了一个使用Amazon SageMaker进行培训的TensorFlow项目，并需要在没有WI-FI接入的情况下继续工作很长一段时间。该专家应该使用哪种方法来继续工作？ A Machine Learning Specialist is assigned a TensorFlow project using Amazon SageMaker for training and needs to continue working for an extended period with no WI-FI access. Which approach should the Specialist use to continue working?
     - [ ] A. 在他们的笔记本电脑上安装Python 3和boto3，并使用该环境继续进行代码开发。 Install Python 3 and boto3 on their laptop and continue the code development using that environment
     - [ ] B. 从GitHub下载Amazon SageMaker中使用的TensorFlow Docker容器到他们的本地环境，并使用Amazon SageMaker Python SDK来测试代码。 Download the TensorFlow Docker container used in Amazon SageMaker from GitHub to their local environment and use the Amazon SageMaker Python SDK to test the code.
     - [ ] C. 从tensorflow.org下载TensorFlow，在SageMaker环境中模拟TensorFlow内核。 Download TensorFlow from tensorflow.org to emulate the TensorFlow kernel in the SageMaker environment.
@@ -149,7 +149,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：[ref](https://aws.amazon.com/cn/blogs/machine-learning/use-the-amazon-sagemaker-local-mode-to-train-on-your-notebook-instance/)。
 
     </details>
 
@@ -175,7 +175,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案D：应该增加还是减少权重，使误差小于当前值？你需要检查变化的量来知道这一点。因此，我们进行微分，检查切线的斜率是正的还是负的，并向减少误差的方向更新权重值。这个操作反复进行，以接近目标的最优解。这时，更新量的宽度很重要，它由学习率决定。
 
     </details>
 
@@ -214,7 +214,14 @@
     <details>
        <summary>Answer</summary>
 
-       答案A：[ref](https://docs.aws.amazon.com/zh_cn/machine-learning/latest/dg/binary-model-insights.html)
+       答案A
+       - ROC曲线（接收者操作特征曲线）是一个显示分类模型在所有分类阈值下的性能的图形。该曲线绘制了两个参数。
+       - 真阳性率
+       - 假阳性率
+       - 真实阳性率（TPR）是召回率的同义词，因此定义如下。
+         - TPR=TP/TP+FN
+       - 假阳性率（FPR）定义如下。
+         - FPR = FP/FP+TN
 
     </details>
 
@@ -301,7 +308,7 @@
     </details>
 
 23. 一个数据科学家使用Amazon SageMaker笔记本实例来进行数据探索和分析。这需要在笔记本实例上安装Amazon SageMaker上没有的某些Python包。机器学习专家如何确保所需的包在笔记本实例上自动可用，供数据科学家使用？ A Data Scientist uses an Amazon SageMaker notebook instance to conduct data exploration and analysis. This requires certain Python packages that are not natively available on Amazon SageMaker to be installed on the notebook instance. How can a Machine Learning Specialist ensure that required packages are automatically available on the notebook instance for the Data Scientist to use?
-    - [ ] A. 在底层的Amazon EC实例上安装AWS系统管理器代理，并使用系统管理器自动化来执行包安装命令。 Install AWS System Manager Agent on the underlying Amazon EC instance and use Systems Manager Automation to execute the package installation commands.
+    - [ ] A. 在底层的Amazon EC2实例上安装AWS系统管理器代理，并使用系统管理器自动化来执行包安装命令。 Install AWS System Manager Agent on the underlying Amazon EC2 instance and use Systems Manager Automation to execute the package installation commands.
     - [ ] B. 创建一个Jupyter笔记本文件（.ipynb），其中包含要执行的包安装命令的单元，并将该文件放在每个Amazon SageMaker笔记本实例的`/etc/init`目录下。 Create a Jupyter notebook file (.ipynb) with cells containing the package installation commands to execute and place the file under the `/etc/init` directory of each Amazon SageMaker notebook instance.
     - [ ] C. 在Jupyter笔记本控制台中使用conda包管理器，将必要的conda包应用于笔记本的默认内核。 Use the conda package manager from within the Jupyter notebook console to apply the necessary conda packages to the default kernel of the notebook.
     - [ ] D. 使用包安装命令创建Amazon SageMaker生命周期配置，并将生命周期配置分配给笔记本实例。 Create an Amazon SageMaker lifecycle configuration with package installation commands and assign the lifecycle configuration to the notebook instance.
@@ -393,7 +400,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：对数变换将偏态分布转换为正态分布。
 
     </details>
 
@@ -410,16 +417,16 @@
 
     </details>
 
-31. 一位机器学习专家正在为一家在线零售商工作，该零售商希望对每个客户的访问进行分析，通过机器学习管道进行处理。数据需要以每秒100个交易的速度被亚马逊Kinesis数据流摄取，SON数据blob的大小为100KB。专家应该使用Kinesis数据流中的最小分片数来成功摄取这些数据？ A Machine Learning Specialist is working for an online retailer that wants to run analytics on every customer visit, processed through a machine learning pipeline. The data needs to be ingested by Amazon Kinesis Data Streams at up to 100 transactions per second, and the SON data blob is 100 KB in size. What in the MINIMUM number of shards in Kinesis Data Streams the Specialist should use to successfully ingest this data?
+31. 需要一名机器学习专家为一家网店工作，该网店希望使用机器学习管道对每个客户访问进行分析。必须使用亚马逊Kinesis数据流以每秒100个交易的速度摄取数据，并且JSON数据blob的大小必须是100KB。专家应该在Kinesis数据流中采用的最小分片数是多少，以有效地摄取这些数据？ A Machine Learning Specialist is required to work for an online shop that want to do analytics on each client visit using a machine learning pipeline. The data must be ingested at a rate of up to 100 transactions per second using Amazon Kinesis Data Streams, and the JSON data blob must be 100 KB in size. What is the MINIMUM number of shards that the Specialist should employ in Kinesis Data Streams to effectively ingest this data?
     - [ ] A. 1 shard
     - [ ] B. 10 shards
     - [ ] C. 100 shards
     - [ ] D. 1,000 shards
   
     <details>
-       <summary>Answer</summary>
+       <summary>Answer</summary> 
 
-       答案B: [ref](https://docs.aws.amazon.com/zh_cn/streams/latest/dev/service-sizes-and-limits.html)
+       答案B: 1shard可以插入1MB/或者1,000records/s,100*100KB=10MB，所以10个shards。
 
     </details>
 
@@ -473,12 +480,12 @@
     <details>
        <summary>Answer</summary>
 
-       答案C。
+       答案C：需要减少保留其信息的特征，这是使用PCA实现的。。
 
     </details>
 
-36. 一位机器学习专家将OT土壤传感器数据存储在Amazon DynamoDB表中，将天气事件数据作为JSON文件存储在Amazon S3中。DynamoDB中的数据集大小为10GB，Amazon S3中的数据集大小为5GB。专家想在这些数据上训练一个模型，以帮助预测土壤湿度，作为使用Amazon SageMaker的天气事件的一个函数。哪种解决方案可以完成必要的转换，以训练Amazon SageMaker模型，并且管理费用最少？ A Machine Learning Specialist stores OT soil sensor data in an Amazon DynamoDB table and stores weather event data as JSON files in Amazon S3. The dataset in DynamoDB is 10 GB in size and the dataset in Amazon S3 is 5 GB in size. The Specialist wants to train a model on this data to help predict soil moisture levels as a function of weather events using Amazon SageMaker. Which solution will accomplish the necessary transformation to train the Amazon SageMaker model with the LEAST amount of administrative overhead?
-    - [ ] A. 启动一个Amazon EMR集群。为 DYNAMODB 表和 S3 数据创建一个 Apache Hive 外部表。连接Hive表，并将结果写到Amazon S3。 Launch an Amazon EMR cluster. Create an Apache Hive external table for the DYNAMODB table and S3 data. Join the Hive tables and write the results out to Amazon S3.
+36. 一位机器学习专家将IoT土壤传感器数据存储在Amazon DynamoDB表中，将天气事件数据作为JSON文件存储在Amazon S3中。DynamoDB中的数据集大小为10GB，Amazon S3中的数据集大小为5GB。专家想在这些数据上训练一个模型，以帮助预测土壤湿度，作为使用Amazon SageMaker的天气事件的一个函数。哪种解决方案可以完成必要的转换，以训练Amazon SageMaker模型，并且管理费用最少？ A Machine Learning Specialist stores IoT soil sensor data in an Amazon DynamoDB table and stores weather event data as JSON files in Amazon S3. The dataset in DynamoDB is 10 GB in size and the dataset in Amazon S3 is 5 GB in size. The Specialist wants to train a model on this data to help predict soil moisture levels as a function of weather events using Amazon SageMaker. Which solution will accomplish the necessary transformation to train the Amazon SageMaker model with the LEAST amount of administrative overhead?
+    - [ ] A. 启动一个Amazon EMR集群。为 DynamoDB表和S3数据创建一个 Apache Hive 外部表。连接Hive表，并将结果写到Amazon S3。 Launch an Amazon EMR cluster. Create an Apache Hive external table for the DynamoDB table and S3 data. Join the Hive tables and write the results out to Amazon S3.
     - [ ] B. 使用AWS Glue爬虫来抓取数据。编写一个AWS Glue ETL作业，合并两个表并将输出写入Amazon Redshift集群。 Crawl the data using AWS Glue crawlers. Write an AWS Glue ETL job that merges the two tables and writes the output to an Amazon Redshift cluster.
     - [ ] C. 在传感器表上启用Amazon DynamoDB Streams。编写一个AWS Lambda函数，消耗流并将结果附加到Amazon S3中的现有天气文件。 Enable Amazon DynamoDB Streams on the sensor table. Write an AWS Lambda function that consumes the stream and appends the results to the existing weather files in Amazon S3.
     - [ ] D. 使用AWS Glue爬虫来抓取数据。编写一个AWS Glue ETL作业，将两个表合并，并将CSV格式的输出写到Amazon S3。 Crawl the data using AWS Glue crawlers. Write an AWS Glue ETL job that merges the two tables and writes the output in CSV format to Amazon S3.
@@ -486,12 +493,12 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案B。
 
     </details>
 
 37. 一家飞机发动机制造公司正在测量时间序列中的200个性能指标。工程师们希望在测试过程中以近乎实时的方式检测出关键的制造缺陷。所有的数据都需要被存储起来，以便进行离线分析。哪种方法对进行近实时的缺陷检测最有效？ An aircraft engine manufacturing company is measuring 200 performance metrics in a time-series. Engineers want to detect critical manufacturing defects in near-real time during testing. All of the data needs to be stored for offline analysis. What approach would be the MOST effect to perform near-real time defect detection?
-    - [ ] A. 使用AWS IoT Analytics进行摄取、存储和进一步分析。使用AWS IT分析中的Jupyter笔记本来进行异常情况的分析。 Use AWS IoT Analytics for ingestion, storage, and further analysis. Use Jupyter notebooks from within AWS IT Analytics to carry our analysis for anomalies.
+    - [ ] A. 使用AWS IoT Analytics进行摄取、存储和进一步分析。使用AWS IoT分析中的Jupyter笔记本来进行异常情况的分析。 Use AWS IoT Analytics for ingestion, storage, and further analysis. Use Jupyter notebooks from within AWS IoT Analytics to carry our analysis for anomalies.
     - [ ] B. 使用Amazon S3进行摄取存储和进一步分析。使用亚马逊EMR集群来进行Apache Spark ML k-means聚类，以确定异常情况。 Use Amazon S3 for ingestion storage, and further analysis. Use an Amazon EMR cluster to carry out Apache Spark ML k-means clustering to determine anomalies.
     - [ ] C. 使用亚马逊S3进行摄取、存储和进一步分析。使用Amazon SageMaker随机切割森林（RCF）算法来确定异常情况。 Use Amazon S3 for ingestion, storage, and further analysis. Use the Amazon SageMaker Random Cut Forest (RCF) algorithm to determine anomalies.
     - [ ] D. 使用Amazon Kinesis Data Firehose进行摄取，使用Amazon Kinesis Data Analytics Random Cut Forest（RCF）进行异常检测。使用Kinesis Data Firehose将数据存储在Amazon S3中，以便进一步分析。 Use Amazon Kinesis Data Firehose for ingestion and Amazon Kinesis Data Analytics Random Cut Forest (RCF) to perform anomaly detection. Use Kinesis Data Firehose to store data in Amazon S3 for further analysis.
@@ -499,7 +506,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案D：D接近实时。
 
     </details>
 
@@ -526,7 +533,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案DE。
+       答案DE：增加Recall率。
 
     </details>
 
@@ -541,7 +548,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案ADF。
+       答案ADF：[ref](https://www.examtopics.com/discussions/amazon/view/7204-exam-aws-certified-solutions-architect-professional-topic-1/)。
 
     </details>
 
