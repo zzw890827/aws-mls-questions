@@ -1,15 +1,15 @@
 # AWS MLS 131-228
 
-1. 一位数据科学家正在开发一个二进制分类器，以预测一个专利是否患有一系列测试结果中的特定疾病。该数据科学家拥有从人口中随机抽取的400名病人的数据。该疾病出现在3%的人口中。该数据科学家应该采用哪种交叉验证策略？ A Data Scientist is developing a binary classier to predict whether a patent has a particular disease on a series of test results. The Data Scientist has data on 400 patients randomly selected from the population. The disease is seen in 3% of the population. Which cross-validation strategy should the Data Scientist adopt?
+1. 一位数据科学家正在开发一个二进制分类器，以预测一个患者是否患有一系列测试结果中的特定疾病。该数据科学家拥有从人口中随机抽取的400名病人的数据。该疾病出现在3%的人口中。该数据科学家应该采用哪种交叉验证策略？ A Data Scientist is developing a binary classier to predict whether a patient has a particular disease on a series of test results. The Data Scientist has data on 400 patients randomly selected from the population. The disease is seen in 3% of the population. Which cross-validation strategy should the Data Scientist adopt?
    - [ ] A. 一个k-fold交叉验证策略，`k=5`。 A k-fold cross-validation strategy with `k=5`.
-   - [ ] B. 一个分层的k-折交叉验证策略，`k=5`。 A stratified k-fold cross-validation strategy with `k=5`.
+   - [ ] B. 一个分层的k-fold交叉验证策略，`k=5`。 A stratified k-fold cross-validation strategy with `k=5`.
    - [ ] C. 一个k-fold交叉验证策略，`k=5`和3次重复。 A k-fold cross-validation strategy with `k=5` and 3 repeats.
    - [ ] D. 训练和验证之间的80/20分层分割。 An 80/20 stratified split between training and validation.
 
    <details>
       <summary>Answer</summary>
 
-      答案B。
+      答案B：分层的k-fold交叉验证将强制要求每个分割数据中的类别分布与完整训练数据集中的分布相匹配。
 
    </details>
 
@@ -25,7 +25,7 @@
    <details>
       <summary>Answer</summary>
 
-      答案C。
+      答案B：基于elbow method。
 
    </details>
 
@@ -90,7 +90,7 @@
     <details>
       <summary>Answer</summary>
 
-      答案C。
+      答案D。
 
    </details>
 
@@ -121,11 +121,11 @@
    <details>
       <summary>Answer</summary>
 
-      答案C。
+      答案C：SageMakerVariantInvocationsPerInstance = (MAX_RPS * SAFETY_FACTOR) * 60。
 
    </details>
 
-10. 一家公司使用一个长短期记忆（STM）模型来评估某个能源部门的风险因素。该模型审查多页文本文件，分析文本的每一句话，并将其归类为潜在风险或无风险。尽管数据科学家已经试验了许多不同的网络结构，并调整了相应的超参数，但该模型的表现并不理想 哪种方法能提供最大的性能提升？ A company uses a long short-term memory (STM) model to evaluate the risk factors of a particular energy sector. The model reviews multi-page text documents to analyze each sentence of the text and categorize it as either a potential risk or no risk. The model is not performing well, even though the Data Scientist has experimented with many different network structures and tuned the corresponding hyperparameters Which approach will provide the MAXIMUM performance boost?
+10. 一个企业使用长短期记忆（LSTM）模型评估与特定能源部门相关的风险变量。该程序分析了多页文本文件，并将每个短语归类为构成危险或不构成风险。尽管数据科学家对几种网络结构进行了广泛的实验，并对相关的超参数进行了调整，但该模型的表现仍然不佳。哪种模型和目标属性组合最适合这个问题？ A business evaluates the risk variables associated with a specific energy sector using a long short-term memory (LSTM) model. The program analyzes multi-page text documents and categorizes each phrase as either posing a danger or posing no risk. The model is underperforming, despite the Data Scientist's extensive experimentation with several network architectures and tuning of the associated hyperparameters. Which model and target attribute combination is most suitable for this problem?
     - [ ] A. 通过术语频率-反文档频率（TF-IDF）向量来初始化单词，该向量在与能源部门相关的大量新闻文章上进行了预训练。 Initialize the words by term frequency-inverse document frequency (TF-IDF) vectors pretrained on a large collection of news articles related to the energy sector.
     - [ ] B. 使用门控递归单元（GRUS）而不是LSTM，并运行训练过程直到验证损失停止下降。 Use gated recurrent units (GRUS) instead of LSTM and run the training process until the validation loss stops decreasing.
     - [ ] C. 降低学习率，运行训练过程，直到训练损失停止下降。 Reduce the learning rate and run the training process until the training loss stops decreasing.
@@ -148,20 +148,20 @@
     <details>
        <summary>Answer</summary>
 
-       答案BC。
+       答案BC：[ref](https://docs.aws.amazon.com/zh_cn/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html)。
 
     </details>
 
 12. 一个机器学习专家之前在本地机器上用scikit-learn训练了一个逻辑回归模型，专家现在想把它部署到生产中，只用于推理，应该采取什么步骤来确保Amazon SageMaker可以托管本地训练的模型？ A Machine Learning Specialist previously trained a logistic regression model using scikit-learn on a local machine, and the Specialist now wants to deploy it to production for inference only What steps should be taken to ensure Amazon SageMaker can host a model that was trained locally?
-    - [ ] A. 用推理代码建立Docker镜像，用注册处的主机名标记Docker镜像，并将其上传到Amazon ECR。 Build the Docker image with the inference code Tag the Docker image with the registry hostname and upload it to Amazon ECR。
+    - [ ] A. 用推理代码建立Docker镜像，用注册处的主机名标记Docker镜像，并将其上传到Amazon ECR。 Build the Docker image with the inference code. Tag the Docker image with the registry hostname and upload it to Amazon ECR。
     - [ ] B. 将训练好的模型序列化，使其格式被压缩以便部署。用注册处的主机名标记Docker镜像，并将其上传到Amazon S3。 Serialize the trained model so the format is compressed for deployment. Tag the Docker image with the registry hostname and upload it to Amazon S3.
     - [ ] C. 将训练好的模型序列化，使其格式被压缩以便部署。构建镜像并将其上传到Docker Hub。 Serialize the trained model so the format is compressed for deployment. Build the image and upload it to Docker Hub.
-    - [ ] D. 用推理代码构建Docker镜像，配置Docker Hub并将镜像上传到Amazon ECR。 Build the Docker image with the inference code, Configure Docker Hub and upload the image to Amazon ECR.
+    - [ ] D. 用推理代码构建Docker镜像，配置Docker Hub并将镜像上传到Amazon ECR。 Build the Docker image with the inference code. Configure Docker Hub and upload the image to Amazon ECR.
 
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案A：[ref](https://sagemaker-workshop.com/custom/containers.html)。
 
     </details>
 
@@ -204,8 +204,10 @@
 
     </details>
 
-16. Given the following confusion matrix for a movie classification model, what is the true class frequency for Romance and the predicted class frequency for Adventure?
+16. 给出以下电影分类模型的混淆矩阵，请问罗曼史的真实类频和冒险史的预测类频是多少？ Given the following confusion matrix for a movie classification model, what is the true class frequency for Romance and the predicted class frequency for Adventure?
+
     ![146](img/146.png)
+
     - [ ] A. The true class frequency for Romance is 77. 56% and the predicted class frequency for Adventure is 20.85%.
     - [ ] B. The true class frequency for Romance is 57.92% and the predicted class frequency for Adventure is 13. 12%.
     - [ ] C. The true class frequency for Romance is 0.78% and the predicted class frequency for Adventure is (0. 47-0.32).
@@ -218,7 +220,7 @@
 
     </details>
 
-17. 一位机器学习专家希望将一个自定义算法引入Amazon SageMaker。该专家在Amazon SageMaker支持的Docker容器中实现该算法，该专家应该如何打包Docker容器，以便Amazon SageMaker能够正确启动训练？ A Machine Learning Specialist wants to bring a custom algorithm to Amazon SageMaker. The Specialist implements the algorithm in a Docker container supported by Amazon SageMaker How should the Specialist package the Docker container so that Amazon SageMaker can launch the training correctly?
+17. 一位机器学习专家希望将一个自定义算法引入Amazon SageMaker。该专家在Amazon SageMaker支持的Docker容器中实现该算法，该专家应该如何打包Docker容器，以便Amazon SageMaker能够正确启动训练？ A Machine Learning Specialist wants to bring a custom algorithm to Amazon SageMaker. The Specialist implements the algorithm in a Docker container supported by Amazon SageMaker. How should the Specialist package the Docker container so that Amazon SageMaker can launch the training correctly?
     - [ ] A. 修改容器中的bash配置文件，添加一个bash命令来启动训练程序。 Modify the bash profile file in the container and add a bash command to start the training program.
     - [ ] B. 在Docker文件中使用CMD配置，将培训程序添加为镜像的CMD。 Use CMD config in the Docker file to add the training program as a CMD of the image.
     - [ ] C. 将训练程序配置为一个名为train的ENTRYPOINT。 Configure the training program as an ENTRYPOINT named train.
@@ -227,7 +229,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案C：[ref](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-training-algo-dockerfile.html)。
 
     </details>
 
@@ -240,11 +242,11 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：[ref](https://docs.aws.amazon.com/quicksight/latest/user/making-data-driven-decisions-with-ml-in-quicksight.html)。
 
     </details>
 
-19. 一家媒体公司希望对其Amazon S3数据湖中的数据进行机器学习和分析。有两个数据转换要求，将使公司内部的消费者能够创建报告。在预定的时间内，对300GB的不同文件格式的数据进行日常转换，并登陆到Amazon S3。对驻留在S3数据湖中的数千兆字节的归档数据进行一次性转换 哪种解决方案的组合能经济有效地满足该公司对数据转换的要求？(选择三个) A media company wants to perform machine learning and analytics on the data residing in its Amazon S3 data lake. There are two data transformation requirements that will enable the consumers within the company to create reports: Daily transformations of 300 GB of data with different file formats landing in Amazon S3 at a scheduled time. One-time transformations of terabytes of archived data residing in the S3 data lake Which combination of solutions cost-effectively meets the company’s requirements for transforming the data? (Choose three)
+19. 一家媒体公司希望对其Amazon S3数据湖中的数据进行机器学习和分析。有两个数据转换要求，将使公司内部的消费者能够创建报告。在预定的时间内，对300GB的不同文件格式的数据进行日常转换，并登陆到Amazon S3。对驻留在S3数据湖中的数千兆字节的归档数据进行一次性转换。哪种解决方案的组合能经济有效地满足该公司对数据转换的要求？(选择三个) A media company wants to perform machine learning and analytics on the data residing in its Amazon S3 data lake. There are two data transformation requirements that will enable the consumers within the company to create reports: Daily transformations of 300 GB of data with different file formats landing in Amazon S3 at a scheduled time. One-time transformations of terabytes of archived data residing in the S3 data lake. Which combination of solutions cost-effectively meets the company’s requirements for transforming the data? (Choose three)
     - [ ] A. 对于每日传入的数据，使用AWS Glue爬虫来扫描和识别模式。 For daily incoming data, use AWS Glue crawlers to scan and identify the schema.
     - [ ] B. 对于每日传入的数据，使用Amazon Athena来扫描和识别模式。 For daily incoming data, use Amazon Athena to scan and identify the schema.
     - [ ] C. 对于每日传入的数据，使用Amazon Redshift来执行转换。 For daily incoming data, use Amazon Redshift to perform transformations.
@@ -256,12 +258,15 @@
        <summary>Answer</summary>
 
        答案ADE。
+       - 不是B，Athena会使用Glue（选项A）。
+       - 不是C。使用Redshift做转换是一种反模式。
+       - 不是F。会选择EMR而不是Sagemaker来做一次性转换。
 
     </details>
 
 20. 一家公司正计划使用Amazon SageMaker做一个机器学习（ML）项目的概念验证，该项目使用公司3TB数据仓库中托管的现有企业内部数据子集。对于项目的一部分，AWS Direct Connect已经建立并测试。为了准备ML的数据，数据分析员正在进行数据整理。数据分析员希望执行多个步骤，包括映射、删除空字段、解决选择和 分割字段。该公司需要最快的解决方案来策划这个项目的数据 哪种解决方案符合这些要求？ A company is planning to do a proof of concept for a machine learning (ML) project using Amazon SageMaker with a subset of existing on-premises data hosted in the company’s 3 TB data warehouse. For part of the project AWS Direct Connect is established and tested. To prepare the data for ML, data analysts are performing data curation. The data analysts want to perform multiple steps, including mapping, dropping null fields, resolving choice, and splitting fields. The company needs the fastest solution to curate the data for this project Which solution meets these requirements?
     - [ ] A. 使用AWS DataSync将数据输入Amazon S3，并使用Apache Spark scrips在Amazon EMR集群中策划数据。将策划好的数据存储在Amazon S3中进行ML处理。 Ingest data into Amazon S3 using AWS DataSync and use Apache Spark scrips to curate the data in an Amazon EMR cluster. Store the curated data in Amazon S3 for ML processing.
-    - [ ] B. 在企业内部创建自定义ETL作业来策划数据 使用AWS DMS将数据摄入Amazon S3进行ML处理。 Create custom ETL jobs on-premises to curate the data Use AWS DMS to ingest data into Amazon S3 for ML processing.
+    - [ ] B. 在企业内部创建自定义ETL作业来策划数据。使用AWS DMS将数据摄入Amazon S3进行ML处理。 Create custom ETL jobs on-premises to curate the data. Use AWS DMS to ingest data into Amazon S3 for ML processing.
     - [ ] C. 使用AWS DMS将数据摄取到Amazon S3。使用AWS Glue来执行数据整理，并将数据存储在Amazon S3中进行ML处理。 Ingest data into Amazon S3 using AWS DMS. Use AWS Glue to perform data curation and store the data in Amazon S3 for ML processing.
     - [ ] D. 对数据存储进行全面备份，并使用AWS Snowball运送备份文件。将Snowball数据上传到Amazon S3，并使用AWS Batch安排数据整理工作，为ML准备数据。 Take a full backup of the data store and ship the backup files using AWS Snowball. Upload Snowball data into Amazon S3 and schedule data curation jobs using AWS Batch to prepare the data for ML.
 
