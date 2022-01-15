@@ -935,7 +935,7 @@
 
     </details>
 
-69. 一位机器倾斜专家需要在Amazon SageMaker-hosed笔记本上安装包，这些笔记本将被用来开发机器学习解决方案。该专家有几个自定义包和依赖，需要在不同的笔记本环境中保持不变和持久。以下哪种方法能以最少的管理费用完成这一任务？ A machine leaning specialist needs to install packages on Amazon SageMaker-hosed notebooks that will be used to develop machine learning solutions. The specialist has several custom packages and dependencies that need to remain constant and persistent across notebook environments. Which of the following accomplishes this with the LEAST administrative overhead?
+69. 一位机器学习专家需要在Amazon SageMaker-hosed笔记本上安装包，这些笔记本将被用来开发机器学习解决方案。该专家有几个自定义包和依赖，需要在不同的笔记本环境中保持不变和持久。以下哪种方法能以最少的管理费用完成这一任务？ A machine learning specialist needs to install packages on Amazon SageMaker-hosed notebooks that will be used to develop machine learning solutions. The specialist has several custom packages and dependencies that need to remain constant and persistent across notebook environments. Which of the following accomplishes this with the LEAST administrative overhead?
     - [ ] A. 使用Jupyter终端的conda create在每个笔记本实例上创建一个虚拟环境。 Create a virtual environment using conda create from the Jupyter terminal on each notebook instance.
     - [ ] B. 创建一个生命周期配置，在笔记本启动时触发，以安装这些包。 Create a lifecycle configuration that triggers on notebook start to install the packages.
     - [ ] C. 使用Jupyter终端在笔记本上安装软件包。 Install the packages on the notebooks using the Jupyter terminal.
@@ -962,7 +962,7 @@
     </details>
 
 71. 在一个高度敏感的10TB数据集上用Amazon SageMaker训练的模型，即使经过几次训练，预测结果也不佳。在进一步审查数据集时，一位机器学习专家注意到，一些字段是从同一数据源中提取的，包含重叠的信息。该专家应该如何清理数据，并为未来的训练工作安全地访问它？ A model trained with Amazon SageMaker on a highly sensitive 10 TB dataset is delivering poor prediction results, even after several training jobs. Upon further review of the dataset a machine learning specialist notices that some fields were pulled from the same data source and contain overlapping information. How should the specialist clean up the data and securely access it for future training jobs?
-    - [ ] A. 使用AWS胶水来丢弃相关字段，并将新的数据集存储在Amazon S3上。为Amazon SageMaker添加一个S3 VPC端点，用于数据访问。 Use AWS Glue to discard the related fields and store the new dataset on Amazon S3. Add an S3 VPC endpoint for Amazon SageMaker for data access.
+    - [ ] A. 使用AWS Glue来丢弃相关字段，并将新的数据集存储在Amazon S3上。为Amazon SageMaker添加一个S3 VPC端点，用于数据访问。 Use AWS Glue to discard the related fields and store the new dataset on Amazon S3. Add an S3 VPC endpoint for Amazon SageMaker for data access.
     - [ ] B. 使用Amazon EMR来丢弃相关字段，并将新的数据集存储在Apache Hadoop分布式文件系统（HDFS）上。在EMR VPC中为Amazon SageMaker添加一个私有子网，用于数据访问。 Use Amazon EMR to discard the elated elds and store the new dataset on an Apache Hadoop Distributed File system (HDFS). Add a private subnet in an EMR VPC for Amazon SageMaker for data access.
     - [ ] C. 使用AWS Lambda来连接相关字段，并将新的数据集存储在Amazon SageMaker上。使用SageMaker EBS卷进行数据访问。 Use AWS Lambda to join the related fields and store the new dataset on Amazon SageMaker. Use SageMaker EBS volumes for data access.
     - [ ] D. 使用Amazon Athena来连接相关字段，并将新的数据集存储在Amazon S3上。为Amazon SageMaker添加一个NAT网关用于数据访问。 Use Amazon Athena to join the related fields and store the new dataset on Amazon S3. Add a NAT gateway for Amazon SageMaker for data access.
