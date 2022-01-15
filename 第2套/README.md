@@ -424,7 +424,7 @@
     - [ ] D. 1,000 shards
   
     <details>
-       <summary>Answer</summary> 
+       <summary>Answer</summary>
 
        答案B: 1shard可以插入1MB/或者1,000records/s,100*100KB=10MB，所以10个shards。
 
@@ -672,7 +672,7 @@
 
     </details>
 
-50. 一个管理员正在亚马逊EMR上部署公园，用于两个不同的用例机器学习算法和临时查询。数据将被存储在Amazon S3中。将为每个用例部署两个单独的集群。Amazon S3上的数据量小于10GB。管理员应该如何使实例类型与集群的目的一致？ An administrator is deploying park on Amazon EMR for two distinct use case machine learning algorithm and ad-hoc querying. A data will be stored in Amazon S3. Two separate clusters for each use case will be deployed. The data volumes on Amazon S3 are less than 10 GB. How should the administrator align instance types with the clusters purpose?
+50. 一个管理员正在亚马逊EMR上部署Spark，用于两个不同的用例机器学习算法和临时查询。数据将被存储在Amazon S3中。将为每个用例部署两个单独的集群。Amazon S3上的数据量小于10GB。管理员应该如何使实例类型与集群的目的一致？ An administrator is deploying Spark on Amazon EMR for two distinct use case machine learning algorithm and ad-hoc querying. A data will be stored in Amazon S3. Two separate clusters for each use case will be deployed. The data volumes on Amazon S3 are less than 10 GB. How should the administrator align instance types with the clusters purpose?
     - [ ] A. C实例类型的机器学习和R实例类型的临时查询。 Machine Learning on C instance types and ad-hoc queries on R instance types.
     - [ ] B. 在R实例类型上进行机器学习，在G2实例类型上进行临时查询。 Machine Learning on R instance types and ad-hoc queries on G2 instance types.
     - [ ] C. 对T实例类型的机器学习和对M实例类型的临时查询。 Machine Learning on T instance types and ad-hoc queries on M instance types.
@@ -681,8 +681,12 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
-
+       答案A：
+       - C - Compute optimized
+       - R - Memory optimized
+       - G - GPU omptimized
+       - I, D - Storage optimized
+       - T - 通用
     </details>
 
 51. 一家公司需要一个预防流失的模型来预测哪些客户不会提前续订该公司的服务。该公司计划为这些客户提供促销优惠。需要一个使用亚马逊机器学习的二元分类模型。这个二元分类模型应该建立在哪个基础上？ A company needs a churn prevention model to predict which customers will NOT renew their early subscription to the company’s service. The company plans to provide these customers with a promotional offer. A binary classification model that uses Amazon Machine Learning is required. On which basis should this binary classification model be built?
@@ -698,11 +702,11 @@
 
     </details>
 
-52. 一家公司在俄勒冈州、北弗吉尼亚州、爱尔兰和悉尼AWS地区托管了一个电子商务网站组合。每个网站都保留了捕捉用户行为的日志文件。该公司建立了一个应用程序，在俄勒冈州用协作过滤法生成成批的产品推荐。俄勒冈州之所以被选中，是因为闪存网站是在那里托管的，并提供了最大的数据收集，以训练机器学习模型。其他地区没有足够的历史数据来训练准确的机器学习模型 哪一组数据处理步骤可以改善每个地区的推荐？ A company hosts a portfolio of e-commerce websites across the Oregon, N. Virginia, Ireland, and Sydney AWS regions. Each site keeps log files that capture user behavior. The company has built an application that generates batches of product recommendations with collaborative filtering in Oregon. Oregon was elected because the flash site is hosted there and provides the largest collection of data to train machine learning models against. The other regions do NOT have enough historic data to train accurate machine learning models Which set of data processing steps improves recommendations for each region?
+52. 一家公司在俄勒冈州、北弗吉尼亚州、爱尔兰和悉尼AWS地区托管了一个电子商务网站组合。每个网站都保留了捕捉用户行为的日志文件。该公司建立了一个应用程序，在俄勒冈州用协作过滤法生成成批的产品推荐。俄勒冈州之所以被选中，是因为闪存网站是在那里托管的，并提供了最大的数据收集，以训练机器学习模型。其他地区没有足够的历史数据来训练准确的机器学习模型。 哪一组数据处理步骤可以改善每个地区的推荐？ A company hosts a portfolio of e-commerce websites across the Oregon, N. Virginia, Ireland, and Sydney AWS regions. Each site keeps log files that capture user behavior. The company has built an application that generates batches of product recommendations with collaborative filtering in Oregon. Oregon was elected because the flash site is hosted there and provides the largest collection of data to train machine learning models against. The other regions do NOT have enough historic data to train accurate machine learning models. Which set of data processing steps improves recommendations for each region?
     - [ ] A. 在俄勒冈州使用电子商务应用程序，在其他各地区写入复制的日志文件。 Use the e-commerce application in Oregon to write replica log files in each other region.
     - [ ] B. 使用Amazon S3桶复制来整合日志条目，并在俄勒冈州建立一个单一的模型。 Use Amazon S3 bucket replication to consolidate log entries and build a single model in Oregon.
     - [ ] C. 使用Kinesis作为网络日志的缓冲区，并将日志复制到邻近地区的Kinesis流中。 Use Kinesis as a buffer for web logs and replicate logs to the Kinesis stream of a neighboring region.
-    - [ ] D. 使用云观察日志代理，将日志合并到一个云观察日志组。 Use the Cloud Watch Logs agent to consolidate logs into a single Cloud Watch Logs group.
+    - [ ] D. 使用CloudWatch日志代理，将日志合并到一个云观察日志组。 Use the CloudWatch Logs agent to consolidate logs into a single Cloud Watch Logs group.
   
     <details>
        <summary>Answer</summary>
@@ -772,7 +776,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：Hadoop Streaming是Hadoop自带的一个工具，可以让你用Java以外的语言开发MapReduce可执行文件。流是以JAR文件的形式实现的，所以你可以像标准JAR文件一样从亚马逊EMR API或命令行运行它。
 
     </details>
 
@@ -781,11 +785,14 @@
     - [ ] B. 数值分档 Numerical value binning
     - [ ] C. 高阶多项式转换 High-degree polynomial transformation
     - [ ] D. 对数变换 一热编码 Logarithmic transformation One-Hot encoding.
+    - [ ] E. 一热编码 One hot encoding
 
     <details>
        <summary>Answer</summary>
 
-       答案：BD。
+       答案：BD
+       - B为年龄分档。
+       - D代表正常范围内的收入。
 
     </details>
 
@@ -811,11 +818,11 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案A：[ref](https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1)。
 
     </details>
 
-61. 一位机器赚钱专家正计划创建一个长期运行的亚马逊EMR集群。该EMR集群将有一个主节点，十个核心节点和20个任务节点。为了节约成本，该专家将在EMR集群中使用Spot Instances 该专家应该在Spot Instances上启动哪些节点？ A Machine earning Specialist is planning to create a long-running Amazon EMR cluster. The EMR cluster will have one master node, ten core nodes, and 20 task nodes. To save on costs, the Specialist will use Spot Instances in the EMR cluster Which nodes should the Specialist launch on Spot Instances?
+61. 一位机器学习专家正计划创建一个长期运行的亚马逊EMR集群。该EMR集群将有一个主节点，十个核心节点和20个任务节点。为了节约成本，该专家将在EMR集群中使用Spot Instances 该专家应该在Spot Instances上启动哪些节点？ A Machine Learning Specialist is planning to create a long-running Amazon EMR cluster. The EMR cluster will have one master node, ten core nodes, and 20 task nodes. To save on costs, the Specialist will use Spot Instances in the EMR cluster Which nodes should the Specialist launch on Spot Instances?
     - [ ] A. 主节点 Master node
     - [ ] B. 任何一个核心节点 Any of the core nodes
     - [ ] C. 任何一个任务节点 Any of the task nodes
@@ -824,7 +831,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案C：[ref](https://docs.aws.amazon.com/zh_cn/emr/latest/ManagementGuide/emr-plan-instances-guidelines.html)。
 
     </details>
 
@@ -837,7 +844,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案A。
 
     </details>
 
@@ -911,7 +918,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案D。
 
     </details>
 
@@ -967,7 +974,7 @@
 
     </details>
 
-72. 一家公司正在建立一个基于机器倾斜（ML）的预测性维护模型。数据存储在一个完全私有的亚马逊S3桶中，该桶在休息时使用AWS密钥管理服务（AWS KMS）CMKS进行加密。ML专家必须通过使用Amazon SageMaker处理作业来运行数据预处理，该作业由Amazon SageMaker笔记本中的代码触发。该作业应从Amazon S3读取数据，对其进行处理，并将其上传到同一个S3桶。预处理代码存储在Amazon Elastic Container Registry（Amazon ECR）的容器镜像中。ML专家需要授予权限以确保数据预处理工作流程的顺利进行。MI专家应该采取哪一组行动来满足这些要求？ A company is building a predictive maintenance model based on machine leaning (ML). The data is stored in a fully private Amazon S3 bucket that is encrypted at rest with AWS Key Management Service (AWS KMS) CMKS. An ML specialist must run data preprocessing by using an Amazon SageMaker Processing job that is triggered from code in an Amazon SageMaker notebook The job should read data from Amazon S3, process it, and upload it back to the same S3 bucket. The preprocessing code is stored in a container image in Amazon Elastic Container Registry (Amazon ECR). The ML specialist needs to grant permissions to ensure a smooth data preprocessing workflow. Which set of actions should the MI specialist take to meet these requirements?
+72. 一家公司正在建立一个基于机器学习（ML）的预测性维护模型。数据存储在一个完全私有的亚马逊S3桶中，该桶在休息时使用AWS密钥管理服务（AWS KMS）CMKS进行加密。ML专家必须通过使用Amazon SageMaker处理作业来运行数据预处理，该作业由Amazon SageMaker笔记本中的代码触发。该作业应从Amazon S3读取数据，对其进行处理，并将其上传到同一个S3桶。预处理代码存储在Amazon Elastic Container Registry（Amazon ECR）的容器镜像中。ML专家需要授予权限以确保数据预处理工作流程的顺利进行。ML专家应该采取哪一组行动来满足这些要求？ A company is building a predictive maintenance model based on machine learning (ML). The data is stored in a fully private Amazon S3 bucket that is encrypted at rest with AWS Key Management Service (AWS KMS) CMKS. An ML specialist must run data preprocessing by using an Amazon SageMaker Processing job that is triggered from code in an Amazon SageMaker notebook The job should read data from Amazon S3, process it, and upload it back to the same S3 bucket. The preprocessing code is stored in a container image in Amazon Elastic Container Registry (Amazon ECR). The ML specialist needs to grant permissions to ensure a smooth data preprocessing workflow. Which set of actions should the ML specialist take to meet these requirements?
     - [ ] A. 创建一个IAM角色，该角色具有创建Amazon SageMaker处理作业的权限，对相关S3桶的S3读和写权限，以及适当的KMS和ECR权限。将该角色附加到SageMaker笔记本实例。从笔记本上创建一个Amazon SageMaker处理作业。 Create an IAM role that has permissions to create Amazon SageMaker Processing jobs, S3 read and write access to the relevant S3 bucket, and appropriate KMS and ECR permissions. Attach the role to the SageMaker notebook instance. Create an Amazon SageMaker Processing job from the notebook.
     - [ ] B. 创建一个IAM角色，具有创建Amazon SageMaker处理作业的权限。将该角色附加到SageMaker笔记本实例。创建一个Amazon SageMaker处理作业，其IAM角色具有对相关S3桶的读和写权限，以及适当的KMS和ECR权限。 Create an IAM role that has permissions to create Amazon SageMaker Processing jobs. Attach the role to the SageMaker notebook instance. Create an Amazon SageMaker Processing job with an IAM role that has read and write permissions to the relevant S3 bucket, and appropriate KMS and ECR permissions.
     - [ ] C. 创建一个IAM角色，具有创建Amazon SageMaker处理作业和访问Amazon ECR的权限。将该角色附加到SageMaker笔记本实例。在默认VPC中设置一个S3端点和一个KMS端点。从笔记本上创建Amazon SageMaker处理作业。 Create an IAM role that has permissions to create Amazon SageMaker Processing jobs and to access Amazon ECR. Attach the role to the SageMaker notebook instance. Set up both an S3 endpoint and a KMS endpoint in the default VPC. Create Amazon SageMaker Processing jobs from the notebook.
