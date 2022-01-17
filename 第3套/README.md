@@ -328,7 +328,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B
+       答案B：[ref](https://docs.aws.amazon.com/sagemaker/latest/dg/model-ab-testing.html#model-testing-target-variant)。
 
     </details>
 
@@ -341,7 +341,19 @@
     <details>
        <summary>Answer</summary>
 
-       答案A。
+       答案C。
+       请注意，该问题要求的是2件事。
+
+       1. 检测特定类型的杂草
+       2. 探测每种类型在田间的位置。
+
+       - 图像分类只能对图像进行分类。
+       - 物体检测算法。
+
+       1. 识别图像场景中的所有物体实例。
+       2. 它在图像中的位置和比例由一个矩形的边界框表示。
+
+      - SageMaker中计算机视觉算法的数据格式。推荐使用RecordIO。
 
     </details>
 
@@ -354,7 +366,10 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：
+       - [ref1](https://sagemaker.readthedocs.io/en/stable/frameworks/tensorflow/using_tf.html)
+       - [ref2](https://github.com/aws-samples/amazon-sagemaker-script-mode/blob/master/tf-horovod-inference-pipeline/train.py
+)
 
     </details>
 
@@ -380,15 +395,15 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案A：因为在这种情况下，不是现有的历史数据（事件值、事件类型（点击与否））的问题，销售量没有持续增长，现在你需要获得更多最新的互动数据。一个事件追踪器为新的事件数据指定一个目标数据集组。
 
     </details>
 
-28. 一位机器学习（ML）专家希望保护对Amazon SageMaker服务API的调用。该专家已将Amazon PC配置为Amazon SageMaker服务API的PC接口端点，并试图确保来自特定实例集和IAM用户的流量。该PC被配置为一个单一的公共子网。ML专家应该采取哪种步骤组合来保护流量？(选择两个) A machine learning (ML) specialist wants to secure calls to the Amazon SageMaker Service API. The specialist has configured Amazon PC with a PC interface endpoint for the Amazon SageMaker Service API and is attempting to secure traffic from specific sets of instances and IAM users. The PC is configured with a single public subnet. Which combination of steps should the ML specialist take to secure the traffic? (Choose two)
+28. 一位机器学习（ML）专家希望保护对Amazon SageMaker服务API的调用。该专家已将Amazon VPC配置为Amazon SageMaker服务API的VPC接口端点，并试图确保来自特定实例集和IAM用户的流量。该PC被配置为一个单一的公共子网。ML专家应该采取哪种步骤组合来保护流量？(选择两个) A machine learning (ML) specialist wants to secure calls to the Amazon SageMaker Service API. The specialist has configured Amazon VPC with a VPC interface endpoint for the Amazon SageMaker Service API and is attempting to secure traffic from specific sets of instances and IAM users. The PC is configured with a single public subnet. Which combination of steps should the ML specialist take to secure the traffic? (Choose two)
     - [ ] A. 添加一个VPC端点策略，允许访问IAM用户。 Add a VPC endpoint policy to allow access to the IAM users.
     - [ ] B. 修改用户的IAM策略，只允许访问Amazon SageMaker服务API调用。 Modify the users' IAM policy to allow access to Amazon SageMaker Service API calls only.
     - [ ] C. 修改端点网络接口上的安全组，限制对实例的访问。 Modify the security group on the endpoint network interface to restrict access to the instances.
-    - [ ] D. 修改端点网络接口上的ACI，限制对实例的访问。 Modify the ACI on the endpoint network interface to restrict access to the instances.
+    - [ ] D. 修改端点网络接口上的ACL，限制对实例的访问。 Modify the ACL on the endpoint network interface to restrict access to the instances.
     - [ ] E. 在VPC中添加一个SageMaker Runtime VPC端点接口。 Add a SageMaker Runtime VPC endpoint interface to the VPC.
 
     <details>
@@ -407,7 +422,9 @@
     <details>
        <summary>Answer</summary>
 
-       答案C。
+       答案A：
+       - IPsec is not the same as SSL. Site to site VPN is for IPsec: [ref](https://aws.amazon.com/vpn/site-to-site-vpn/)
+       - Also Glue can directly connect to Postgres and upload to S3: [ref](https://aws.amazon.com/blogs/big-data/how-to-access-and-analyze-on-premises-data-stores-using-aws-glue/)
 
     </details>
 
@@ -420,8 +437,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
-
+       答案B：用CPU重新部署，并增加弹性推理以降低成本。
     </details>
 
 31. 一家物流公司需要一个预测模型来预测下个月10个仓库中单一物品的库存需求。一位机器学习专家使用Amazon Forecast从3年的月度数据中开发了一个预测模型。没有缺失的数据。该专家选择DeepAR算法来训练一个预测器。该预测器的平均绝对百分比误差（MAPE）比目前人类预测者产生的MAPE大得多。对`CreatePredictor` API调用的哪些修改可以改善MAPE？(选择两个) A logistics company needs a forecast model to predict next month‘’s inventory requirements for a single item in 10 warehouses. A machine learning specialist uses Amazon Forecast to develop a forecast model from 3 years of monthly data. There is no missing data. The specialist selects the DeepAR algorithm to train a predictor. The predictor means absolute percentage error (MAPE) is much larger than the MAPE produced by the current human forecasters. Which changes to the `CreatePredictor` API call could improve the MAPE? (Choose two)
@@ -434,7 +450,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案CD：[ref](https://docs.aws.amazon.com/forecast/latest/dg/forecast.dg.pdf)
+       答案AD。
 
     </details>
 
@@ -446,28 +462,28 @@
     |2020-01-31|uni_003429|98|hardware|30|
     |2020-03-04|uni_000211|234|accessories|10|
 
-    - [ ] A. 在AWS Glue中使用ETL作业，将数据集分成一个目标时间序列数据集和一个项目元数据集 将两个数据集`a.csv`文件上传到Amazon S3。 Use ETL jobs in AWS Glue to separate the dataset into a target time series dataset and an item metadata dataset Upload both datasets `a.csv` files to Amazon S3
-    - [ ] B. 使用Amazon SageMaker中的Jupyter笔记本，将数据集分成一个相关的时间序列数据集和一个项目元数据集 将这两个数据集作为表格上传到Amazon Aurora中。 Use a Jupyter notebook in Amazon SageMaker to separate the dataset into a related time series dataset and an item metadata dataset Upload both datasets as tables in Amazon Aurora.
-    - [ ] C. 使用AWS批处理作业将数据集分成一个目标时间序列数据集、一个相关时间序列数据集和一个项目元数据集 从本地机器直接上传到Forecast。 Use AWS Batch jobs to separate the dataset into a target time series dataset, a related time series dataset, and an item metadata dataset Upload them directly to Forecast from a local machine
-    - [ ] D. 使用Amazon SageMaker中的Jupyter笔记本，将数据转化为优化的protobuf RecordIO格式 将此格式的数据集上传至Amazon S3。 Use a Jupyter notebook in Amazon SageMaker to transform the data into the optimized protobuf RecordIO format Upload the dataset in this format to Amazon S3.
+    - [ ] A. 在AWS Glue中使用ETL作业，将数据集分成一个目标时间序列数据集和一个项目元数据集。将两个数据集`a.csv`文件上传到Amazon S3。 Use ETL jobs in AWS Glue to separate the dataset into a target time series dataset and an item metadata dataset. Upload both datasets `a.csv` files to Amazon S3
+    - [ ] B. 使用Amazon SageMaker中的Jupyter笔记本，将数据集分成一个相关的时间序列数据集和一个项目元数据集。将这两个数据集作为表格上传到Amazon Aurora中。 Use a Jupyter notebook in Amazon SageMaker to separate the dataset into a related time series dataset and an item metadata dataset. Upload both datasets as tables in Amazon Aurora.
+    - [ ] C. 使用AWS批处理作业将数据集分成一个目标时间序列数据集、一个相关时间序列数据集和一个项目元数据集。从本地机器直接上传到Forecast。 Use AWS Batch jobs to separate the dataset into a target time series dataset, a related time series dataset, and an item metadata dataset. Upload them directly to Forecast from a local machine
+    - [ ] D. 使用Amazon SageMaker中的Jupyter笔记本，将数据转化为优化的protobuf RecordIO格式。将此格式的数据集上传至Amazon S3。 Use a Jupyter notebook in Amazon SageMaker to transform the data into the optimized protobuf RecordIO format. Upload the dataset in this format to Amazon S3.
   
     <details>
        <summary>Answer</summary>
 
-       答案A：目标文件必须位于两个文件并且从S3载入。
+       答案A：目标文件和元数据必须位于两个文件并且从S3载入。
 
     </details>
 
 33. 一个数据科学家需要为一个公司的电子商务平台识别欺诈性的用户账户。该公司希望能够确定一个新创建的账户是否与之前已知的欺诈性用户有关。该数据科学家正在使用AWS Glue在摄取过程中清理该公司的应用程序日志。哪种策略可以让数据科学家识别欺诈性账户？ A data scientist needs to identify fraudulent user accounts for a company ecommerce platform. The company wants the ability to determine if a newly created account is associated with a previously known fraudulent user. The data scientist is using AWS Glue to cleanse the company’s application logs during ingestion. Which strategy will allow the data scientist to identify fraudulent accounts?
     - [ ] A. 执行内置的Find Duplicates Amazon Athena查询。 Execute the built-in Find Duplicates Amazon Athena query.
-    - [ ] B. 在AWS Glue中创建一个FindMatches机器赚钱的转换。 Create a FindMatches machine earning transform in AWS Glue.
+    - [ ] B. 在AWS Glue中创建一个FindMatches机器学习转换。 Create a FindMatches machine learning transform in AWS Glue.
     - [ ] C. 创建一个AWS Glue爬行器来推断源数据中的重复账户。 Create an AWS Glue crawler to infer duplicate accounts in the source data.
     - [ ] D. 在AWS Glue数据目录中搜索重复的账户。 Search for duplicate accounts in the AWS Glue Data Catalog.
   
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案B：你可以使用FindMatches转换来查找源数据中的重复记录。会生成或提供一个标签文件，以帮助教授该转换。
 
     </details>
 
@@ -480,7 +496,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案C：[ref](https://docs.aws.amazon.com/zh_cn/sagemaker/latest/dg/seq-2-seq-howitworks.html)。
 
     </details>
 
@@ -493,7 +509,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案D："EnableNetworkIsolation - 在创建训练、超参数调整和推理工作时，将此设置为 "true"，以防止恶意代码被意外安装并将数据传输到远程主机等情况。"。
 
     </details>
 
@@ -506,7 +522,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案B。
+       答案C：，即授权用户只应拥有访问权。这些用户将组成AWS Ground Truth的私人员工队伍➞[ref](https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-private.html)。
 
     </details>
 
@@ -552,7 +568,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案D。
+       答案B。
 
     </details>
 
@@ -567,7 +583,7 @@
     <details>
        <summary>Answer</summary>
 
-       答案BDF。
+       答案ADE。
 
     </details>
 
@@ -640,7 +656,7 @@
     - [ ] A. 使用俄勒冈州的电子商务应用程序，在其他每个地区写入复制的日志文件。 Use the e-commerce application in Oregon to write replica log files in each other region.
     - [ ] B. 使用Amazon S3桶复制来整合日志条目，并在俄勒冈州建立一个单一的模型。 Use Amazon S3 bucket replication to consolidate log entries and build a single model in Oregon.
     - [ ] C. 使用Kinesis作为网络日志的缓冲区，并将日志复制到邻近地区的Kinesis流中。 Use Kinesis as a buffer for web logs and replicate logs to the Kinesis stream of a neighboring region.
-    - [ ] D. 使用云观察日志代理，将日志合并到一个云观察日志组。 Use the Cloud Watch Logs agent to consolidate logs into a single Cloud Watch Logs group.
+    - [ ] D. 使用CloudWatch日志代理，将日志合并到一个云观察日志组。 Use the CloudWatch Logs agent to consolidate logs into a single Cloud Watch Logs group.
 
     <details>
        <summary>Answer</summary>
