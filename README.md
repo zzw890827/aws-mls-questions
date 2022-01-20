@@ -14,6 +14,6 @@
 
 ## 测试3
 
-![测试2正确率](./img/rate03.png)
+![测试3正确率](./img/rate03.png)
 
-![测试2错题集](./img/result03.png)
+![测试3错题集](./img/result03.png)
