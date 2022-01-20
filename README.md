@@ -11,3 +11,9 @@
 ![测试2正确率](./img/rate02.png)
 
 ![测试2错题集](./img/result02.png)
+
+## 测试3
+
+![测试2正确率](./img/rate03.png)
+
+![测试2错题集](./img/result03.png)

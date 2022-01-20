@@ -110,3 +110,60 @@ option = {
     datasetIndex: 1,
   },
 };
+
+/////////////////////////////////////////////////////
+
+option = {
+  title: {
+    left: 'center',
+    text: '测试3错题直方图',
+  },
+  dataset: [
+    {
+      dimensions: ['number', 'frequent'],
+      source: [
+        ['03', 1],
+        ['05', 1],
+        ['07', 1],
+        ['08', 1],
+        ['10', 2],
+        ['11', 1],
+        ['13', 1],
+        ['22', 2],
+        ['26', 2],
+        ['28', 1],
+        ['29', 1],
+        ['30', 2],
+        ['31', 1],
+        ['36', 1],
+        ['43', 2],
+        ['47', 2],
+        ['55', 1],
+        ['58', 1],
+        ['59', 1],
+        ['61', 1],
+        ['64', 1],
+        ['71', 1],
+        ['72', 1],
+        ['73', 1],
+        ['75', 2],
+      ],
+    },
+    {
+      transform: {
+        type: 'sort',
+        config: { dimension: 'frequent', order: 'desc' },
+      },
+    },
+  ],
+  xAxis: {
+    type: 'category',
+    axisLabel: { interval: 0, rotate: 30 },
+  },
+  yAxis: {},
+  series: {
+    type: 'bar',
+    encode: { x: 'number', y: 'frequent' },
+    datasetIndex: 1,
+  },
+};
