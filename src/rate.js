@@ -1,35 +1,35 @@
 option = {
   title: {
-    left: "center",
-    text: "测试1正确率推移",
+    left: 'center',
+    text: '测试1正确率推移',
   },
   tooltip: {
-    trigger: "axis",
+    trigger: 'axis',
   },
   xAxis: {
-    type: "category",
-    data: ["第一回", "第二回"],
+    type: 'category',
+    data: ['第一回', '第二回', '第三回'],
   },
   yAxis: {
-    type: "value",
+    type: 'value',
     scale: true,
     axisLabel: {
-      formatter: "{value}%",
+      formatter: '{value}%',
     },
   },
   series: [
     {
-      data: [80.3, 73.7],
-      type: "line",
+      data: [80.3, 73.7, 80.3],
+      type: 'line',
       markLine: {
-        symbol: ["none", "none"],
+        symbol: ['none', 'none'],
         label: { show: true },
         data: [{ yAxis: 75 }],
       },
       markPoint: {
         data: [
-          { type: "max", name: "最大值" },
-          { type: "min", name: "最小值" },
+          { type: 'max', name: '最大值' },
+          { type: 'min', name: '最小值' },
         ],
       },
     },
@@ -40,36 +40,36 @@ option = {
 
 option = {
   title: {
-    left: "center",
-    text: "测试2正确率推移",
+    left: 'center',
+    text: '测试2正确率推移',
   },
   tooltip: {
-    trigger: "axis",
+    trigger: 'axis',
   },
   xAxis: {
-    type: "category",
-    data: ["第一回", "第二回"],
+    type: 'category',
+    data: ['第一回', '第二回'],
   },
   yAxis: {
-    type: "value",
+    type: 'value',
     scale: true,
     axisLabel: {
-      formatter: "{value}%",
+      formatter: '{value}%',
     },
   },
   series: [
     {
       data: [76.3, 85.5],
-      type: "line",
+      type: 'line',
       markLine: {
-        symbol: ["none", "none"],
+        symbol: ['none', 'none'],
         label: { show: true },
         data: [{ yAxis: 75 }],
       },
       markPoint: {
         data: [
-          { type: "max", name: "最大值" },
-          { type: "min", name: "最小值" },
+          { type: 'max', name: '最大值' },
+          { type: 'min', name: '最小值' },
         ],
       },
     },
