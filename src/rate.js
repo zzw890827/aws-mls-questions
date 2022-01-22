@@ -48,7 +48,7 @@ option = {
   },
   xAxis: {
     type: 'category',
-    data: ['第一回', '第二回'],
+    data: ['第一回', '第二回', '第三回'],
   },
   yAxis: {
     type: 'value',
@@ -88,7 +88,7 @@ option = {
   },
   xAxis: {
     type: 'category',
-    data: ['第一回', '第二回', '第三回'],
+    data: ['第一回', '第二回'],
   },
   yAxis: {
     type: 'value',
