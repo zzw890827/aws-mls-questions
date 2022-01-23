@@ -48,7 +48,7 @@ option = {
   },
   xAxis: {
     type: 'category',
-    data: ['第一回', '第二回', '第三回'],
+    data: ['第一回', '第二回', '第三回', '第四回'],
   },
   yAxis: {
     type: 'value',
@@ -59,7 +59,7 @@ option = {
   },
   series: [
     {
-      data: [76.3, 85.5, 89.5],
+      data: [76.3, 85.5, 89.5, 93.4],
       type: 'line',
       markLine: {
         symbol: ['none', 'none'],
@@ -81,14 +81,14 @@ option = {
 option = {
   title: {
     left: 'center',
-    text: '测试2正确率推移',
+    text: '测试3正确率推移',
   },
   tooltip: {
     trigger: 'axis',
   },
   xAxis: {
     type: 'category',
-    data: ['第一回', '第二回', '第三回', '第四回'],
+    data: ['第一回', '第二回', '第三回',],
   },
   yAxis: {
     type: 'value',
@@ -99,7 +99,7 @@ option = {
   },
   series: [
     {
-      data: [69.7, 90.8, 94.7, 93.4],
+      data: [69.7, 90.8, 94.7],
       type: 'line',
       markLine: {
         symbol: ['none', 'none'],
